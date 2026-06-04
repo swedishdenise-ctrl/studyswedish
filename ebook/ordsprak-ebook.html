@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50 Svenska Ordspråk — StudySwedish.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ─── Base ─── */
+    html { font-size: 11pt; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #1A1A2E;
+      background: #FAF7F2;
+      line-height: 1.6;
+    }
+
+    /* ─── Print settings ─── */
+    @page {
+      size: A4;
+      margin: 16mm 20mm;
+    }
+
+    @media print {
+      body { background: #FAF7F2; }
+      .no-print { display: none !important; }
+      .page-break { page-break-before: always; break-before: page; }
+      .avoid-break { page-break-inside: avoid; break-inside: avoid; }
+    }
+
+    /* ─── Screen wrapper ─── */
+    @media screen {
+      body {
+        max-width: 210mm;
+        margin: 0 auto;
+        padding: 0;
+        box-shadow: 0 4px 60px rgba(0,0,0,0.12);
+        min-height: 100vh;
+      }
+    }
+
+    /* ═══════════════════════════════════════
+       COVER
+    ═══════════════════════════════════════ */
+    .cover {
+      background: #005B99;
+      min-height: 267mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 48px 32px;
+    }
+
+    /* Decorative Swedish cross — golden, very subtle */
+    .cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,203,5,0.07), rgba(255,203,5,0.07)) center / 100% 90px no-repeat,
+        linear-gradient(rgba(255,203,5,0.07), rgba(255,203,5,0.07)) 38% 0 / 90px 100% no-repeat;
+      pointer-events: none;
+    }
+
+    .cover-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 8pt;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 32px;
+    }
+
+    .cover-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 108pt;
+      font-weight: 700;
+      color: #FFCB05;
+      line-height: 0.9;
+      margin-bottom: 12px;
+    }
+
+    .cover-title-sv {
+      font-family: 'Playfair Display', serif;
+      font-size: 30pt;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .cover-title-en {
+      font-family: 'Playfair Display', serif;
+      font-size: 15pt;
+      font-weight: 400;
+      font-style: italic;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 40px;
+    }
+
+    .cover-rule {
+      width: 48px;
+      height: 2px;
+      background: #FFCB05;
+      margin: 0 auto 32px;
+    }
+
+    .cover-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+
+    .cover-author {
+      font-family: 'Playfair Display', serif;
+      font-size: 11pt;
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+    }
+
+    .cover-footer {
+      position: absolute;
+      bottom: 24px;
+      left: 0; right: 0;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 8pt;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ═══════════════════════════════════════
+       INTRO PAGE
+    ═══════════════════════════════════════ */
+    .intro {
+      padding: 52px 36px 40px;
+      min-height: 267mm;
+    }
+
+    .intro-kicker {
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #FFCB05;
+      background: #005B99;
+      display: inline-block;
+      padding: 3px 10px;
+      margin-bottom: 20px;
+    }
+
+    .intro h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26pt;
+      font-weight: 700;
+      color: #005B99;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .intro .intro-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: 13pt;
+      font-style: italic;
+      color: #888;
+      margin-bottom: 28px;
+    }
+
+    .intro p {
+      font-size: 10.5pt;
+      line-height: 1.8;
+      color: #2a2a3e;
+      margin-bottom: 14px;
+      max-width: 62ch;
+    }
+
+    .pronunciation-box {
+      background: #005B99;
+      color: white;
+      padding: 22px 26px;
+      margin: 28px 0 20px;
+    }
+
+    .pronunciation-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 13pt;
+      color: #FFCB05;
+      margin-bottom: 14px;
+    }
+
+    .pronunciation-box .desc {
+      font-size: 9pt;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+
+    .vowel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .vowel-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .vowel-item .letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 16pt;
+      color: #FFCB05;
+      line-height: 1;
+    }
+
+    .vowel-item .sound {
+      font-size: 8.5pt;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.3;
+    }
+
+    .intro-footnote {
+      font-size: 9pt;
+      font-style: italic;
+      color: #999;
+      margin-top: 24px;
+    }
+
+    /* ═══════════════════════════════════════
+       PROVERBS SECTION
+    ═══════════════════════════════════════ */
+    .proverbs-section {
+      padding: 0 36px;
+    }
+
+    .section-header {
+      padding: 32px 0 16px;
+      border-bottom: 2.5px solid #005B99;
+      margin-bottom: 0;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18pt;
+      font-weight: 700;
+      color: #005B99;
+    }
+
+    .section-header .count {
+      font-size: 9pt;
+      color: #aaa;
+      letter-spacing: 0.1em;
+    }
+
+    /* Each proverb entry */
+    .proverb {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 0 14px;
+      padding: 22px 0;
+      border-bottom: 1px solid #E2DDD6;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .proverb-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: #FFCB05;
+      background: #005B99;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 8.5pt;
+      margin-top: 3px;
+    }
+
+    .proverb-body {}
+
+    .proverb-sv {
+      font-family: 'Playfair Display', serif;
+      font-size: 15.5pt;
+      font-weight: 600;
+      color: #005B99;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .proverb-pronunciation {
+      font-family: 'Inter', sans-serif;
+      font-size: 8pt;
+      color: #aaa;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .proverb-pronunciation::before {
+      content: 'Pronunciation: ';
+      font-weight: 500;
+      color: #bbb;
+    }
+
+    .proverb-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .proverb-row {
+      font-size: 10pt;
+      line-height: 1.55;
+      color: #1A1A2E;
+    }
+
+    .proverb-row .lbl {
+      font-weight: 600;
+      font-size: 8.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #888;
+      margin-right: 6px;
+    }
+
+    .proverb-row.literal {
+      font-style: italic;
+      color: #555;
+    }
+
+    .proverb-row.literal .lbl { font-style: normal; }
+
+    .proverb-note {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #999;
+      margin-top: 6px;
+      line-height: 1.5;
+      padding-left: 10px;
+      border-left: 2px solid #FFCB05;
+    }
+
+    /* ═══════════════════════════════════════
+       BACK MATTER
+    ═══════════════════════════════════════ */
+    .back-matter {
+      padding: 60px 36px;
+      text-align: center;
+      min-height: 180px;
+    }
+
+    .back-rule {
+      width: 60px;
+      height: 2px;
+      background: #FFCB05;
+      margin: 0 auto 32px;
+    }
+
+    .back-matter h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22pt;
+      color: #005B99;
+      margin-bottom: 16px;
+    }
+
+    .back-matter p {
+      font-size: 10.5pt;
+      color: #666;
+      line-height: 1.75;
+      max-width: 52ch;
+      margin: 0 auto 12px;
+    }
+
+    .back-matter .site {
+      display: inline-block;
+      margin-top: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 14pt;
+      color: #005B99;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .back-matter .copyright {
+      margin-top: 28px;
+      font-size: 8pt;
+      color: #ccc;
+      letter-spacing: 0.08em;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ═══════ COVER ═══════ -->
+<div class="cover">
+  <div class="cover-eyebrow">StudySwedish.com presents</div>
+  <div class="cover-number">50</div>
+  <div class="cover-title-sv">Svenska Ordspråk</div>
+  <div class="cover-title-en">Swedish Proverbs</div>
+  <div class="cover-rule"></div>
+  <div class="cover-tagline">With Literal Translations &amp; Pronunciation</div>
+  <div class="cover-author">by Denise — StudySwedish.com</div>
+  <div class="cover-footer">studyswedish.com</div>
+</div>
+
+<!-- ═══════ INTRO ═══════ -->
+<div class="intro page-break avoid-break">
+  <div class="intro-kicker">Introduction</div>
+  <h1>Välkommen</h1>
+  <p class="intro-sub">Welcome to 50 Svenska Ordspråk</p>
+
+  <p>Ordspråk — proverbs — are windows into how a culture thinks. Swedish proverbs are especially revealing: you'll find an obsession with moderation (<em>lagom</em>), a deep love of nature, a calm fatalism about outcomes, and a dry humor that surfaces most clearly in the literal translations.</p>
+
+  <p>Each entry gives you four things: the Swedish proverb in full, a phonetic pronunciation guide, the word-for-word literal translation (often surprisingly funny), and the actual meaning in English.</p>
+
+  <p>The literal translations are the heart of this collection. When Swedes say "there's no cow on the ice," they mean "don't worry." When they say "hurry slowly," they mean slow down to avoid mistakes. Seeing the gap between the literal and the intended is one of the best ways to feel a language from the inside.</p>
+
+  <p>If you have the audio companion, listen along as I read each proverb aloud — twice, clearly, so you can absorb the rhythm and sounds of real Swedish speech.</p>
+
+  <div class="pronunciation-box avoid-break">
+    <h3>Pronunciation Key</h3>
+    <p class="desc">All phonetic guides use English sounds. ALL-CAPS letters carry the main stress.</p>
+    <div class="vowel-grid">
+      <div class="vowel-item">
+        <span class="letter">å</span>
+        <span class="sound">"AW" as in <em>saw</em></span>
+      </div>
+      <div class="vowel-item">
+        <span class="letter">ä</span>
+        <span class="sound">"EH" / "AIR" as in <em>bed</em></span>
+      </div>
+      <div class="vowel-item">
+        <span class="letter">ö</span>
+        <span class="sound">"UR" as in <em>fern</em></span>
+      </div>
+      <div class="vowel-item">
+        <span class="letter">j</span>
+        <span class="sound">"Y" as in <em>yes</em></span>
+      </div>
+      <div class="vowel-item">
+        <span class="letter">g + e/i/y/ä/ö</span>
+        <span class="sound">"Y" as in <em>yes</em></span>
+      </div>
+      <div class="vowel-item">
+        <span class="letter">sk/k + e/i/y/ä/ö</span>
+        <span class="sound">"SH" as in <em>she</em></span>
+      </div>
+    </div>
+  </div>
+
+  <p class="intro-footnote">Tip: Read each proverb aloud. Swedish has a musical pitch accent — some words rise, others fall. The best way to learn it is simply to listen and imitate.</p>
+</div>
+
+<!-- ═══════ PROVERBS ═══════ -->
+<div class="proverbs-section page-break">
+
+  <div class="section-header">
+    <h2>The 50 Proverbs</h2>
+    <span class="count">01 – 50</span>
+  </div>
+
+  <!-- 1 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">1</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Lagom är bäst</div>
+      <div class="proverb-pronunciation">LAH-gom air BEST</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"The right amount is best"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Everything in moderation — not too much, not too little.</div>
+      </div>
+      <div class="proverb-note">The word <em>lagom</em> is uniquely Swedish and essentially untranslatable: exactly the right amount, no more, no less. It is arguably the single most important concept in Swedish culture.</div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">2</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Det är ingen ko på isen</div>
+      <div class="proverb-pronunciation">det air ING-en KOO paw EE-sen</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"There's no cow on the ice"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>There's no need to worry — everything is under control.</div>
+      </div>
+      <div class="proverb-note">Picture a cow that has wandered onto a frozen lake. That would be a crisis. If there's no cow on the ice, there is no crisis.</div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">3</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Kärt barn har många namn</div>
+      <div class="proverb-pronunciation">CHÄRT BAHN hahr MONG-ah NAHM</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"A dear child has many names"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Something beloved gets lots of names and nicknames.</div>
+      </div>
+      <div class="proverb-note">Used to explain why something — a person, a place, a dish — has many different words for it. Affection breeds creativity.</div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">4</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Man ska inte sälja skinnet innan björnen är skjuten</div>
+      <div class="proverb-pronunciation">man SKAH IN-teh SELL-yah SHIN-et IN-an BYUR-nen air SHU-ten</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Don't sell the hide before the bear is shot"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Don't count your chickens before they hatch.</div>
+      </div>
+      <div class="proverb-note">A hunter who sells the bearskin before the hunt is over is going to be in trouble. Assume success only once you have it.</div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">5</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Den som gapar efter mycket mister ofta hela stycket</div>
+      <div class="proverb-pronunciation">den som GAH-par EF-ter MYK-et MIS-ter OF-tah HEE-lah STYK-et</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"He who gapes for much often loses the whole piece"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Greed leads to loss — reaching for everything can leave you with nothing.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">6</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Bättre sent än aldrig</div>
+      <div class="proverb-pronunciation">BET-reh SENT en AL-drig</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Better late than never"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Doing something late is still better than never doing it at all.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">7</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Morgonstund har guld i mund</div>
+      <div class="proverb-pronunciation">MOR-gon-stund hahr GULD ee MUND</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Morning time has gold in its mouth"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>The early bird catches the worm — early hours are precious.</div>
+      </div>
+      <div class="proverb-note"><em>Mund</em> is an archaic form of <em>mun</em> (mouth), giving the proverb a poetic, old-fashioned feel even in modern Swedish.</div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">8</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Ingen rök utan eld</div>
+      <div class="proverb-pronunciation">ING-en RURK OO-tan ELD</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"No smoke without fire"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Where there's a rumor, there's usually some truth to it.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">9</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Liten tuva stjälper stort lass</div>
+      <div class="proverb-pronunciation">LEE-ten TU-vah SHEL-per STOORT LASS</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"A small tuft of grass overturns a big load"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Small things can have big consequences — a seemingly minor obstacle can ruin everything.</div>
+      </div>
+      <div class="proverb-note">The image is a heavy cart tipping over when its wheel catches a small grassy mound on the road. The Swedish version of "the straw that broke the camel's back."</div>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">10</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Borta bra men hemma bäst</div>
+      <div class="proverb-pronunciation">BOR-tah BRAH men HEM-ah BEST</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Away is good but home is best"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>There's no place like home.</div>
+      </div>
+      <div class="proverb-note">Said with a contented sigh upon returning from a trip, however wonderful it was.</div>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">11</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Det är inte guld allt som glimmar</div>
+      <div class="proverb-pronunciation">det air IN-teh GULD alt som GLIM-ar</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Not everything that glitters is gold"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Appearances can be deceiving.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">12</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Bra karl reder sig själv</div>
+      <div class="proverb-pronunciation">BRAH KARL REH-der sig SHELV</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"A good man manages himself"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>A capable person is self-reliant and doesn't need help.</div>
+      </div>
+      <div class="proverb-note">Can be used both admiringly (resourceful!) and critically (too proud to ask for help). Very Swedish in its ambivalence about dependence.</div>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">13</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Många bäckar små gör en stor å</div>
+      <div class="proverb-pronunciation">MONG-ah BEK-ar SMOH YURR en STOOR OH</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Many small streams make a big river"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Many small contributions add up to something big — every little bit helps.</div>
+      </div>
+      <div class="proverb-note">Note: <em>å</em> means both the vowel and "river/stream." A delightful double meaning the original speaker almost certainly intended.</div>
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">14</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Hellre fågeln i handen än tio i skogen</div>
+      <div class="proverb-pronunciation">HEL-reh FOW-geln ee HAN-den en TEE-oh ee SKOO-gen</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Better the bird in the hand than ten in the forest"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>A bird in the hand is worth two in the bush — take the certain good over the uncertain greater good.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">15</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Övning ger färdighet</div>
+      <div class="proverb-pronunciation">UV-ning YAIR FAIR-dig-het</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Practice gives skill"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Practice makes perfect.</div>
+      </div>
+      <div class="proverb-note">Encouragement often given to language learners — including those learning Swedish.</div>
+    </div>
+  </div>
+
+  <!-- 16 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">16</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Den som väntar på något gott väntar aldrig för länge</div>
+      <div class="proverb-pronunciation">den som VEN-tar paw NAW-got GOT VEN-tar AL-drig FUR LENG-eh</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"He who waits for something good never waits too long"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Good things come to those who wait.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">17</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Skratt förlänger livet</div>
+      <div class="proverb-pronunciation">SKRATT FUR-leng-er LEE-vet</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Laughter lengthens life"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Laughter is the best medicine.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 18 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">18</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Som man bäddar får man ligga</div>
+      <div class="proverb-pronunciation">som man BED-ar for man LIG-ah</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"As you make your bed, so you must lie in it"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>You have to live with the consequences of your choices.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 19 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">19</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Äpplet faller inte långt från trädet</div>
+      <div class="proverb-pronunciation">EP-let FAL-er IN-teh LONGT fron TRED-et</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"The apple doesn't fall far from the tree"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Children tend to resemble and repeat their parents' patterns.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 20 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">20</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">En svala gör ingen sommar</div>
+      <div class="proverb-pronunciation">en SVAH-lah YURR ING-en SOM-ar</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"One swallow doesn't make a summer"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>One positive sign doesn't mean the hard times are over — one instance doesn't prove a pattern.</div>
+      </div>
+      <div class="proverb-note">In Sweden, the first swallow of the season is eagerly awaited. But seeing just one doesn't mean summer has arrived.</div>
+    </div>
+  </div>
+
+  <!-- 21 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">21</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Tyst vatten har djupt botten</div>
+      <div class="proverb-pronunciation">TYST VAT-en hahr YUPT BOT-en</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Still water has a deep bottom"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Still waters run deep — quiet people often have more depth than they show.</div>
+      </div>
+      <div class="proverb-note">Particularly apt in Sweden, where reserve and understatement are cultural norms. Silence often signals depth, not emptiness.</div>
+    </div>
+  </div>
+
+  <!-- 22 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">22</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Ord är silver, tystnad är guld</div>
+      <div class="proverb-pronunciation">OORD air SIL-ver TYST-nad air GULD</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Words are silver, silence is gold"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Speech is silver, silence is golden — sometimes saying nothing is the wisest choice.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 23 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">23</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Gammal kärlek rostar inte</div>
+      <div class="proverb-pronunciation">GAM-al CHAIR-lek ROOST-ar IN-teh</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Old love doesn't rust"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>An old flame never fully dies — deep feelings resurface even after years apart.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 24 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">24</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Tid läker alla sår</div>
+      <div class="proverb-pronunciation">TEED LEH-ker AL-ah SOHR</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Time heals all wounds"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>With enough time, even the deepest pain and grief will fade.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 25 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">25</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Man talar om varg och vargen kommer</div>
+      <div class="proverb-pronunciation">man TAH-lar om VARG ok VAR-gen KOM-er</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Speak of the wolf and the wolf appears"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Speak of the devil — said when the person you're talking about suddenly appears.</div>
+      </div>
+      <div class="proverb-note">Sweden's version uses a wolf instead of the devil. Fitting for a country with real wolves in the forest.</div>
+    </div>
+  </div>
+
+  <!-- 26 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">26</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Skynda långsamt</div>
+      <div class="proverb-pronunciation">SHYN-dah LONG-samt</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Hurry slowly"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>More haste, less speed — slow down to avoid the mistakes that come from rushing.</div>
+      </div>
+      <div class="proverb-note">From the Latin <em>festina lente</em>. Two words that seem to cancel each other out, and yet make perfect sense together.</div>
+    </div>
+  </div>
+
+  <!-- 27 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">27</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Allas ansvar är ingens ansvar</div>
+      <div class="proverb-pronunciation">AL-as ANS-var air ING-ens ANS-var</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Everyone's responsibility is no one's responsibility"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>When a task belongs to everyone, no one steps up to do it.</div>
+      </div>
+      <div class="proverb-note">The Swedish version of the "tragedy of the commons." Particularly ironic in a society famous for collective responsibility.</div>
+    </div>
+  </div>
+
+  <!-- 28 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">28</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Som man sår, får man skörda</div>
+      <div class="proverb-pronunciation">som man SOHR for man SHURR-dah</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"As you sow, so shall you reap"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Your actions have consequences — what you put in is what you get out.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 29 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">29</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Var sak har sin tid</div>
+      <div class="proverb-pronunciation">vahr SAHK hahr sin TEED</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Every thing has its time"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Everything happens in its own time — there is a right moment for everything.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 30 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">30</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Kärleken är blind</div>
+      <div class="proverb-pronunciation">CHAIR-lek-en air BLIND</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Love is blind"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>When you're in love, you cannot see flaws — in your beloved or yourself.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 31 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">31</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Ingen är profet i sitt eget land</div>
+      <div class="proverb-pronunciation">ING-en air pro-FEET ee sit EE-get LAND</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"No one is a prophet in their own land"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>It's hard to be respected where you grew up — familiarity can breed contempt.</div>
+      </div>
+      <div class="proverb-note">From the Gospel of Luke. A warning against expecting recognition from those closest to home.</div>
+    </div>
+  </div>
+
+  <!-- 32 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">32</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Kärlek och hosta kan inte döljas</div>
+      <div class="proverb-pronunciation">CHAIR-lek ok HOOS-tah kan IN-teh DUL-yas</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Love and a cough cannot be hidden"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Some things are impossible to conceal, no matter how hard you try.</div>
+      </div>
+      <div class="proverb-note">One of the most charming proverbs in this collection — the pairing of love and a cough is unexpectedly perfect.</div>
+    </div>
+  </div>
+
+  <!-- 33 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">33</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Varje moln har en silverkant</div>
+      <div class="proverb-pronunciation">VAR-yeh MOLN hahr en SIL-ver-kant</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Every cloud has a silver lining"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>There is something positive to be found in every negative situation.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 34 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">34</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Lycklig i spel, olycklig i kärlek</div>
+      <div class="proverb-pronunciation">LYK-lig ee SPEEL oh-LYK-lig ee CHAIR-lek</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Lucky in games, unlucky in love"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>You can't be lucky at everything — fortune balances itself out.</div>
+      </div>
+      <div class="proverb-note">Said with a sympathetic smile when someone wins at cards but can't seem to make a relationship work.</div>
+    </div>
+  </div>
+
+  <!-- 35 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">35</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Det ordnar sig</div>
+      <div class="proverb-pronunciation">det ORD-nar sig</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"It will sort itself out"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Things will work out in the end — don't worry too much about it.</div>
+      </div>
+      <div class="proverb-note">Perhaps the most Swedish phrase in this entire collection. Three words that capture a deep national confidence in the eventual rightness of things.</div>
+    </div>
+  </div>
+
+  <!-- 36 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">36</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Det är lättare sagt än gjort</div>
+      <div class="proverb-pronunciation">det air LET-areh SAGT en YOORT</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"It is easier said than done"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Taking action is always harder than talking about it.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 37 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">37</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Den som sover syndar inte</div>
+      <div class="proverb-pronunciation">den som SOO-ver SYN-dar IN-teh</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"He who sleeps does not sin"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>You can't cause trouble while you're asleep — sometimes doing nothing is the wisest course.</div>
+      </div>
+      <div class="proverb-note">Often said with a smile when justifying a long lie-in. Sweden takes its sleep seriously.</div>
+    </div>
+  </div>
+
+  <!-- 38 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">38</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Hjälp dig själv, så hjälper Gud dig</div>
+      <div class="proverb-pronunciation">YELP dig SHELV soh YEL-per GUUD dig</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Help yourself and God will help you"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>God helps those who help themselves — take initiative before expecting outside help.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 39 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">39</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Inga nyheter, goda nyheter</div>
+      <div class="proverb-pronunciation">ING-ah NY-heh-ter GOO-dah NY-heh-ter</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"No news, good news"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>If you haven't heard anything bad, things are probably fine.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 40 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">40</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Det händer den bäste</div>
+      <div class="proverb-pronunciation">det HEN-der den BES-teh</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"It happens to the best"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Even the most capable people make mistakes — it can happen to anyone.</div>
+      </div>
+      <div class="proverb-note">Generous consolation, offered immediately after someone drops something, forgets a meeting, or makes a silly error.</div>
+    </div>
+  </div>
+
+  <!-- 41 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">41</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Man kan inte ha allt</div>
+      <div class="proverb-pronunciation">man kan IN-teh hah ALT</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"You can't have everything"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>We all have to accept limitations — demanding everything is unrealistic.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 42 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">42</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Pengar luktar inte</div>
+      <div class="proverb-pronunciation">PENG-ar LUK-tar IN-teh</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Money has no smell"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Money is money, regardless of how it was earned — the source doesn't change its value.</div>
+      </div>
+      <div class="proverb-note">From the Latin <em>pecunia non olet</em> — attributed to Roman Emperor Vespasian, who taxed public urinals and used the profits to fund Rome.</div>
+    </div>
+  </div>
+
+  <!-- 43 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">43</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Att göra en höna av en fjäder</div>
+      <div class="proverb-pronunciation">at YURR-ah en HU-nah ahv en FYEH-der</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"To make a hen out of a feather"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>To make a mountain out of a molehill — to greatly exaggerate a small problem.</div>
+      </div>
+      <div class="proverb-note">One of the most vivid expressions in Swedish. You started with a single feather and somehow ended up with a whole hen.</div>
+    </div>
+  </div>
+
+  <!-- 44 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">44</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Ju fler kockar, desto sämre soppa</div>
+      <div class="proverb-pronunciation">yu FLAIR KOK-ar DES-toh SEM-reh SOP-ah</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"The more cooks, the worse the soup"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Too many cooks spoil the broth — too many people involved in a task leads to a worse result.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 45 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">45</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Det lönar sig att vara ärlig</div>
+      <div class="proverb-pronunciation">det LU-nar sig at VAH-rah AIR-lig</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"It pays to be honest"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Honesty is the best policy — truth-telling ultimately rewards you.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 46 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">46</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Man ska inte kasta pärlor för svin</div>
+      <div class="proverb-pronunciation">man SKAH IN-teh KAS-tah PAIR-lor FUR SVEEN</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Don't cast pearls before swine"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Don't offer something valuable to those who won't appreciate it.</div>
+      </div>
+      <div class="proverb-note">From the Sermon on the Mount (Matthew 7:6). Same meaning in Swedish as in English.</div>
+    </div>
+  </div>
+
+  <!-- 47 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">47</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Ensam är stark</div>
+      <div class="proverb-pronunciation">EN-sam air STARK</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Alone is strong"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Independence and self-reliance are strengths, not weaknesses.</div>
+      </div>
+      <div class="proverb-note">A distinctly Swedish proverb reflecting the national value placed on individual independence. Not lonely — strong.</div>
+    </div>
+  </div>
+
+  <!-- 48 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">48</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Vågat är halvt vunnet</div>
+      <div class="proverb-pronunciation">VOH-gat air HALVT VUN-et</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Dared is half won"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Nothing ventured, nothing gained — having the courage to start is already half the battle.</div>
+      </div>
+      <div class="proverb-note">Excellent encouragement for anyone about to take a bold step — apply for the job, send the message, book the trip.</div>
+    </div>
+  </div>
+
+  <!-- 49 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">49</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Den som gräver en grop för andra faller själv däri</div>
+      <div class="proverb-pronunciation">den som GREV-er en GROOP foor AN-drah FAL-er SHELV deh-REE</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"He who digs a pit for others falls in it himself"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>Schemes intended to harm others tend to backfire on the schemer.</div>
+      </div>
+      <div class="proverb-note">From the Book of Proverbs (26:27). Karma, expressed as a cautionary tale about digging.</div>
+    </div>
+  </div>
+
+  <!-- 50 -->
+  <div class="proverb avoid-break">
+    <div class="proverb-num">50</div>
+    <div class="proverb-body">
+      <div class="proverb-sv">Livet är kort, konsten lång</div>
+      <div class="proverb-pronunciation">LEE-vet air KOORT KONS-ten LONG</div>
+      <div class="proverb-rows">
+        <div class="proverb-row literal"><span class="lbl">Literal</span>"Life is short, art is long"</div>
+        <div class="proverb-row"><span class="lbl">Meaning</span>There is always more to learn and create than a lifetime can hold — keep going.</div>
+      </div>
+      <div class="proverb-note">From the Latin <em>ars longa, vita brevis</em>. A beautiful final proverb for a collection about language — the most human art of all.</div>
+    </div>
+  </div>
+
+</div><!-- /proverbs-section -->
+
+<!-- ═══════ BACK MATTER ═══════ -->
+<div class="back-matter page-break avoid-break">
+  <div class="back-rule"></div>
+  <h2>Tack för att du läser</h2>
+  <p>Thank you for reading. I hope these proverbs have given you a small window into how Swedes think, talk, and see the world — through cows on ice, bears that haven't been shot yet, and coughs that cannot be hidden.</p>
+  <p>If you'd like to go further, come learn Swedish with me at <strong>StudySwedish.com</strong> — structured lessons from A1 to C1, with grammar, vocabulary, and the kind of cultural context that makes a language come alive.</p>
+  <a class="site" href="https://studyswedish.com">studyswedish.com</a>
+  <p class="copyright">© Denise — StudySwedish.com &nbsp;·&nbsp; All rights reserved</p>
+</div>
+
+</body>
+</html>

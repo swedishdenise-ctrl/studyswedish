@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Kit – Swedish with Denise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #D9D2C9;
+    }
+
+    .page {
+      width: 960px;
+      min-height: 1280px;
+      background: #FAF8F4;
+      margin: 0 auto 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media print {
+      body { background: white; }
+      .page {
+        margin: 0;
+        page-break-after: always;
+        width: 100%;
+        min-height: 100vh;
+        box-shadow: none;
+      }
+    }
+
+    /* ─── PAGE 1 ─── */
+    .page-1 { display: flex; }
+
+    .photo-col {
+      width: 42%;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .photo-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .photo-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 35%;
+      background: linear-gradient(to top, rgba(250,248,244,0.25), transparent);
+    }
+
+    .content-col {
+      width: 58%;
+      padding: 72px 56px 56px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .corner-tr {
+      position: absolute;
+      top: 28px; right: 28px;
+      width: 44px; height: 44px;
+      border-top: 1.5px solid #C9A96E;
+      border-right: 1.5px solid #C9A96E;
+    }
+
+    .corner-bl {
+      position: absolute;
+      bottom: 28px; left: 28px;
+      width: 44px; height: 44px;
+      border-bottom: 1.5px solid #C9A96E;
+      border-left: 1.5px solid #C9A96E;
+    }
+
+    .kit-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #C9A96E;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 50px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      color: #1A1A1A;
+      line-height: 1.05;
+    }
+
+    .gold-rule {
+      width: 52px;
+      height: 1.5px;
+      background: linear-gradient(to right, #C9A96E, #F5E6C0, #C9A96E);
+      margin: 28px 0;
+    }
+
+    .bio {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #3A3935;
+      font-weight: 300;
+    }
+
+    .quick-stats {
+      display: flex;
+      align-items: flex-end;
+      gap: 0;
+      margin-top: 44px;
+    }
+
+    .qs-item { display: flex; flex-direction: column; }
+
+    .qs-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 500;
+      color: #C9A96E;
+      line-height: 1;
+    }
+
+    .qs-label {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #9B9690;
+      margin-top: 4px;
+    }
+
+    .qs-sep {
+      width: 1px;
+      height: 40px;
+      background: #D9D2C9;
+      margin: 0 24px;
+      align-self: center;
+    }
+
+    .platforms {
+      margin-top: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .platform-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .p-icon {
+      width: 34px; height: 34px;
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .p-icon.ig { background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45); }
+    .p-icon.tt { background: #010101; }
+
+    .p-handle { font-size: 14px; color: #3A3935; font-weight: 400; }
+    .p-count {
+      margin-left: auto;
+      font-size: 13px;
+      color: #9B9690;
+      font-weight: 300;
+    }
+
+    .web-tag {
+      margin-top: 36px;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #C9A96E;
+    }
+
+    /* ─── PAGE 2 ─── */
+    .page-2 { padding: 72px; }
+
+    .pg-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #C9A96E;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .pg-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 500;
+      color: #1A1A1A;
+      line-height: 1;
+      margin-bottom: 48px;
+    }
+
+    .stats-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 44px;
+    }
+
+    .sc {
+      background: #F0EBE3;
+      border-radius: 3px;
+      padding: 28px 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sc::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, #C9A96E, #F5E6C0, #C9A96E);
+    }
+
+    .sc-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 46px;
+      font-weight: 500;
+      color: #1A1A1A;
+      line-height: 1;
+    }
+
+    .sc-suf {
+      font-size: 24px;
+      color: #C9A96E;
+    }
+
+    .sc-lbl {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #9B9690;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .platforms-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 44px;
+    }
+
+    .pc {
+      background: #F0EBE3;
+      border-radius: 3px;
+      padding: 30px;
+    }
+
+    .pc-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #DDD5C8;
+    }
+
+    .pc-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #1A1A1A;
+    }
+
+    .pc-handle {
+      font-size: 12px;
+      color: #9B9690;
+      margin-top: 1px;
+    }
+
+    .pc-metrics { display: flex; flex-direction: column; gap: 14px; }
+
+    .pm-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .pm-key {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #9B9690;
+    }
+
+    .pm-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #1A1A1A;
+    }
+
+    .pm-val.small {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #5A5550;
+    }
+
+    .section-hd {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 500;
+      color: #1A1A1A;
+      margin-bottom: 20px;
+    }
+
+    .reel-row {
+      display: flex;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid #E8E0D5;
+    }
+
+    .reel-n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: #C9A96E;
+      width: 32px;
+      flex-shrink: 0;
+    }
+
+    .reel-t {
+      font-size: 14px;
+      color: #3A3935;
+      flex: 1;
+      padding: 0 20px;
+      font-weight: 300;
+    }
+
+    .reel-v {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: #1A1A1A;
+      white-space: nowrap;
+    }
+
+    .reel-v span {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      color: #9B9690;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-left: 4px;
+    }
+
+    /* ─── PAGE 3 ─── */
+    .page-3 { padding: 72px; }
+
+    .brands-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+      margin-bottom: 52px;
+    }
+
+    .brand-tag {
+      padding: 10px 26px;
+      border: 1px solid #C9A96E;
+      border-radius: 2px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #5A4E40;
+      font-weight: 400;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 20px;
+      margin-bottom: 52px;
+    }
+
+    .offer {
+      padding: 24px;
+      background: #F0EBE3;
+      border-radius: 3px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .o-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #C9A96E;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .o-text h4 {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1A1A1A;
+      margin-bottom: 5px;
+    }
+
+    .o-text p {
+      font-size: 13px;
+      color: #9B9690;
+      line-height: 1.55;
+      font-weight: 300;
+    }
+
+    .contact-bar {
+      background: #1A1A1A;
+      color: white;
+      padding: 48px 52px;
+      border-radius: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .cb-left h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    .cb-left p {
+      font-size: 13px;
+      color: #888;
+      font-weight: 300;
+      max-width: 280px;
+      line-height: 1.55;
+    }
+
+    .cb-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .ci {
+      font-size: 14px;
+      color: #D9D2C9;
+      font-weight: 300;
+    }
+
+    .ci .g { color: #C9A96E; }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════ PAGE 1: Introduction ══════════════════ -->
+  <div class="page page-1">
+
+    <div class="photo-col">
+      <img src="photo.jpog.png" alt="Denise">
+      <div class="photo-overlay"></div>
+    </div>
+
+    <div class="content-col">
+      <div class="corner-tr"></div>
+
+      <div>
+        <p class="kit-label">Media Kit &nbsp;·&nbsp; 2026</p>
+        <h1 class="brand-name">Swedish<br>with Denise</h1>
+        <div class="gold-rule"></div>
+        <p class="bio">
+          I'm Denise — a native Swede living in Spain who creates content that decodes Swedish culture for the world. My reels don't teach textbook Swedish; they reveal the insider secrets, unspoken rules, and cultural quirks that make Swedes uniquely Swedish. That's what drives millions of views and a fiercely loyal, niche audience who genuinely can't get this perspective anywhere else.
+        </p>
+
+        <div class="quick-stats">
+          <div class="qs-item">
+            <span class="qs-number">433k</span>
+            <span class="qs-label">Monthly Reach</span>
+          </div>
+          <div class="qs-sep"></div>
+          <div class="qs-item">
+            <span class="qs-number">1.3M</span>
+            <span class="qs-label">Monthly Views</span>
+          </div>
+          <div class="qs-sep"></div>
+          <div class="qs-item">
+            <span class="qs-number">26.4k</span>
+            <span class="qs-label">Followers</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="platforms">
+          <div class="platform-row">
+            <div class="p-icon ig">📷</div>
+            <span class="p-handle">@swedish_with_denise</span>
+            <span class="p-count">Instagram &nbsp;·&nbsp; 9,500</span>
+          </div>
+          <div class="platform-row">
+            <div class="p-icon tt">♪</div>
+            <span class="p-handle">@swedish_with_denise</span>
+            <span class="p-count">TikTok &nbsp;·&nbsp; 16,900</span>
+          </div>
+        </div>
+
+        <p class="web-tag">studyswedish.com</p>
+      </div>
+
+      <div class="corner-bl"></div>
+    </div>
+
+  </div>
+
+
+  <!-- ══════════════════ PAGE 2: Stats ══════════════════ -->
+  <div class="page page-2">
+
+    <p class="pg-label">Performance Overview</p>
+    <h2 class="pg-title">By the Numbers</h2>
+
+    <div class="stats-4">
+      <div class="sc">
+        <div class="sc-num">433<span class="sc-suf">k</span></div>
+        <div class="sc-lbl">Accounts Reached<br>Monthly</div>
+      </div>
+      <div class="sc">
+        <div class="sc-num">1.3<span class="sc-suf">M</span></div>
+        <div class="sc-lbl">Video Views<br>Last 30 Days</div>
+      </div>
+      <div class="sc">
+        <div class="sc-num">61.5<span class="sc-suf">k</span></div>
+        <div class="sc-lbl">Total Interactions<br>Last 30 Days</div>
+      </div>
+      <div class="sc">
+        <div class="sc-num">26.4<span class="sc-suf">k</span></div>
+        <div class="sc-lbl">Combined<br>Followers</div>
+      </div>
+    </div>
+
+    <div class="platforms-2col">
+
+      <div class="pc">
+        <div class="pc-head">
+          <div class="p-icon ig" style="width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;">📷</div>
+          <div>
+            <div class="pc-name">Instagram</div>
+            <div class="pc-handle">@swedish_with_denise</div>
+          </div>
+        </div>
+        <div class="pc-metrics">
+          <div class="pm-row">
+            <span class="pm-key">Followers</span>
+            <span class="pm-val">9,500</span>
+          </div>
+          <div class="pm-row">
+            <span class="pm-key">Monthly Reach</span>
+            <span class="pm-val">433,000</span>
+          </div>
+          <div class="pm-row">
+            <span class="pm-key">Monthly Views</span>
+            <span class="pm-val">1,300,000</span>
+          </div>
+          <div class="pm-row">
+            <span class="pm-key">Interactions / mo</span>
+            <span class="pm-val">61,500</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-head">
+          <div class="p-icon tt" style="width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;">♪</div>
+          <div>
+            <div class="pc-name">TikTok</div>
+            <div class="pc-handle">@swedish_with_denise</div>
+          </div>
+        </div>
+        <div class="pc-metrics">
+          <div class="pm-row">
+            <span class="pm-key">Followers</span>
+            <span class="pm-val">16,900</span>
+          </div>
+          <div class="pm-row">
+            <span class="pm-key">Content Type</span>
+            <span class="pm-val small">Short-form Reels</span>
+          </div>
+          <div class="pm-row">
+            <span class="pm-key">Niche</span>
+            <span class="pm-val small">Swedish Culture & Lifestyle</span>
+          </div>
+          <div class="pm-row">
+            <span class="pm-key">Cross-posts</span>
+            <span class="pm-val small">All content dual-published</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="section-hd">Top Performing Content</h3>
+    <div class="reel-row">
+      <span class="reel-n">01</span>
+      <span class="reel-t">"This is why you don't understand when Swedish people talk"</span>
+      <span class="reel-v">189,970<span>views</span></span>
+    </div>
+    <div class="reel-row">
+      <span class="reel-n">02</span>
+      <span class="reel-t">"If a Swede tells you this... you know you messed up"</span>
+      <span class="reel-v">162,024<span>views</span></span>
+    </div>
+    <div class="reel-row">
+      <span class="reel-n">03</span>
+      <span class="reel-t">"How other countries swear VS Sweden"</span>
+      <span class="reel-v">124,439<span>views</span></span>
+    </div>
+
+  </div>
+
+
+  <!-- ══════════════════ PAGE 3: Collaborations ══════════════════ -->
+  <div class="page page-3">
+
+    <p class="pg-label">Work With Me</p>
+    <h2 class="pg-title">Collaborations</h2>
+
+    <h3 class="section-hd">Previous Brand Partners</h3>
+    <div class="brands-list">
+      <div class="brand-tag">Rusta</div>
+      <div class="brand-tag">Face Stockholm</div>
+      <div class="brand-tag">Fytoo Glasses</div>
+      <div class="brand-tag">Dossier Perfumes</div>
+      <div class="brand-tag">AnytoSpeech</div>
+    </div>
+
+    <h3 class="section-hd">What I Offer</h3>
+    <div class="offers-grid">
+      <div class="offer">
+        <div class="o-dot"></div>
+        <div class="o-text">
+          <h4>Sponsored Reels &amp; TikToks</h4>
+          <p>Native-style video content woven naturally into my storytelling format — never stiff or scripted</p>
+        </div>
+      </div>
+      <div class="offer">
+        <div class="o-dot"></div>
+        <div class="o-text">
+          <h4>Instagram Stories</h4>
+          <p>Product features, link stickers, and day-in-the-life integrations that drive real clicks</p>
+        </div>
+      </div>
+      <div class="offer">
+        <div class="o-dot"></div>
+        <div class="o-text">
+          <h4>Product Reviews &amp; Unboxings</h4>
+          <p>Honest, engaging reviews that feel personal and build genuine trust with my audience</p>
+        </div>
+      </div>
+      <div class="offer">
+        <div class="o-dot"></div>
+        <div class="o-text">
+          <h4>Long-term Partnerships</h4>
+          <p>Ongoing brand ambassador relationships for consistent audience exposure and maximum impact</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-bar">
+      <div class="cb-left">
+        <h3>Let's work together</h3>
+        <p>I'd love to hear about your brand and find the right way to collaborate. All enquiries welcome.</p>
+      </div>
+      <div class="cb-right">
+        <span class="ci"><span class="g">Email</span> &nbsp; swedish.denise@gmail.com</span>
+        <span class="ci"><span class="g">Instagram</span> &nbsp; @swedish_with_denise</span>
+        <span class="ci"><span class="g">Web</span> &nbsp; studyswedish.com</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

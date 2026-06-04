@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice 010 — Hedengrens</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; width: 100%; padding: 40px; }
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f5f5f0;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      color: #1a1a1a;
+    }
+
+    .page {
+      background: #ffffff;
+      width: 750px;
+      padding: 60px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 3px solid #1a1a1a;
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 13px;
+      color: #666;
+      margin-top: 4px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .invoice-label {
+      text-align: right;
+    }
+
+    .invoice-label h1 {
+      font-size: 32px;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+    }
+
+    .invoice-label p {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: #666;
+      margin-top: 6px;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+
+    .meta-block h3 {
+      font-family: 'Arial', sans-serif;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .meta-block p {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #1a1a1a;
+    }
+
+    .notice {
+      display: inline-block;
+      background: #1a1a1a;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      margin-bottom: 36px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0;
+    }
+
+    thead tr {
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    thead th {
+      font-family: 'Arial', sans-serif;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #999;
+      padding: 0 0 12px 0;
+      text-align: left;
+    }
+
+    thead th.right { text-align: right; }
+
+    tbody tr {
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    tbody td {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      padding: 16px 0;
+      vertical-align: top;
+      color: #1a1a1a;
+    }
+
+    tbody td.right { text-align: right; }
+
+    .book-title {
+      font-style: italic;
+    }
+
+    .totals {
+      margin-top: 0;
+      border-top: 3px solid #1a1a1a;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .totals-table {
+      width: 280px;
+      margin-top: 0;
+    }
+
+    .totals-table td {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      padding: 10px 0;
+      color: #1a1a1a;
+    }
+
+    .totals-table td.right { text-align: right; }
+
+    .total-row td {
+      font-size: 16px;
+      font-weight: bold;
+      border-top: 1px solid #1a1a1a;
+      padding-top: 14px;
+    }
+
+    .payment {
+      margin-top: 48px;
+      border-top: 1px solid #e8e8e8;
+      padding-top: 28px;
+    }
+
+    .payment h3 {
+      font-family: 'Arial', sans-serif;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #999;
+      margin-bottom: 14px;
+    }
+
+    .payment-details {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: #1a1a1a;
+    }
+
+    .footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #e8e8e8;
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      color: #aaa;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="header">
+      <div>
+        <div class="brand">Denise Lundqvist</div>
+        <div class="brand-sub">swedish.denise@gmail.com</div>
+      </div>
+      <div class="invoice-label">
+        <h1>Invoice</h1>
+        <p>No. 010 &nbsp;·&nbsp; 25 May 2026</p>
+      </div>
+    </div>
+
+    <div class="meta">
+      <div class="meta-block">
+        <h3>Billed To</h3>
+        <p>
+          Hedengrens bokhandel AB<br>
+          Grev Turegatan 13A (Sturegallerian)<br>
+          Box 5509<br>
+          114 85 Stockholm
+        </p>
+      </div>
+      <div class="meta-block" style="text-align:right;">
+        <h3>Payment Terms</h3>
+        <p>Pro-forma<br>Payment required before dispatch</p>
+      </div>
+    </div>
+
+    <div class="notice">Pro-forma — Payment Required Before Dispatch</div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:50%">Description</th>
+          <th style="width:15%">Qty</th>
+          <th class="right" style="width:17%">Unit Price</th>
+          <th class="right" style="width:18%">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="book-title">How to Understand a Swede — Det är lugnt</span></td>
+          <td>2</td>
+          <td class="right">120 kr</td>
+          <td class="right">240 kr</td>
+        </tr>
+        <tr>
+          <td>Shipping</td>
+          <td>—</td>
+          <td class="right">Included</td>
+          <td class="right">—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <table class="totals-table">
+        <tr>
+          <td>Subtotal</td>
+          <td class="right">240 kr</td>
+        </tr>
+        <tr class="total-row">
+          <td>Total Due (SEK)</td>
+          <td class="right">240 kr</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="payment">
+      <h3>Payment Options</h3>
+      <div class="payment-details">
+        <strong>Option 1 — PayPal</strong><br>
+        Send to: &nbsp;<strong>dlundqvist12@gmail.com</strong><br>
+        <br>
+        <strong>Option 2 — Bank Transfer (Revolut)</strong><br>
+        Beneficiary: &nbsp;<strong>Denise Lundqvist</strong><br>
+        IBAN: &nbsp;<strong>LT83 3250 0711 0931 0796</strong><br>
+        BIC/SWIFT: &nbsp;<strong>REVOLT21</strong><br>
+        Bank: &nbsp;<strong>Revolut Bank UAB, Konstitucijos ave. 21B, 08130, Vilnius, Lithuania</strong>
+      </div>
+    </div>
+
+    <div class="footer">
+      Thank you for stocking How to Understand a Swede &nbsp;·&nbsp; Questions? swedish.denise@gmail.com
+    </div>
+
+  </div>
+</body>
+</html>
