@@ -60,8 +60,20 @@ export function SiteHeader() {
     : { color: `${WARM_TEXT}CC` };
 
   return (
+    <>
+    {/* Announcement strip */}
+    <div className="fixed inset-x-0 top-0 z-[60] flex h-9 items-center justify-center px-4 text-center" style={{ background: "#C9A04A" }}>
+      <Link
+        href="/coaching"
+        className="text-[12px] font-medium tracking-wide transition hover:opacity-80"
+        style={{ color: "#1A1208" }}
+      >
+        Now taking 1:1 coaching students — Book a session →
+      </Link>
+    </div>
+
     <header
-      className="fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow] duration-300"
+      className="fixed inset-x-0 top-9 z-50 transition-[background-color,border-color,box-shadow] duration-300"
       style={
         floating
           ? { background: "transparent", borderBottom: "1px solid transparent" }
@@ -108,7 +120,7 @@ export function SiteHeader() {
             {openMenu === "sweden" && <DesktopDropdown links={swedenLinks} />}
           </li>
           <li>
-            <Link href="/coaching" className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition hover:bg-black/5" style={deskBtnStyle}>
+            <Link href="/coaching" className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition" style={{ color: GOLD }}>
               Coaching
             </Link>
           </li>
@@ -213,7 +225,7 @@ export function SiteHeader() {
                   </li>
 
                   <li>
-                    <Link href="/coaching" className="block px-6 py-4 text-base font-medium hover:bg-black/5" style={{ color: WARM_TEXT }}>
+                    <Link href="/coaching" className="block px-6 py-4 text-base font-semibold hover:bg-black/5" style={{ color: GOLD }}>
                       Coaching
                     </Link>
                   </li>
@@ -245,6 +257,7 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
+    </>
   );
 }
 
