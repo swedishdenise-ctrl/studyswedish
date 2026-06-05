@@ -73,11 +73,11 @@ export function SiteHeader() {
 
     <header
       className="fixed inset-x-0 z-50 transition-[background-color,border-color,box-shadow] duration-300"
-      style={{ top: "36px" }}
       style={
         floating
-          ? { background: "transparent", borderBottom: "1px solid transparent" }
+          ? { top: "36px", background: "transparent", borderBottom: "1px solid transparent" }
           : {
+              top: "36px",
               background: `${WARM_BG}F2`,
               borderBottom: `1px solid ${GOLD}22`,
               boxShadow: "0 1px 12px rgba(61,43,20,0.06)",
