@@ -62,18 +62,18 @@ export function SiteHeader() {
   return (
     <>
     {/* Announcement strip */}
-    <div className="fixed inset-x-0 top-0 z-[60] flex h-9 items-center justify-center px-4 text-center" style={{ background: "#C9A04A" }}>
+    <div style={{ position: "fixed", inset: "0 0 auto 0", top: 0, zIndex: 60, height: "36px", background: "#C9A04A", display: "flex", alignItems: "center", justifyContent: "center", padding: "0 16px" }}>
       <Link
         href="/coaching"
-        className="text-[12px] font-medium tracking-wide transition hover:opacity-80"
-        style={{ color: "#1A1208" }}
+        style={{ fontSize: "12px", fontWeight: 500, letterSpacing: "0.05em", color: "#1A1208", textDecoration: "none" }}
       >
         Now taking 1:1 coaching students — Book a session →
       </Link>
     </div>
 
     <header
-      className="fixed inset-x-0 top-9 z-50 transition-[background-color,border-color,box-shadow] duration-300"
+      className="fixed inset-x-0 z-50 transition-[background-color,border-color,box-shadow] duration-300"
+      style={{ top: "36px" }}
       style={
         floating
           ? { background: "transparent", borderBottom: "1px solid transparent" }
