@@ -7,6 +7,8 @@ export const metadata = {
 };
 
 const CALENDLY = "https://calendly.com/swedish-denise";
+const STRIPE_SINGLE = "https://buy.stripe.com/28EbJ00x9gYTdCX0kGf3a00";
+const STRIPE_PACK   = "https://buy.stripe.com/8x29AS1Bd0ZV56r4AWf3a01";
 
 export default function CoachingPage() {
   return (
@@ -167,23 +169,36 @@ export default function CoachingPage() {
             </div>
             <div className="border-t" style={{ borderColor: "#C9A04A25" }} />
           </div>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-wrap gap-3">
             <Link
-              href={CALENDLY}
+              href={STRIPE_SINGLE}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide transition hover:opacity-90 active:scale-[0.98]"
+              className="inline-block rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide transition hover:opacity-90 active:scale-[0.98]"
               style={{ background: "#C9A04A", color: "#1A1208" }}
             >
-              Book on Calendly
+              Pay for one session →
             </Link>
-            <p className="mt-5 text-sm" style={{ color: "#3D2B1470" }}>
-              Payment details are sent after booking. Questions?{" "}
-              <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
-                swedish.denise@gmail.com
-              </a>
-            </p>
+            <Link
+              href={STRIPE_PACK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-full border px-7 py-3.5 text-sm font-semibold tracking-wide transition hover:opacity-80"
+              style={{ borderColor: "#C9A04A", color: "#1A1208" }}
+            >
+              Pay for 4-pack →
+            </Link>
           </div>
+          <p className="mt-5 text-sm" style={{ color: "#3D2B1470" }}>
+            After payment I'll be in touch to schedule your session. Prefer to pick a time first?{" "}
+            <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
+              Book on Calendly
+            </a>{" "}
+            then pay after. Questions?{" "}
+            <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
+              swedish.denise@gmail.com
+            </a>
+          </p>
         </div>
       </section>
 
