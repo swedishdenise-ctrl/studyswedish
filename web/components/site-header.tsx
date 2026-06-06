@@ -61,17 +61,13 @@ export function SiteHeader() {
     <>
     <header
       className="fixed inset-x-0 z-50 transition-[background-color,border-color,box-shadow] duration-300"
-      style={
-        floating
-          ? { top: "36px", background: "transparent", borderBottom: "1px solid transparent" }
-          : {
-              top: "36px",
-              background: `${WARM_BG}F2`,
-              borderBottom: `1px solid ${GOLD}22`,
-              boxShadow: "0 1px 12px rgba(61,43,20,0.06)",
-              backdropFilter: "blur(12px)",
-            }
-      }
+      style={{
+        top: "36px",
+        background: `${WARM_BG}F2`,
+        borderBottom: `1px solid ${GOLD}22`,
+        boxShadow: "0 1px 12px rgba(61,43,20,0.06)",
+        backdropFilter: "blur(12px)",
+      }}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         {/* Logo */}
