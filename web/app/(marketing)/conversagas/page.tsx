@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export const metadata = {
   title: "Conversagas, Learn Swedish Online | StudySwedish",
@@ -172,7 +172,7 @@ export default function ConversagasPage() {
           <div className="absolute bottom-0 left-0 h-px w-full opacity-20" style={{ background: "linear-gradient(90deg, transparent, #C9A04A, transparent)" }} />
         </div>
 
-        <div className="relative mx-auto max-w-3xl">
+        <div className="relative mx-auto max-w-2xl">
           <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#C9A04A80" }}>
             My language app
           </p>
@@ -202,8 +202,8 @@ export default function ConversagasPage() {
       </section>
 
       {/* Four features */}
-      <section className="px-6 py-16 sm:py-20" style={{ background: "#FAF5EE" }}>
-        <div className="mx-auto max-w-3xl">
+      <section className="px-6 py-20" style={{ background: "#FAF5EE" }}>
+        <div className="mx-auto max-w-2xl">
           <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
             How it works
           </p>
@@ -214,70 +214,58 @@ export default function ConversagasPage() {
             Every part is built to reinforce every other. Your reading sharpens your drills.
             Your drills feed your lessons. Your performance shows you the path.
           </p>
-
-          <div className="mt-10 space-y-4">
+          <div className="mt-10">
             {features.map((f) => (
-              <div
-                key={f.number}
-                className="flex gap-6 rounded-2xl border bg-white p-6 sm:p-8"
-                style={{ borderColor: "#C9A04A15" }}
-              >
-                <span
-                  className="mt-0.5 shrink-0 font-display text-3xl font-semibold leading-none"
-                  style={{ color: "#C9A04A30" }}
-                >
-                  {f.number}
-                </span>
-                <div>
-                  <h3 className="font-display text-lg font-semibold" style={{ color: "#1A1208" }}>
-                    {f.title}
-                  </h3>
-                  <p className="mt-2 text-[15px] leading-relaxed" style={{ color: "#3D2B1460" }}>
-                    {f.desc}
-                  </p>
-                </div>
+              <div key={f.number} className="border-t py-7" style={{ borderColor: "#C9A04A20" }}>
+                <span className="font-display text-sm font-semibold" style={{ color: "#C9A04A60" }}>{f.number}</span>
+                <h3 className="mt-2 font-display text-xl font-semibold" style={{ color: "#1A1208" }}>{f.title}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed max-w-xl" style={{ color: "#3D2B1460" }}>{f.desc}</p>
               </div>
             ))}
+            <div className="border-t" style={{ borderColor: "#C9A04A20" }} />
           </div>
         </div>
       </section>
 
-      {/* FAQ, AEO + GEO */}
-      <section className="px-6 py-16" style={{ background: "#F0E8D8" }}>
-        <div className="mx-auto max-w-3xl">
+      {/* FAQ */}
+      <section className="px-6 py-20" style={{ background: "#FAF5EE" }}>
+        <div className="mx-auto max-w-2xl">
+          <div className="h-px mb-16" style={{ background: "#C9A04A20" }} />
           <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
             Questions
           </p>
           <h2 className="mt-3 font-display text-2xl font-semibold" style={{ color: "#1A1208" }}>
             Everything you need to know.
           </h2>
-          <div className="mt-8 space-y-5">
+          <div className="mt-10">
             {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-2xl border bg-white p-6" style={{ borderColor: "#C9A04A15" }}>
-                <h3 className="font-semibold text-[15px]" style={{ color: "#1A1208" }}>{faq.q}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed" style={{ color: "#3D2B1460" }}>{faq.a}</p>
+              <div key={faq.q} className="border-t py-7" style={{ borderColor: "#C9A04A20" }}>
+                <h3 className="font-display text-lg font-semibold" style={{ color: "#1A1208" }}>{faq.q}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed" style={{ color: "#3D2B1460" }}>{faq.a}</p>
               </div>
             ))}
+            <div className="border-t" style={{ borderColor: "#C9A04A20" }} />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="px-6 py-16" style={{ background: "#1A1208" }}>
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-display text-3xl font-semibold" style={{ color: "#F5EDE3" }}>
+      <section className="px-6 pb-28" style={{ background: "#FAF5EE" }}>
+        <div className="mx-auto max-w-2xl">
+          <div className="h-px mb-16" style={{ background: "#C9A04A20" }} />
+          <h2 className="font-display text-3xl font-semibold" style={{ color: "#1A1208" }}>
             Swedish now. Live.
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-[16px] leading-relaxed" style={{ color: "#F5EDE350" }}>
-            Start your first lesson today. No download, no card, no commitment —
-            just Swedish, the way it should be taught.
+          <p className="mt-4 max-w-md text-[16px] leading-relaxed" style={{ color: "#3D2B1470" }}>
+            Start your first lesson today. No download, no card, no commitment.
+            Just Swedish, the way it should be taught.
           </p>
           <Link
             href="https://www.conversagas.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition hover:opacity-90"
-            style={{ background: "linear-gradient(135deg, #C9A04A, #A8813A)", color: "#1A1208" }}
+            className="mt-8 inline-block rounded-full px-8 py-3.5 text-sm font-semibold transition hover:opacity-90 active:scale-[0.98]"
+            style={{ background: "#C9A04A", color: "#1A1208" }}
           >
             Start free at Conversagas.com →
           </Link>

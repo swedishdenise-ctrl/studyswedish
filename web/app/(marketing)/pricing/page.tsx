@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export const metadata = {
   title: "Pricing, StudySwedish",
@@ -8,198 +8,187 @@ export const metadata = {
 
 export default function PricingPage() {
   return (
-    <>
+    <div style={{ background: "#FAF5EE" }}>
+
       {/* Hero */}
-      <section className="bg-cream px-6 pb-0 pt-20 text-center">
+      <section className="px-6 pt-36 pb-16 sm:pt-44">
         <div className="mx-auto max-w-2xl">
-          <h1 className="font-display text-5xl font-semibold tracking-tight text-charcoal sm:text-6xl">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
+            Pricing
+          </p>
+          <h1 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl" style={{ color: "#1A1208" }}>
             Honestly? Most of it is free.
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-charcoal/60">
+          <p className="mt-5 text-lg leading-relaxed max-w-xl" style={{ color: "#3D2B14BB" }}>
             We built a real course, not a demo. The whole A1 level, the grammar
             reference, the recipes, the community, yours without a credit card.
           </p>
         </div>
       </section>
 
-      {/* Free tier, big, generous */}
-      <section className="bg-cream px-6 py-14">
-        <div className="mx-auto max-w-3xl">
-          <div className="rounded-3xl border border-forest/15 bg-white px-10 py-10">
-            <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
-              <div className="flex-1">
-                <p className="text-[11px] font-semibold uppercase tracking-widest text-forest/50">
-                  Free, always
-                </p>
-                <h2 className="mt-2 font-display text-3xl font-semibold text-charcoal">
-                  $0
-                </h2>
-                <p className="mt-1 text-sm text-charcoal/45">
-                  No credit card. No trial period. No catch.
-                </p>
+      {/* Free tier */}
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-2xl">
+          <div className="h-px mb-16" style={{ background: "#C9A04A20" }} />
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
+            Free, always
+          </p>
+          <p className="mt-3 font-display text-5xl font-semibold" style={{ color: "#1A1208" }}>$0</p>
+          <p className="mt-2 text-sm" style={{ color: "#3D2B1460" }}>No credit card. No trial period. No catch.</p>
+
+          <div className="mt-8 space-y-3">
+            {[
+              "Complete A1 beginner course, all units",
+              "First 2 lessons of every A2–C1 unit",
+              "Full grammar reference (all levels)",
+              "Every recipe, blog post and travel guide",
+              "Community, read, post, reply",
+              "Progress tracking and streaks",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: "#C9A04A" }} />
+                <p className="text-[15px]" style={{ color: "#3D2B14" }}>{item}</p>
               </div>
-              <ul className="flex-1 space-y-3 text-[15px] text-charcoal/70">
-                <FreeItem>Complete A1 beginner course, all units</FreeItem>
-                <FreeItem>First 2 lessons of every A2–C1 unit</FreeItem>
-                <FreeItem>Full grammar reference (all levels)</FreeItem>
-                <FreeItem>Every recipe, blog post &amp; travel guide</FreeItem>
-                <FreeItem>Community, read, post, reply</FreeItem>
-                <FreeItem>Progress tracking &amp; streaks</FreeItem>
-              </ul>
-            </div>
-            <div className="mt-8 border-t border-black/5 pt-6">
-              <Link
-                href="/auth/login"
-                className="inline-flex rounded-full border border-charcoal/15 px-7 py-2.5 text-sm font-medium text-charcoal transition hover:border-charcoal/30 hover:bg-black/[0.02]"
-              >
-                Start free
-              </Link>
-            </div>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <Link
+              href="/auth/login"
+              className="inline-block rounded-full border px-7 py-2.5 text-sm font-medium transition hover:border-[#1A1208]/30"
+              style={{ borderColor: "#1A1208", color: "#1A1208" }}
+            >
+              Start free
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Paid options */}
-      <section className="bg-cream px-6 pb-20">
-        <div className="mx-auto max-w-3xl">
-          <div className="mb-8 text-center">
-            <h2 className="font-display text-2xl font-semibold text-charcoal">
-              Want the full course?
-            </h2>
-            <p className="mt-2 text-charcoal/50">
-              All 52 units, A1 through C1. Audio. PDFs. The whole thing.
-            </p>
-          </div>
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-2xl">
+          <div className="h-px mb-16" style={{ background: "#C9A04A20" }} />
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
+            Premium
+          </p>
+          <h2 className="mt-4 font-display text-2xl font-semibold" style={{ color: "#1A1208" }}>
+            Want the full course?
+          </h2>
+          <p className="mt-3 text-[15px] leading-relaxed" style={{ color: "#3D2B1470" }}>
+            All 52 units, A1 through C1. Audio. PDFs. The whole thing.
+          </p>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {/* Monthly */}
-            <div className="rounded-2xl border border-black/8 bg-white p-7">
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-charcoal/35">
-                Monthly
-              </p>
-              <div className="mt-3 flex items-baseline gap-1.5">
-                <span className="font-display text-4xl font-semibold text-charcoal">
-                  $12.99
-                </span>
-                <span className="text-sm text-charcoal/40">/ month</span>
+          <div className="mt-10">
+            <div className="border-t py-8 sm:flex sm:items-start sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A20" }}>
+              <div className="flex-1">
+                <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Monthly</p>
+                <p className="mt-1 text-sm" style={{ color: "#3D2B1460" }}>Cancel any time, no questions.</p>
+                <div className="mt-5 space-y-2">
+                  {[
+                    "All 52 units, A1 through C1",
+                    "Audio lessons with native speakers",
+                    "Downloadable PDFs for every lesson",
+                    "AI grammar checks (3/day)",
+                    "Priority support",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: "#C9A04A60" }} />
+                      <p className="text-sm" style={{ color: "#3D2B1470" }}>{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <p className="mt-1 text-[13px] text-charcoal/40">
-                Cancel any time, no questions.
-              </p>
-              <ul className="mt-6 space-y-2.5 text-[13px] text-charcoal/60">
-                <PaidItem>All 52 units, A1 → C1</PaidItem>
-                <PaidItem>Audio lessons with native speakers</PaidItem>
-                <PaidItem>Downloadable PDFs for every lesson</PaidItem>
-                <PaidItem>AI grammar checks (3/day)</PaidItem>
-                <PaidItem>Priority support</PaidItem>
-              </ul>
-              <Link
-                href="/auth/login"
-                className="mt-7 block rounded-full border border-charcoal/15 py-2.5 text-center text-sm font-medium text-charcoal transition hover:border-charcoal/30"
-              >
-                Coming soon
-              </Link>
+              <div className="mt-6 sm:mt-0 sm:shrink-0 sm:text-right">
+                <p className="font-display text-4xl font-semibold" style={{ color: "#1A1208" }}>$12.99</p>
+                <p className="mt-1 text-sm" style={{ color: "#3D2B1460" }}>per month</p>
+                <Link
+                  href="/auth/login"
+                  className="mt-5 inline-block rounded-full border px-6 py-2.5 text-sm font-medium transition hover:border-[#1A1208]/30"
+                  style={{ borderColor: "#C9A04A50", color: "#1A1208" }}
+                >
+                  Coming soon
+                </Link>
+              </div>
             </div>
 
-            {/* Lifetime */}
-            <div className="relative rounded-2xl border border-golden/40 bg-white p-7">
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-golden-dark/60">
-                Lifetime
-              </p>
-              <div className="mt-3 flex items-baseline gap-1.5">
-                <span className="font-display text-4xl font-semibold text-charcoal">
-                  $150
-                </span>
-                <span className="text-sm text-charcoal/40">one time</span>
+            <div className="border-t py-8 sm:flex sm:items-start sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A20" }}>
+              <div className="flex-1">
+                <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Lifetime</p>
+                <p className="mt-1 text-sm" style={{ color: "#3D2B1460" }}>Pay once. Yours forever, including future content.</p>
+                <div className="mt-5 space-y-2">
+                  {[
+                    "Everything in Monthly",
+                    "All future units and features included",
+                    "Early access to new content",
+                    "Founders' community access",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: "#C9A04A60" }} />
+                      <p className="text-sm" style={{ color: "#3D2B1470" }}>{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <p className="mt-1 text-[13px] text-charcoal/40">
-                Pay once. Yours forever, including future content.
-              </p>
-              <ul className="mt-6 space-y-2.5 text-[13px] text-charcoal/60">
-                <PaidItem>Everything in Monthly</PaidItem>
-                <PaidItem>All future units & features included</PaidItem>
-                <PaidItem>Early access to new content</PaidItem>
-                <PaidItem>Founders&rsquo; community access</PaidItem>
-              </ul>
-              <Link
-                href="/auth/login"
-                className="mt-7 block rounded-full bg-charcoal py-2.5 text-center text-sm font-medium text-white transition hover:bg-charcoal/85"
-              >
-                Coming soon
-              </Link>
+              <div className="mt-6 sm:mt-0 sm:shrink-0 sm:text-right">
+                <p className="font-display text-4xl font-semibold" style={{ color: "#1A1208" }}>$150</p>
+                <p className="mt-1 text-sm" style={{ color: "#3D2B1460" }}>one time</p>
+                <Link
+                  href="/auth/login"
+                  className="mt-5 inline-block rounded-full px-6 py-2.5 text-sm font-medium transition hover:opacity-90"
+                  style={{ background: "#C9A04A", color: "#1A1208" }}
+                >
+                  Coming soon
+                </Link>
+              </div>
             </div>
+            <div className="border-t" style={{ borderColor: "#C9A04A20" }} />
           </div>
 
-          {/* Value nudge */}
-          <p className="mt-6 text-center text-[13px] text-charcoal/35">
+          <p className="mt-6 text-sm" style={{ color: "#3D2B1445" }}>
             For context, one hour with a Swedish tutor typically costs $50–80.
           </p>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-black/5 bg-white px-6 py-20">
+      <section className="px-6 pb-28">
         <div className="mx-auto max-w-2xl">
-          <h2 className="font-display text-2xl font-semibold text-charcoal">
-            A few things people ask
+          <div className="h-px mb-16" style={{ background: "#C9A04A20" }} />
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
+            Questions
+          </p>
+          <h2 className="mt-4 font-display text-2xl font-semibold" style={{ color: "#1A1208" }}>
+            A few things people ask.
           </h2>
-          <div className="mt-8 space-y-8">
-            <Faq q="Is free actually free?">
-              Yes, the full A1 beginner course, the grammar reference, all the
-              recipes and blog posts, and the whole community. No credit card,
-              no trial that secretly charges you. It&rsquo;s just free.
-            </Faq>
-            <Faq q="What do I get for $12.99 that I don't get free?">
-              The rest of the course, A2 all the way to C1 (52 units total),
-              native-speaker audio for every lesson, downloadable PDFs, and AI
-              grammar checks. The free tier gives you a real head start; Premium
-              takes you the rest of the way.
-            </Faq>
-            <Faq q="Why is Lifetime only $150?">
-              Because we want serious learners to commit, not feel squeezed. One
-              payment, everything included, all future content too. It&rsquo;s
-              less than two hours with a private tutor.
-            </Faq>
-            <Faq q="What if I cancel monthly, do I lose my progress?">
-              Never. Your progress and streaks stay. You just go back to the
-              free tier limits. Pick it up again whenever.
-            </Faq>
+          <div className="mt-10">
+            {[
+              {
+                q: "Is free actually free?",
+                a: "Yes, the full A1 beginner course, the grammar reference, all the recipes and blog posts, and the whole community. No credit card, no trial that secretly charges you. It's just free.",
+              },
+              {
+                q: "What do I get for $12.99 that I don't get free?",
+                a: "The rest of the course, A2 all the way to C1 (52 units total), native-speaker audio for every lesson, downloadable PDFs, and AI grammar checks. The free tier gives you a real head start; Premium takes you the rest of the way.",
+              },
+              {
+                q: "Why is Lifetime only $150?",
+                a: "Because we want serious learners to commit, not feel squeezed. One payment, everything included, all future content too. It's less than two hours with a private tutor.",
+              },
+              {
+                q: "What if I cancel monthly, do I lose my progress?",
+                a: "Never. Your progress and streaks stay. You just go back to the free tier limits. Pick it up again whenever.",
+              },
+            ].map((faq) => (
+              <div key={faq.q} className="border-t py-7" style={{ borderColor: "#C9A04A20" }}>
+                <h3 className="font-display text-lg font-semibold" style={{ color: "#1A1208" }}>{faq.q}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed" style={{ color: "#3D2B1460" }}>{faq.a}</p>
+              </div>
+            ))}
+            <div className="border-t" style={{ borderColor: "#C9A04A20" }} />
           </div>
         </div>
       </section>
-    </>
-  );
-}
 
-function FreeItem({ children }: { children: React.ReactNode }) {
-  return (
-    <li className="flex items-start gap-2.5">
-      <span className="mt-0.5 text-forest">✓</span>
-      <span>{children}</span>
-    </li>
-  );
-}
-
-function PaidItem({ children }: { children: React.ReactNode }) {
-  return (
-    <li className="flex items-start gap-2">
-      <span className="mt-0.5 text-charcoal/25">–</span>
-      <span>{children}</span>
-    </li>
-  );
-}
-
-function Faq({
-  q,
-  children,
-}: {
-  q: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div>
-      <h3 className="font-display text-lg font-semibold text-charcoal">{q}</h3>
-      <p className="mt-2 leading-relaxed text-charcoal/60">{children}</p>
     </div>
   );
 }
