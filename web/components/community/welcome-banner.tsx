@@ -31,9 +31,9 @@ export function WelcomeBanner() {
           Welcome home.
         </p>
         <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/60">
-          A community of people learning Swedish, exploring Sweden, and sharing
-          what they find. Whether you&rsquo;re planning a trip, moving to
-          Sweden, or just curious &mdash; you belong here.
+          A corner of the internet for people who love Sweden and can&rsquo;t
+          really explain why but don&rsquo;t need to. Ask questions, share
+          what you find, say hej.
         </p>
 
       </div>
