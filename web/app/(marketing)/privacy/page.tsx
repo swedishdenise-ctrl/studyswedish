@@ -27,8 +27,8 @@ export default function PrivacyPage() {
                 This is StudySwedish.com, run by Denise. The site covers Swedish language, culture, recipes,
                 and resources — including the Conversagas language app and downloadable products. If you have
                 any questions about this policy, email{" "}
-                <a href="mailto:hej@studyswedish.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
-                  hej@studyswedish.com
+                <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
+                  swedish.denise@gmail.com
                 </a>.
               </p>
             </div>
@@ -83,8 +83,8 @@ export default function PrivacyPage() {
               </p>
               <p className="mt-3">
                 To exercise any of these rights, just email{" "}
-                <a href="mailto:hej@studyswedish.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
-                  hej@studyswedish.com
+                <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
+                  swedish.denise@gmail.com
                 </a>{" "}
                 and we'll sort it out promptly.
               </p>
@@ -109,8 +109,8 @@ export default function PrivacyPage() {
             <div className="border-t pt-10" style={{ borderColor: "#C9A04A15" }}>
               <p style={{ color: "#8B6A3E80" }}>
                 Questions? Email{" "}
-                <a href="mailto:hej@studyswedish.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
-                  hej@studyswedish.com
+                <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
+                  swedish.denise@gmail.com
                 </a>
               </p>
             </div>

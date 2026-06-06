@@ -91,11 +91,11 @@ export default function AboutPage() {
             </Link>
             . And if you just want to say hej —{" "}
             <a
-              href="mailto:hej@studyswedish.com"
+              href="mailto:swedish.denise@gmail.com"
               className="font-medium underline underline-offset-2 transition hover:opacity-70"
               style={{ color: "#C9A04A" }}
             >
-              hej@studyswedish.com
+              swedish.denise@gmail.com
             </a>
           </p>
 
