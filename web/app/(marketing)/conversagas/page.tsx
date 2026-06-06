@@ -216,10 +216,17 @@ export default function ConversagasPage() {
           </p>
           <div className="mt-10">
             {features.map((f) => (
-              <div key={f.number} className="border-t py-7" style={{ borderColor: "#C9A04A20" }}>
-                <span className="font-display text-sm font-semibold" style={{ color: "#C9A04A60" }}>{f.number}</span>
-                <h3 className="mt-2 font-display text-xl font-semibold" style={{ color: "#1A1208" }}>{f.title}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed max-w-xl" style={{ color: "#3D2B1460" }}>{f.desc}</p>
+              <div key={f.number} className="border-t py-8 flex gap-7" style={{ borderColor: "#C9A04A20" }}>
+                <span
+                  className="font-display text-5xl font-semibold leading-none shrink-0 select-none"
+                  style={{ color: "#C9A04A18", marginTop: "2px", minWidth: "3rem" }}
+                >
+                  {f.number}
+                </span>
+                <div>
+                  <h3 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>{f.title}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed max-w-xl" style={{ color: "#3D2B1460" }}>{f.desc}</p>
+                </div>
               </div>
             ))}
             <div className="border-t" style={{ borderColor: "#C9A04A20" }} />

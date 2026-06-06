@@ -83,7 +83,7 @@ export default function HomePage() {
       </section>
 
       {/* What I share, editorial list */}
-      <section id="what-i-share" className="px-6 py-20" style={{ background: "#FAF5EE" }}>
+      <section id="what-i-share" className="px-6 py-20" style={{ background: "#F0E8D8" }}>
         <div className="mx-auto max-w-2xl">
           <p className="text-[10px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E50" }}>
             All free, always
@@ -161,7 +161,7 @@ export default function HomePage() {
                 style={{ borderColor: "#C9A04A18" }}
               >
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-display text-lg font-semibold transition group-hover:opacity-70" style={{ color: "#1A1208" }}>
+                  <h3 className="font-display text-xl font-semibold transition group-hover:opacity-70" style={{ color: "#1A1208" }}>
                     {item.label}
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed" style={{ color: "#3D2B1460" }}>

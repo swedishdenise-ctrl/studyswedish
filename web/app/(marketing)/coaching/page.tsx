@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "1:1 Swedish Coaching with Denise, StudySwedish",
   description:
-    "Private Swedish coaching sessions with a native speaker. 60 minutes of real conversation, honest feedback, and guidance that textbooks skip.",
+    "Private Swedish coaching sessions with a native speaker. 30 minutes of real conversation, honest feedback, and guidance that textbooks skip.",
 };
 
 const CALENDLY = "https://calendly.com/swedish-denise";
@@ -22,9 +22,9 @@ export default function CoachingPage() {
             Learn Swedish with a native speaker.
           </h1>
           <p className="mt-6 text-lg leading-relaxed max-w-xl" style={{ color: "#3D2B14BB" }}>
-            Private 60-minute sessions with me, Denise, from Halmstad, Sweden.
-            No textbook drills. Real conversation, honest feedback, and the kind
-            of context you only get from someone who actually grew up speaking it.
+            Private sessions with me, Denise, from Halmstad, Sweden.
+            Real conversation, honest feedback, and the kind of context
+            you only get from someone who actually grew up speaking it.
           </p>
           <div className="mt-8">
             <Link
@@ -44,19 +44,23 @@ export default function CoachingPage() {
       <section className="px-6 pb-20">
         <div className="mx-auto max-w-2xl">
           <div className="h-px mb-16" style={{ background: "#C9A04A20" }} />
-          <h2 className="font-display text-2xl font-semibold" style={{ color: "#1A1208" }}>
+          <h2 className="font-display text-3xl font-semibold leading-tight" style={{ color: "#1A1208" }}>
             You know some Swedish, but you can't actually speak it yet.
           </h2>
           <p className="mt-5 text-[17px] leading-relaxed" style={{ color: "#3D2B14" }}>
             Maybe you've taken classes, used an app, or watched Swedish films with subtitles.
             You understand more than you expected, but the moment you try to say something,
-            everything disappears. That gap between understanding and speaking is exactly what
-            we work on together.
+            everything disappears.
           </p>
           <p className="mt-4 text-[17px] leading-relaxed" style={{ color: "#3D2B14" }}>
-            Any level is welcome. Complete beginners, intermediate learners who've
-            plateaued, people preparing for a trip, a job, or a relationship that requires Swedish.
-            If you want to actually speak rather than just study, this is for you.
+            That gap between understanding and speaking is exactly what we work on together.
+            Any level is welcome — complete beginners, people who've plateaued, anyone preparing
+            for a trip, a job, or a life that requires Swedish.
+          </p>
+
+          {/* Pull quote */}
+          <p className="mt-10 font-display text-2xl font-semibold italic leading-snug" style={{ color: "#C9A04A" }}>
+            "If you want to actually speak rather than just study — this is for you."
           </p>
         </div>
       </section>
@@ -68,8 +72,8 @@ export default function CoachingPage() {
           <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
             What to expect
           </p>
-          <h2 className="mt-4 font-display text-2xl font-semibold" style={{ color: "#1A1208" }}>
-            A 60-minute session, shaped around you.
+          <h2 className="mt-4 font-display text-3xl font-semibold" style={{ color: "#1A1208" }}>
+            A session shaped around you.
           </h2>
           <div className="mt-10">
             {[
@@ -89,10 +93,18 @@ export default function CoachingPage() {
                 title: "Your agenda",
                 body: "Travel Swedish, work Swedish, fika chat, pronunciation. You tell me what you need.",
               },
-            ].map((item) => (
-              <div key={item.title} className="border-t py-7" style={{ borderColor: "#C9A04A20" }}>
-                <p className="font-display text-lg font-semibold" style={{ color: "#1A1208" }}>{item.title}</p>
-                <p className="mt-2 text-[16px] leading-relaxed" style={{ color: "#3D2B14BB" }}>{item.body}</p>
+            ].map((item, i) => (
+              <div key={item.title} className="border-t py-8 flex gap-7" style={{ borderColor: "#C9A04A20" }}>
+                <span
+                  className="font-display text-5xl font-semibold leading-none shrink-0 select-none"
+                  style={{ color: "#C9A04A18", marginTop: "2px", minWidth: "3rem" }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>{item.title}</p>
+                  <p className="mt-2 text-[16px] leading-relaxed" style={{ color: "#3D2B14BB" }}>{item.body}</p>
+                </div>
               </div>
             ))}
             <div className="border-t" style={{ borderColor: "#C9A04A20" }} />
@@ -107,7 +119,7 @@ export default function CoachingPage() {
           <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
             Your coach
           </p>
-          <h2 className="mt-4 font-display text-2xl font-semibold" style={{ color: "#1A1208" }}>
+          <h2 className="mt-4 font-display text-3xl font-semibold" style={{ color: "#1A1208" }}>
             Hej, I'm Denise.
           </h2>
           <p className="mt-5 text-[17px] leading-relaxed" style={{ color: "#3D2B14" }}>
@@ -129,32 +141,31 @@ export default function CoachingPage() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="px-6 pb-28">
+      {/* Pricing, warm background */}
+      <section className="px-6 py-20" style={{ background: "#F0E8D8" }}>
         <div className="mx-auto max-w-2xl">
-          <div className="h-px mb-16" style={{ background: "#C9A04A20" }} />
           <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
             Pricing
           </p>
-          <h2 className="mt-4 font-display text-2xl font-semibold" style={{ color: "#1A1208" }}>
+          <h2 className="mt-4 font-display text-3xl font-semibold" style={{ color: "#1A1208" }}>
             Simple and straightforward.
           </h2>
           <div className="mt-10">
-            <div className="border-t py-8 sm:flex sm:items-center sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A20" }}>
+            <div className="border-t py-8 sm:flex sm:items-center sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A25" }}>
               <div>
                 <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Single session</p>
-                <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>60 minutes, no commitment</p>
+                <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>30 minutes, no commitment</p>
               </div>
-              <p className="mt-3 font-display text-4xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€45</p>
+              <p className="mt-3 font-display text-5xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€40</p>
             </div>
-            <div className="border-t py-8 sm:flex sm:items-center sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A20" }}>
+            <div className="border-t py-8 sm:flex sm:items-center sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A25" }}>
               <div>
                 <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>4-session pack</p>
-                <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>4 × 60 min, save €20</p>
+                <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>4 × 30 min, save €20</p>
               </div>
-              <p className="mt-3 font-display text-4xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€160</p>
+              <p className="mt-3 font-display text-5xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€140</p>
             </div>
-            <div className="border-t" style={{ borderColor: "#C9A04A20" }} />
+            <div className="border-t" style={{ borderColor: "#C9A04A25" }} />
           </div>
           <div className="mt-10">
             <Link
