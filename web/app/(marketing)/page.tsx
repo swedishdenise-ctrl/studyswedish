@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Denise, StudySwedish",
+  title: { absolute: "StudySwedish, Learn Swedish online" },
   description:
     "Swedish words, recipes, culture and a few good proverbs, from someone who is just very Swedish.",
 };
