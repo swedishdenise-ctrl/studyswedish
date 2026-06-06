@@ -55,9 +55,7 @@ export function SiteHeader() {
     setOpenMenu((prev) => (prev === menu ? null : menu));
   }
 
-  const deskBtnStyle = floating
-    ? { color: "rgba(255,255,255,0.85)" }
-    : { color: `${WARM_TEXT}CC` };
+  const deskBtnStyle = { color: `${WARM_TEXT}CC` };
 
   return (
     <>
@@ -80,7 +78,7 @@ export function SiteHeader() {
         <Link
           href="/"
           className="font-display text-xl font-semibold tracking-tight transition-colors duration-300"
-          style={{ color: floating ? "rgba(255,255,255,0.95)" : "#1A1208" }}
+          style={{ color: "#1A1208" }}
         >
           StudySwedish
         </Link>
@@ -149,7 +147,7 @@ export function SiteHeader() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                style={{ color: floating ? "rgba(255,255,255,0.9)" : WARM_TEXT }}
+                style={{ color: WARM_TEXT }}
                 aria-hidden="true"
               >
                 <line x1="3" y1="6" x2="21" y2="6" />
@@ -273,7 +271,7 @@ function Chevron({ floating, open }: { floating: boolean; open: boolean }) {
   return (
     <svg
       className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-      style={{ color: floating ? "rgba(255,255,255,0.45)" : `${WARM_TEXT}55` }}
+      style={{ color: `${WARM_TEXT}55` }}
       fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
