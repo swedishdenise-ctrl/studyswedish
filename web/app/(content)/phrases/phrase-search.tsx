@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import type { Phrase, Situation } from "@/data/phrases";
@@ -51,7 +51,7 @@ export function PhraseSearch({
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search in Swedish or English — e.g. &quot;thank you&quot; or &quot;tack&quot;"
+            placeholder="Search in Swedish or English, e.g. &quot;thank you&quot; or &quot;tack&quot;"
             className="w-full rounded-xl border border-black/10 bg-cream/50 px-4 py-3 text-charcoal placeholder:text-charcoal/40 focus:border-swedish-blue/40 focus:outline-none focus:ring-2 focus:ring-swedish-blue/20"
           />
 

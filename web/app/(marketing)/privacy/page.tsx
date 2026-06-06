@@ -1,5 +1,5 @@
-export const metadata = {
-  title: "Privacy Policy — StudySwedish",
+﻿export const metadata = {
+  title: "Privacy Policy, StudySwedish",
   description: "How StudySwedish handles your data.",
 };
 
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
               <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Who we are</h2>
               <p className="mt-3">
                 This is StudySwedish.com, run by Denise. The site covers Swedish language, culture, recipes,
-                and resources — including the Conversagas language app and downloadable products. If you have
+                and resources, including the Conversagas language app and downloadable products. If you have
                 any questions about this policy, email{" "}
                 <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
                   swedish.denise@gmail.com
@@ -37,9 +37,9 @@ export default function PrivacyPage() {
               <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>What data we collect</h2>
               <p className="mt-3">We only collect what we need:</p>
               <ul className="mt-3 space-y-2 pl-5 list-disc" style={{ color: "#3D2B1490" }}>
-                <li><strong style={{ color: "#1A1208" }}>Email address</strong> — if you create an account or sign up for updates.</li>
-                <li><strong style={{ color: "#1A1208" }}>Usage data</strong> — pages visited, time spent, general interaction data. This is anonymous and used only to improve the site.</li>
-                <li><strong style={{ color: "#1A1208" }}>Technical data</strong> — browser type, device, approximate location (country level). Collected automatically by our hosting provider.</li>
+                <li><strong style={{ color: "#1A1208" }}>Email address</strong>, if you create an account or sign up for updates.</li>
+                <li><strong style={{ color: "#1A1208" }}>Usage data</strong>, pages visited, time spent, general interaction data. This is anonymous and used only to improve the site.</li>
+                <li><strong style={{ color: "#1A1208" }}>Technical data</strong>, browser type, device, approximate location (country level). Collected automatically by our hosting provider.</li>
               </ul>
               <p className="mt-3">
                 We do not sell your data. We do not share it with third parties for marketing purposes.
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
             <div>
               <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Cookies</h2>
               <p className="mt-3">
-                We use essential cookies to keep the site working — for example, to keep you logged in.
+                We use essential cookies to keep the site working, for example, to keep you logged in.
                 We do not use advertising or tracking cookies.
               </p>
             </div>
@@ -67,8 +67,8 @@ export default function PrivacyPage() {
               <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Third-party services</h2>
               <p className="mt-3">We use a small number of trusted services to run the site:</p>
               <ul className="mt-3 space-y-2 pl-5 list-disc" style={{ color: "#3D2B1490" }}>
-                <li><strong style={{ color: "#1A1208" }}>Supabase</strong> — database and authentication. Your account data is stored securely here.</li>
-                <li><strong style={{ color: "#1A1208" }}>Vercel</strong> — website hosting. Processes technical data as part of serving the site.</li>
+                <li><strong style={{ color: "#1A1208" }}>Supabase</strong>, database and authentication. Your account data is stored securely here.</li>
+                <li><strong style={{ color: "#1A1208" }}>Vercel</strong>, website hosting. Processes technical data as part of serving the site.</li>
               </ul>
               <p className="mt-3">
                 Each of these services has their own privacy policy and handles data in accordance with GDPR.

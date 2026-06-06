@@ -1,9 +1,9 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export const metadata = {
-  title: "Conversagas — Learn Swedish Online | StudySwedish",
+  title: "Conversagas, Learn Swedish Online | StudySwedish",
   description:
-    "Conversagas is a Swedish language learning app with real lessons, daily stories, and performance tracking. Start free — no download, no card required.",
+    "Conversagas is a Swedish language learning app with real lessons, daily stories, and performance tracking. Start free, no download, no card required.",
   keywords: [
     "learn Swedish online",
     "Swedish language app",
@@ -14,9 +14,9 @@ export const metadata = {
     "Conversagas",
   ],
   openGraph: {
-    title: "Conversagas — Learn Swedish Online",
+    title: "Conversagas, Learn Swedish Online",
     description:
-      "Real Swedish lessons, daily stories, and performance tracking. Start free — no download, no card required.",
+      "Real Swedish lessons, daily stories, and performance tracking. Start free, no download, no card required.",
     url: "https://studyswedish.com/conversagas",
     type: "website",
   },
@@ -60,7 +60,7 @@ const jsonLd = {
           name: "Is Conversagas free?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — Conversagas offers a full 5-day free trial with no credit card required and no download needed. You can start your first Swedish lesson instantly in the browser.",
+            text: "Yes, Conversagas offers a full 5-day free trial with no credit card required and no download needed. You can start your first Swedish lesson instantly in the browser.",
           },
         },
         {
@@ -68,7 +68,7 @@ const jsonLd = {
           name: "How is Conversagas different from Duolingo?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Conversagas is built around real grammar concepts, CEFR-levelled stories, and detailed performance tracking — not gamified streaks. It teaches Swedish the way it actually works, with new content added every day.",
+            text: "Conversagas is built around real grammar concepts, CEFR-levelled stories, and detailed performance tracking, not gamified streaks. It teaches Swedish the way it actually works, with new content added every day.",
           },
         },
         {
@@ -112,33 +112,33 @@ const features = [
   {
     number: "01",
     title: "A real course",
-    desc: "Interactive lessons that teach the concepts that actually deliver fluency — not word matching, not streaks for the sake of streaks. Learn the rules, hear the pronunciation, and practice with content that changes every time you enter.",
+    desc: "Interactive lessons that teach the concepts that actually deliver fluency, not word matching, not streaks for the sake of streaks. Learn the rules, hear the pronunciation, and practice with content that changes every time you enter.",
   },
   {
     number: "02",
     title: "A library built for fluency",
-    desc: "Stories and grammar topics built on real conversations and speech patterns natives actually use. Every piece is level-specific, so you're always challenged — never lost, never bored.",
+    desc: "Stories and grammar topics built on real conversations and speech patterns natives actually use. Every piece is level-specific, so you're always challenged, never lost, never bored.",
   },
   {
     number: "03",
     title: "New content, every day",
-    desc: "Fresh lessons and articles posted daily. Learn the language and the culture at the same time — why everyone disappears to a summer cottage in July, what fika actually means, how Swedes really talk.",
+    desc: "Fresh lessons and articles posted daily. Learn the language and the culture at the same time, why everyone disappears to a summer cottage in July, what fika actually means, how Swedes really talk.",
   },
   {
     number: "04",
     title: "Performance, measured",
-    desc: "Words learned, study time, accuracy by tense, streak, percentile ranking. The same accountability tools elite athletes use. If you plateau, you'll know exactly why — and exactly what to do next.",
+    desc: "Words learned, study time, accuracy by tense, streak, percentile ranking. The same accountability tools elite athletes use. If you plateau, you'll know exactly why, and exactly what to do next.",
   },
 ];
 
 const faqs = [
   {
     q: "Is Conversagas free?",
-    a: "Yes — full 5-day free access, no credit card required, no download. Start your first lesson right now in the browser.",
+    a: "Yes, full 5-day free access, no credit card required, no download. Start your first lesson right now in the browser.",
   },
   {
     q: "How is it different from Duolingo?",
-    a: "Conversagas teaches real grammar concepts with CEFR-levelled stories and detailed performance data — not gamified streaks. New content is added every day, so you never run out of level-appropriate material.",
+    a: "Conversagas teaches real grammar concepts with CEFR-levelled stories and detailed performance data, not gamified streaks. New content is added every day, so you never run out of level-appropriate material.",
   },
   {
     q: "Do I need to download anything?",
@@ -150,7 +150,7 @@ const faqs = [
   },
   {
     q: "Who made Conversagas?",
-    a: "Denise and her partner — the same team behind StudySwedish.com. Denise handles the Swedish content and creative direction; together they built Conversagas after seeing what was genuinely missing from existing Swedish learning tools.",
+    a: "Denise and her partner, the same team behind StudySwedish.com. Denise handles the Swedish content and creative direction; together they built Conversagas after seeing what was genuinely missing from existing Swedish learning tools.",
   },
 ];
 
@@ -180,7 +180,7 @@ export default function ConversagasPage() {
             The Swedish app I built because nothing else was good enough.
           </h1>
           <p className="mt-6 max-w-xl text-[17px] leading-relaxed" style={{ color: "#F5EDE370" }}>
-            I saw what was missing from Swedish learning tools — and built Conversagas
+            I saw what was missing from Swedish learning tools, and built Conversagas
             to fix it. Real lessons, real stories, and tracking that actually
             tells you something.
           </p>
@@ -192,7 +192,7 @@ export default function ConversagasPage() {
               className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold transition hover:opacity-90"
               style={{ background: "linear-gradient(135deg, #C9A04A, #A8813A)", color: "#1A1208" }}
             >
-              Start free — no card needed →
+              Start free, no card needed →
             </Link>
           </div>
           <p className="mt-4 text-xs" style={{ color: "#F5EDE330" }}>
@@ -242,7 +242,7 @@ export default function ConversagasPage() {
         </div>
       </section>
 
-      {/* FAQ — AEO + GEO */}
+      {/* FAQ, AEO + GEO */}
       <section className="px-6 py-16" style={{ background: "#F0E8D8" }}>
         <div className="mx-auto max-w-3xl">
           <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>

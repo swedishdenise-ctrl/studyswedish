@@ -1,7 +1,7 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export const metadata = {
-  title: "1:1 Swedish Coaching with Denise — StudySwedish",
+  title: "1:1 Swedish Coaching with Denise, StudySwedish",
   description:
     "Private Swedish coaching sessions with a native speaker. 60 minutes of real conversation, honest feedback, and guidance that textbooks skip.",
 };
@@ -22,7 +22,7 @@ export default function CoachingPage() {
             Learn Swedish with a native speaker.
           </h1>
           <p className="mt-5 text-lg leading-relaxed" style={{ color: "#3D2B14CC" }}>
-            Private 60-minute sessions with me — Denise, from Halmstad, Sweden.
+            Private 60-minute sessions with me, Denise, from Halmstad, Sweden.
             No textbook drills. Real conversation, honest feedback, and the kind
             of context you only get from someone who actually grew up speaking it.
           </p>
@@ -48,7 +48,7 @@ export default function CoachingPage() {
             Who this is for
           </p>
           <h2 className="mt-4 font-display text-2xl font-semibold" style={{ color: "#1A1208" }}>
-            You know some Swedish — but you can't actually speak it yet.
+            You know some Swedish, but you can't actually speak it yet.
           </h2>
           <p className="mt-4 text-[17px] leading-relaxed" style={{ color: "#3D2B14" }}>
             Maybe you've taken classes, used Duolingo, or watched Swedish films with subtitles.
@@ -86,7 +86,7 @@ export default function CoachingPage() {
             {[
               {
                 title: "Real conversation",
-                body: "We talk — in Swedish, at your pace. I meet you where you are and push you a little further.",
+                body: "We talk, in Swedish, at your pace. I meet you where you are and push you a little further.",
               },
               {
                 title: "Honest corrections",
@@ -98,7 +98,7 @@ export default function CoachingPage() {
               },
               {
                 title: "Your agenda",
-                body: "Travel Swedish, work Swedish, fika chat, pronunciation — you tell me what you need.",
+                body: "Travel Swedish, work Swedish, fika chat, pronunciation, you tell me what you need.",
               },
             ].map((card) => (
               <div
@@ -130,7 +130,7 @@ export default function CoachingPage() {
           </h2>
           <p className="mt-4 text-[17px] leading-relaxed" style={{ color: "#3D2B14" }}>
             I grew up in Halmstad on the west coast of Sweden. I've spent years sharing Swedish
-            culture and language online because I genuinely love it. I'm not a credentialed teacher — I'm a native speaker
+            culture and language online because I genuinely love it. I'm not a credentialed teacher, I'm a native speaker
             who knows how the language actually sounds, what sounds natural, and what gives you away
             as a learner the second you open your mouth.
           </p>

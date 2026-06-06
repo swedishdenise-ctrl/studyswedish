@@ -1,8 +1,8 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { GRAMMAR_TOPICS } from "@/data/grammar-topics";
 
 export const metadata = {
-  title: "Swedish Grammar — StudySwedish",
+  title: "Swedish Grammar, StudySwedish",
   description:
     "A complete reference to Swedish grammar. Every rule explained clearly, from A1 basics to B2 advanced topics.",
 };
@@ -96,7 +96,7 @@ export default async function GrammarPage({ searchParams }: Props) {
             Swedish Grammar
           </h1>
           <p className="mt-4 max-w-lg text-[17px] leading-relaxed" style={{ color: "#3D2B1470" }}>
-            Every rule you need, from first words to fluency. Free to read — no account required.
+            Every rule you need, from first words to fluency. Free to read, no account required.
           </p>
         </div>
       </section>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -71,7 +71,7 @@ export function VerbsContent() {
               Test your conjugations
             </h2>
             <p className="mt-2 text-charcoal/70">
-              8 random verbs per round. Pick the right form — present, past,
+              8 random verbs per round. Pick the right form, present, past,
               supinum, or imperative.
             </p>
           </div>
@@ -87,7 +87,7 @@ export function VerbsContent() {
             <p className="mt-2 max-w-2xl text-charcoal/70">
               Swedish verbs fall into four groups based on how they form the past
               tense. Groups 1–3 are regular (predictable patterns). Group 4 verbs
-              are irregular — but many of the most common verbs are here, so
+              are irregular, but many of the most common verbs are here, so
               you&rsquo;ll learn them fast through use.
             </p>
 
@@ -202,7 +202,7 @@ export function VerbsContent() {
             <div className="rounded-2xl border border-dashed border-black/15 bg-white p-8 text-center">
               <p className="text-charcoal/70">
                 Currently covering <strong>{VERBS.length}</strong> common verbs
-                — more being added regularly.
+               , more being added regularly.
               </p>
             </div>
           </section>

@@ -1,9 +1,9 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import { createClient } from "@/lib/supabase/server";
 
 export const metadata = {
-  title: "Learn Swedish — StudySwedish",
+  title: "Learn Swedish, StudySwedish",
   description:
     "A structured Swedish course from A1 to C1, built on the CEFR framework. Start free, progress at your own pace.",
 };
@@ -124,7 +124,7 @@ export default async function LearnPage() {
             <span className="text-golden">One clear path to fluency.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-            A structured course built on the CEFR framework — the same standard
+            A structured course built on the CEFR framework, the same standard
             used by Swedish universities and SFI. Start at A1 and work through
             to C1, or place into the level that fits.
           </p>
@@ -259,7 +259,7 @@ export default async function LearnPage() {
             Ready to begin?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-white/60">
-            Start with Unit 1 for free — no sign-up, no credit card. When
+            Start with Unit 1 for free, no sign-up, no credit card. When
             you&rsquo;re ready for more, pick a plan that fits.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
@@ -427,7 +427,7 @@ const LEVELS = [
     level: "A2",
     label: "Elementary",
     description:
-      "Everyday conversations — shopping, food, weather, and simple past tense.",
+      "Everyday conversations, shopping, food, weather, and simple past tense.",
     units: 12,
     hours: 28,
   },

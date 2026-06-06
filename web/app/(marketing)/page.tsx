@@ -1,10 +1,10 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Denise — StudySwedish",
+  title: "Denise, StudySwedish",
   description:
-    "Swedish words, recipes, culture and a few good proverbs — from someone who is just very Swedish.",
+    "Swedish words, recipes, culture and a few good proverbs, from someone who is just very Swedish.",
 };
 
 export default function HomePage() {
@@ -17,7 +17,7 @@ export default function HomePage() {
       >
         <div className="mx-auto flex min-h-svh max-w-5xl flex-col justify-center sm:flex-row sm:items-center sm:gap-12 lg:gap-20">
 
-          {/* Left — text */}
+          {/* Left, text */}
           <div className="relative z-10 flex-1 py-16 sm:py-0">
             <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#8B6A3E]/60">
               StudySwedish.com
@@ -50,7 +50,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right — Denise's photo */}
+          {/* Right, Denise's photo */}
           <div className="relative mx-auto w-72 shrink-0 sm:mx-0 sm:w-80 lg:w-96">
             {/* Soft gold frame behind the photo */}
             <div
@@ -60,7 +60,7 @@ export default function HomePage() {
             <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-[#3D2B14]/15">
               <Image
                 src="/images/denise.jpg"
-                alt="Denise — StudySwedish"
+                alt="Denise, StudySwedish"
                 width={800}
                 height={1000}
                 className="block w-full object-cover"
@@ -77,7 +77,7 @@ export default function HomePage() {
 
         </div>
 
-        {/* Decorative soft circle — top right */}
+        {/* Decorative soft circle, top right */}
         <div
           className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-30"
           style={{ background: "radial-gradient(circle, #C9A04A40 0%, transparent 70%)" }}
@@ -92,7 +92,7 @@ export default function HomePage() {
       >
         <div className="mx-auto max-w-4xl">
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8B6A3E]/50">
-            All free — always
+            All free, always
           </p>
           <h2 className="mt-3 font-display text-2xl font-semibold text-[#1A1208]">
             Here's what I share.
@@ -100,7 +100,7 @@ export default function HomePage() {
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
 
-            {/* Conversagas — full width featured */}
+            {/* Conversagas, full width featured */}
             <Link
               href="/conversagas"
               className="group relative col-span-1 overflow-hidden rounded-2xl sm:col-span-2"
@@ -158,11 +158,11 @@ export default function HomePage() {
                 </div>
               }
               title="How to Understand a Swede"
-              desc="My book — a guide to the Swedish mindset, with the humour, the silence, the fika, and everything in between. Available on Amazon."
+              desc="My book, a guide to the Swedish mindset, with the humour, the silence, the fika, and everything in between. Available on Amazon."
               cta="Buy on Amazon →"
             />
 
-            {/* 50 Swedish Proverbs — free download */}
+            {/* 50 Swedish Proverbs, free download */}
             <OfferingCard
               href="/shop"
               header={
@@ -219,7 +219,7 @@ export default function HomePage() {
                 </div>
               }
               title="Swedish Affirmations"
-              desc="Start your morning in Swedish. Positive affirmations recorded by me — it works better than you'd think."
+              desc="Start your morning in Swedish. Positive affirmations recorded by me, it works better than you'd think."
               cta="Listen free →"
             />
 
@@ -237,7 +237,7 @@ export default function HomePage() {
                 </div>
               }
               title="Swedish language"
-              desc="Grammar, vocabulary, verbs and phrases — the way I'd explain it to a friend. No jargon, no paywall."
+              desc="Grammar, vocabulary, verbs and phrases, the way I'd explain it to a friend. No jargon, no paywall."
               cta="Start learning →"
             />
 
@@ -268,7 +268,7 @@ export default function HomePage() {
                 </div>
               }
               title="Swedish recipes"
-              desc="Real Swedish recipes — yes, meatballs, but also cinnamon buns, gravlax and everything in between."
+              desc="Real Swedish recipes, yes, meatballs, but also cinnamon buns, gravlax and everything in between."
               cta="Cook something →"
             />
 

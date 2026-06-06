@@ -1,8 +1,8 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { VerbsContent } from "./verbs-content";
 
 export const metadata = {
-  title: "Swedish verb conjugator — StudySwedish",
+  title: "Swedish verb conjugator, StudySwedish",
   description:
     "Look up any Swedish verb and see its full conjugation, or drill yourself with interactive conjugation quizzes. Free, no account needed.",
 };
@@ -32,7 +32,7 @@ export default function VerbsPage() {
               <p className="mt-4 max-w-2xl text-lg text-white/80">
                 Look up a Swedish verb and see its full conjugation, or test
                 yourself with the conjugation drill. Present, past, supinum,
-                imperative — learn them all.
+                imperative, learn them all.
               </p>
             </div>
           </div>

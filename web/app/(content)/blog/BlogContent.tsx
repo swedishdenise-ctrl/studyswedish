@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -19,7 +19,7 @@ const POSTS: Post[] = [
     slug: "what-is-fika",
     title: "What fika really is (and isn't)",
     lede:
-      "People ask me constantly: what actually is fika? And every time, I pause. Because it's not the coffee. It's not the cinnamon bun. It's the deliberate stop — the choice to sit down, be present, and say that the people around you matter more than whatever is on your to-do list.",
+      "People ask me constantly: what actually is fika? And every time, I pause. Because it's not the coffee. It's not the cinnamon bun. It's the deliberate stop, the choice to sit down, be present, and say that the people around you matter more than whatever is on your to-do list.",
     location: "Sweden",
     category: "Culture",
   },
@@ -35,7 +35,7 @@ const POSTS: Post[] = [
     slug: "weekend-gothenburg",
     title: "A perfect weekend in Gothenburg",
     lede:
-      "I almost moved to Gothenburg once. I might still. The west coast does something to you — the salt air, the seafood, the way the light falls across the archipelago at six in the evening.",
+      "I almost moved to Gothenburg once. I might still. The west coast does something to you, the salt air, the seafood, the way the light falls across the archipelago at six in the evening.",
     location: "Gothenburg",
     category: "Travel",
   },
@@ -43,7 +43,7 @@ const POSTS: Post[] = [
     slug: "en-ett-survival-guide",
     title: "The en/ett survival guide",
     lede:
-      "Swedish will humble you fast. This is the thing that trips everyone up first — and the three patterns that quietly make it click.",
+      "Swedish will humble you fast. This is the thing that trips everyone up first, and the three patterns that quietly make it click.",
     location: "Language",
     category: "Language",
   },
@@ -51,7 +51,7 @@ const POSTS: Post[] = [
     slug: "first-50-words",
     title: "The 50 Swedish words I'd hand you first",
     lede:
-      "If I could give you one thing before your first trip to Sweden, it would be this list. Not the textbook ones — the ones that actually come up.",
+      "If I could give you one thing before your first trip to Sweden, it would be this list. Not the textbook ones, the ones that actually come up.",
     location: "Language",
     category: "Language",
   },
@@ -67,7 +67,7 @@ const POSTS: Post[] = [
     slug: "swedish-summers",
     title: "The thing nobody tells you about Swedish summers",
     lede:
-      "You plan for the long days. You don't plan for what they do to you — the slowness, the birch trees, the sudden compulsion to sit by the water for three hours doing absolutely nothing.",
+      "You plan for the long days. You don't plan for what they do to you, the slowness, the birch trees, the sudden compulsion to sit by the water for three hours doing absolutely nothing.",
     location: "Sweden",
     category: "Culture",
   },
@@ -157,7 +157,7 @@ export default function BlogContent() {
           <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
             <Link href={`/blog/${featured.slug}`} className="group block">
               <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-charcoal/35">
-                Editor&rsquo;s pick &mdash; {featured.category}
+                Editor&rsquo;s pick, {featured.category}
               </p>
               <h2 className="mt-5 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-charcoal transition-colors group-hover:text-swedish-blue sm:text-5xl lg:text-6xl">
                 {featured.title}
@@ -184,11 +184,11 @@ export default function BlogContent() {
       <section className="mx-auto max-w-5xl px-6 py-16">
         {filtered.length === 0 ? (
           <p className="py-20 text-center text-sm text-charcoal/40">
-            Nothing here yet — check back soon.
+            Nothing here yet, check back soon.
           </p>
         ) : (
           <>
-            {/* Row 1 — two large */}
+            {/* Row 1, two large */}
             {filtered.length >= 2 && (
               <div className="grid grid-cols-1 gap-px border border-charcoal/[0.07] bg-charcoal/[0.07] sm:grid-cols-2">
                 {filtered.slice(0, 2).map((post) => (
@@ -202,7 +202,7 @@ export default function BlogContent() {
               </div>
             )}
 
-            {/* Row 2 — three smaller */}
+            {/* Row 2, three smaller */}
             {filtered.length >= 5 && (
               <div className="mt-px grid grid-cols-1 gap-px border-x border-b border-charcoal/[0.07] bg-charcoal/[0.07] sm:grid-cols-3">
                 {filtered.slice(2, 5).map((post) => (
@@ -225,7 +225,7 @@ export default function BlogContent() {
               </div>
             )}
 
-            {/* Row 3 — remaining wide */}
+            {/* Row 3, remaining wide */}
             {filtered.length >= 6 && (
               <div className="mt-px border-x border-b border-charcoal/[0.07]">
                 <ArticleCard post={filtered[5]} size="wide" />

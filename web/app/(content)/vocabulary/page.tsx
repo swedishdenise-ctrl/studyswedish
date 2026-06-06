@@ -1,12 +1,12 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import { VOCABULARY, CATEGORIES } from "@/data/vocabulary";
 import { VocabularySearch } from "./vocabulary-search";
 
 export const metadata = {
-  title: "Swedish vocabulary — StudySwedish",
+  title: "Swedish vocabulary, StudySwedish",
   description:
-    "Browse Swedish words by category and level. Each word includes pronunciation, gender, examples, and real usage — free, no account needed.",
+    "Browse Swedish words by category and level. Each word includes pronunciation, gender, examples, and real usage, free, no account needed.",
 };
 
 const LEVEL_STYLES: Record<string, string> = {
@@ -56,12 +56,12 @@ export default function VocabularyPage() {
             Swedish words you&rsquo;ll actually use.
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-base text-white/75">
-            {VOCABULARY.length} words across 10 categories — with pronunciation,
+            {VOCABULARY.length} words across 10 categories, with pronunciation,
             gender, and real examples. Practice with flashcards or the match
             game. Free, no account needed.
           </p>
 
-          {/* Search — hero-size */}
+          {/* Search, hero-size */}
           <div className="mx-auto mt-8 max-w-xl">
             <VocabularySearch words={VOCABULARY} levelStyles={LEVEL_STYLES} />
           </div>
@@ -133,7 +133,7 @@ export default function VocabularyPage() {
 
         {/* Footer note */}
         <p className="mt-10 text-center text-sm text-charcoal/35">
-          New words added weekly — currently at {VOCABULARY.length} and growing.
+          New words added weekly, currently at {VOCABULARY.length} and growing.
         </p>
       </section>
     </>

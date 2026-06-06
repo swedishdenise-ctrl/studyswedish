@@ -1,7 +1,7 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 
-export const metadata = { title: "Dashboard — StudySwedish" };
+export const metadata = { title: "Dashboard, StudySwedish" };
 
 export default async function DashboardPage() {
   const supabase = await createClient();

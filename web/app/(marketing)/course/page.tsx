@@ -1,8 +1,8 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "The course — StudySwedish",
+  title: "The course, StudySwedish",
   description:
     "A complete Swedish course from A1 to C1. 52 units built on the CEFR framework, with native audio, grammar, exercises, and AI practice.",
 };
@@ -71,7 +71,7 @@ export default function CoursePage() {
             <div className="flex flex-col justify-center gap-6 text-white/60 text-base leading-relaxed">
               <p>
                 Apps give you streaks. We give you Swedish. There is a
-                difference — and most people discover it after two years of
+                difference, and most people discover it after two years of
                 daily notifications and still not being able to hold a
                 conversation.
               </p>
@@ -89,7 +89,7 @@ export default function CoursePage() {
         </div>
       </section>
 
-      {/* ── Level overview — editorial ── */}
+      {/* ── Level overview, editorial ── */}
       <section className="bg-cream">
         <div className="mx-auto max-w-5xl px-6 py-24">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-charcoal/30">
@@ -123,7 +123,7 @@ export default function CoursePage() {
                   </p>
                 </div>
 
-                {/* Units/hours — hidden on mobile */}
+                {/* Units/hours, hidden on mobile */}
                 <div className="hidden text-right text-xs text-charcoal/30 tabular-nums sm:block">
                   <p>{lv.units} units</p>
                   <p>~{lv.hours}h</p>
@@ -136,7 +136,7 @@ export default function CoursePage() {
         </div>
       </section>
 
-      {/* ── Inside every unit — split layout ── */}
+      {/* ── Inside every unit, split layout ── */}
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-6 py-24">
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
@@ -150,7 +150,7 @@ export default function CoursePage() {
               </h2>
               <p className="mt-5 text-charcoal/60 leading-relaxed">
                 Each unit is built to move you forward and short enough to
-                finish in a week. The structure is deliberate — comprehension,
+                finish in a week. The structure is deliberate, comprehension,
                 then production, then fluency.
               </p>
 
@@ -186,7 +186,7 @@ export default function CoursePage() {
                   "The structure is what makes the difference."
                 </p>
                 <p className="mt-2 text-xs text-white/50">
-                  — Every learner who tried the other options first
+                 , Every learner who tried the other options first
                 </p>
               </div>
             </div>
@@ -233,7 +233,7 @@ export default function CoursePage() {
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <footer className="mt-4 text-xs text-charcoal/40">
-                  — {t.author}
+                 , {t.author}
                 </footer>
               </blockquote>
             ))}
@@ -241,7 +241,7 @@ export default function CoursePage() {
         </div>
       </section>
 
-      {/* ── Final CTA — minimal / confident ── */}
+      {/* ── Final CTA, minimal / confident ── */}
       <section className="relative overflow-hidden bg-navy">
         <div className="absolute inset-0">
           <Image
@@ -303,7 +303,7 @@ const LEVELS = [
     level: "A2",
     label: "Elementary",
     description:
-      "Everyday conversations — shopping, food, weather, and simple past tense.",
+      "Everyday conversations, shopping, food, weather, and simple past tense.",
     units: 12,
     hours: 28,
     dot: "bg-coral",
@@ -345,7 +345,7 @@ const UNIT_FEATURES = [
   },
   {
     title: "Written guides",
-    body: "Clear explanations you can read, re-read, and search — a proper reference, not bullet points.",
+    body: "Clear explanations you can read, re-read, and search, a proper reference, not bullet points.",
     icon: <BookIcon />,
   },
   {
@@ -373,7 +373,7 @@ const PILLARS = [
   },
   {
     heading: "Real Swedish",
-    body: "Idioms, culture, spoken register, written register. The language people actually use — not the Swedish of textbook dialogues.",
+    body: "Idioms, culture, spoken register, written register. The language people actually use, not the Swedish of textbook dialogues.",
     color: "#C0714A",
   },
 ];

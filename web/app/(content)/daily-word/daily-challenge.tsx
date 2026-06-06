@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -20,10 +20,10 @@ export function DailyChallenge({
     <div className="mx-auto max-w-xl">
       {/* Main card */}
       <div className="overflow-hidden rounded-3xl border border-black/8 bg-white shadow-sm">
-        {/* Top accent stripe — thicker, more presence */}
+        {/* Top accent stripe, thicker, more presence */}
         <div className="h-1 bg-gradient-to-r from-swedish-blue/30 via-golden to-swedish-blue/30" />
 
-        {/* Swedish word — always visible */}
+        {/* Swedish word, always visible */}
         <div className="px-10 pt-12 pb-9 text-center">
           <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-charcoal/30">
             Svenska
@@ -143,8 +143,8 @@ export function DailyChallenge({
                 <div className="space-y-1">
                   <p className="font-display text-xl font-semibold text-charcoal">
                     {response === "knew"
-                      ? "Bra jobbat — keep it up."
-                      : "Det kommer — it'll stick soon."}
+                      ? "Bra jobbat, keep it up."
+                      : "Det kommer, it'll stick soon."}
                   </p>
                   <p className="text-sm text-charcoal/40">See you tomorrow.</p>
                 </div>
@@ -154,7 +154,7 @@ export function DailyChallenge({
         </div>
       </div>
 
-      {/* Fun fact — after reveal */}
+      {/* Fun fact, after reveal */}
       {revealed && daily.funFact && (
         <div className="mt-4 rounded-2xl border border-golden/35 bg-golden/8 px-7 py-6">
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-charcoal/40">
@@ -166,7 +166,7 @@ export function DailyChallenge({
         </div>
       )}
 
-      {/* Usage tip — after reveal */}
+      {/* Usage tip, after reveal */}
       {revealed && daily.usageTip && (
         <div className="mt-3 rounded-2xl border border-swedish-blue/15 bg-swedish-blue/5 px-7 py-6">
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-swedish-blue/60">
@@ -178,7 +178,7 @@ export function DailyChallenge({
         </div>
       )}
 
-      {/* Explore link — after reveal */}
+      {/* Explore link, after reveal */}
       {revealed && (
         <div className="mt-7 text-center">
           <Link

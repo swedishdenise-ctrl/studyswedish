@@ -1,9 +1,9 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export const metadata = {
-  title: "About Denise — StudySwedish",
+  title: "About Denise, StudySwedish",
   description:
-    "I'm Denise — from Halmstad, Sweden, now living in Spain. I share Swedish culture, language and life because I genuinely love where I'm from.",
+    "I'm Denise, from Halmstad, Sweden, now living in Spain. I share Swedish culture, language and life because I genuinely love where I'm from.",
 };
 
 export default function AboutPage() {
@@ -30,7 +30,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-2xl space-y-8 text-[17px] leading-relaxed" style={{ color: "#3D2B14" }}>
 
           <p>
-            I grew up in <strong style={{ color: "#1A1208" }}>Halmstad</strong> — a small city on the west
+            I grew up in <strong style={{ color: "#1A1208" }}>Halmstad</strong>, a small city on the west
             coast of Sweden, right by the sea. The kind of place where summer lasts exactly long enough
             to make you fall in love with it, and winter lasts exactly long enough to make you appreciate that.
           </p>
@@ -38,12 +38,12 @@ export default function AboutPage() {
           <p>
             I left Sweden and moved abroad, and somewhere in the middle of a life that looked nothing like
             the one I grew up with, I started to really <em>miss</em> it. The culture, the humour, the way
-            Swedes communicate — or don't communicate. The things I used to take for granted suddenly felt
+            Swedes communicate, or don't communicate. The things I used to take for granted suddenly felt
             like the most interesting things in the world. So I started talking about them.
           </p>
 
           <p>
-            That became this — a corner of the internet about Sweden, Swedish, and what it actually means
+            That became this, a corner of the internet about Sweden, Swedish, and what it actually means
             to be Swedish. The videos, the book, the app, the proverbs. All of it started with missing home.
           </p>
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            I'm a big believer that you can completely change your life — that what you put out into the
+            I'm a big believer that you can completely change your life, that what you put out into the
             world comes back to you, that positive thinking isn't just a cliché, and that most limits are
             ones we invented ourselves. That belief shows up in everything I do, including the affirmations
             project.
@@ -114,7 +114,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {[
-              { href: "/conversagas", label: "Conversagas — the app" },
+              { href: "/conversagas", label: "Conversagas, the app" },
               { href: "/shop",        label: "Downloads" },
               { href: "/community",   label: "Community" },
               { href: "/recipes",     label: "Swedish recipes" },

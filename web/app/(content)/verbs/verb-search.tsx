@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -33,7 +33,7 @@ export function VerbSearch({ verbs }: { verbs: Verb[] }) {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search by infinitive, English, or any conjugated form — e.g. 'skrev' or 'to eat'"
+        placeholder="Search by infinitive, English, or any conjugated form, e.g. 'skrev' or 'to eat'"
         className="w-full rounded-xl border border-black/10 bg-cream/40 px-4 py-3 text-sm text-charcoal placeholder:text-warm-gray focus:border-swedish-blue/40 focus:outline-none focus:ring-2 focus:ring-swedish-blue/20"
       />
 
@@ -86,7 +86,7 @@ export function VerbSearch({ verbs }: { verbs: Verb[] }) {
       {query.length >= 2 && results.length === 0 && (
         <div className="absolute left-0 right-0 top-full z-20 mt-1 rounded-xl border border-black/10 bg-white px-4 py-6 text-center shadow-lg">
           <p className="text-sm text-charcoal/60">
-            No verbs match &ldquo;{query}&rdquo; — try the infinitive form
+            No verbs match &ldquo;{query}&rdquo;, try the infinitive form
             or search in English.
           </p>
         </div>

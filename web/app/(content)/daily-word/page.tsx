@@ -1,12 +1,12 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { getDailyWord, DAILY_WORDS } from "@/data/daily-words";
 import { VOCABULARY } from "@/data/vocabulary";
 import { DailyChallenge } from "./daily-challenge";
 
 export const metadata = {
-  title: "Swedish word of the day — StudySwedish",
+  title: "Swedish word of the day, StudySwedish",
   description:
-    "A new Swedish word every day — with pronunciation, an example sentence, and a fun fact about Sweden. A tiny daily habit that adds up.",
+    "A new Swedish word every day, with pronunciation, an example sentence, and a fun fact about Sweden. A tiny daily habit that adds up.",
 };
 
 export default function DailyWordPage() {
@@ -35,7 +35,7 @@ export default function DailyWordPage() {
 
   return (
     <>
-      {/* Hero — background image */}
+      {/* Hero, background image */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -68,7 +68,7 @@ export default function DailyWordPage() {
           </h1>
           <p className="mt-3 text-sm text-white/60">{formattedDate}</p>
           <p className="mt-2 text-sm text-white/40">
-            One new word every morning — a tiny habit that adds up.
+            One new word every morning, a tiny habit that adds up.
           </p>
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function DailyWordPage() {
             <div className="inline-flex items-center gap-3">
               <div className="h-px w-8 bg-charcoal/15" />
               <p className="text-sm text-charcoal/35">
-                A new word every day — come back tomorrow.
+                A new word every day, come back tomorrow.
               </p>
               <div className="h-px w-8 bg-charcoal/15" />
             </div>

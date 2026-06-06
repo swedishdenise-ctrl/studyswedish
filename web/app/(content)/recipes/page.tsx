@@ -1,10 +1,10 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Swedish Recipes — StudySwedish",
+  title: "Swedish Recipes, StudySwedish",
   description:
-    "Real Swedish recipes — köttbullar, kanelbullar, semla and more — written in English with Swedish names so you learn while you cook.",
+    "Real Swedish recipes, köttbullar, kanelbullar, semla and more, written in English with Swedish names so you learn while you cook.",
 };
 
 export default function RecipesPage() {
@@ -48,7 +48,7 @@ export default function RecipesPage() {
             className="group block overflow-hidden rounded-2xl bg-charcoal transition-transform hover:-translate-y-0.5 hover:shadow-xl"
           >
             <div className="grid md:grid-cols-2 min-h-[380px]">
-              {/* Left — photo */}
+              {/* Left, photo */}
               <div className="relative min-h-[260px] md:min-h-0">
                 {featured.image ? (
                   <Image
@@ -67,7 +67,7 @@ export default function RecipesPage() {
                   </div>
                 )}
               </div>
-              {/* Right — details */}
+              {/* Right, details */}
               <div className="flex flex-col justify-center p-8 md:p-10">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/40 mb-4">
                   {featured.category} · {featured.minutes} min
@@ -206,7 +206,7 @@ const RECIPES: Recipe[] = [
     title: "Meatballs with mashed potato & lingonberry",
     title_sv: "Köttbullar",
     blurb:
-      "Pan-fried from scratch in butter, finished in a silky brown sauce. Served with mashed potato and lingonberry — Sweden's most beloved dinner.",
+      "Pan-fried from scratch in butter, finished in a silky brown sauce. Served with mashed potato and lingonberry, Sweden's most beloved dinner.",
     category: "Dinner",
     minutes: 45,
     image: "/images/kottbullar.jpg",
@@ -246,7 +246,7 @@ const RECIPES: Recipe[] = [
     title: "Jansson's temptation",
     title_sv: "Janssons frestelse",
     blurb:
-      "Creamy potato and anchovy gratin. A Christmas classic — but tastes good any dark Tuesday.",
+      "Creamy potato and anchovy gratin. A Christmas classic, but tastes good any dark Tuesday.",
     category: "Dinner",
     minutes: 70,
     image: "/images/janssons-frestelse.jpg",

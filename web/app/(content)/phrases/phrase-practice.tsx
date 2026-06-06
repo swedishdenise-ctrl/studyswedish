@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo, useCallback } from "react";
 import type { Phrase } from "@/data/phrases";
@@ -109,7 +109,7 @@ export function PhrasePractice({ phrases }: { phrases: Phrase[] }) {
               ? "Perfekt! You nailed every phrase."
               : pct >= 60
                 ? "Bra jobbat! A few more rounds to lock these in."
-                : "Keep practising — real phrases stick with repetition."}
+                : "Keep practising, real phrases stick with repetition."}
           </p>
           <p className="mt-1 text-sm text-warm-gray">
             {total + batch.length} phrases practised this session

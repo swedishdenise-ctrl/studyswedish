@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo, useCallback } from "react";
 import type { Verb } from "@/data/verbs";
@@ -101,7 +101,7 @@ export function ConjugationDrill({ verbs }: { verbs: Verb[] }) {
               ? "Perfekt! You got every conjugation right."
               : pct >= 60
                 ? "Bra jobbat! A few more rounds will lock these in."
-                : "Keep drilling — those irregular verbs take repetition."}
+                : "Keep drilling, those irregular verbs take repetition."}
           </p>
           <p className="mt-1 text-sm text-warm-gray">
             {totalDrilled} verb forms drilled this session

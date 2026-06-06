@@ -1,10 +1,10 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { PHRASES, SITUATIONS } from "@/data/phrases";
 import { PhraseSearch } from "./phrase-search";
 import { PhrasePractice } from "./phrase-practice";
 
 export const metadata = {
-  title: "Swedish phrases — How do you say it in Swedish? — StudySwedish",
+  title: "Swedish phrases, How do you say it in Swedish?, StudySwedish",
   description:
     "80+ essential Swedish phrases for real situations: greetings, restaurants, shopping, directions, fika, and more. Each phrase includes pronunciation, literal translations, and cultural notes.",
 };
@@ -32,7 +32,7 @@ export default function PhrasesPage() {
                 How do you say it in Swedish?
               </h1>
               <p className="mt-4 max-w-2xl text-lg text-white/80">
-                Essential phrases for real situations — from your first{" "}
+                Essential phrases for real situations, from your first{" "}
                 <em>hej</em> to ordering fika like a local. Every phrase includes a
                 literal translation so you can see how Swedish really works.
               </p>
@@ -63,7 +63,7 @@ export default function PhrasesPage() {
       <section className="mx-auto max-w-4xl px-6 pb-12">
         <div className="rounded-2xl border border-dashed border-black/15 bg-white p-8 text-center">
           <p className="text-charcoal/70">
-            We&rsquo;re adding new phrases regularly — got a situation
+            We&rsquo;re adding new phrases regularly, got a situation
             you&rsquo;d like covered? Let us know.
           </p>
         </div>

@@ -1,9 +1,9 @@
-import { Suspense } from "react";
+﻿import { Suspense } from "react";
 import { CommunityLayout } from "@/components/community/community-layout";
 import { CreatePostForm } from "./create-post-form";
 
 export const metadata = {
-  title: "New Post — Community — StudySwedish",
+  title: "New Post, Community, StudySwedish",
   description: "Share something with the community.",
 };
 
@@ -16,7 +16,7 @@ export default function NewPostPage() {
         </h1>
         <p className="mt-1 text-sm text-charcoal/50">
           Share a question, recommendation, recipe, or anything Sweden-related.
-          No account needed — just your name.
+          No account needed, just your name.
         </p>
 
         <div className="mt-6">

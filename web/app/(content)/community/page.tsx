@@ -1,4 +1,4 @@
-import { CommunityLayout } from "@/components/community/community-layout";
+﻿import { CommunityLayout } from "@/components/community/community-layout";
 import { ChannelGrid } from "@/components/community/channel-nav";
 import { WelcomeBanner } from "@/components/community/welcome-banner";
 import { PostCard } from "@/components/community/post-card";
@@ -7,7 +7,7 @@ import { samplePosts } from "@/data/sample-posts";
 import { fetchRealPosts } from "@/lib/community/fetch-posts";
 
 export const metadata = {
-  title: "Community — StudySwedish",
+  title: "Community, StudySwedish",
   description:
     "Join the Swedish community. Discover places to see, restaurants, recipes, events, and connect with fellow Sweden-lovers.",
 };

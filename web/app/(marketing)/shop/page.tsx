@@ -1,9 +1,9 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export const metadata = {
-  title: "Resources — StudySwedish",
+  title: "Resources, StudySwedish",
   description:
-    "Things made by Denise — a book about Swedish culture on Amazon, a free proverbs PDF, and Swedish affirmations on YouTube.",
+    "Things made by Denise, a book about Swedish culture on Amazon, a free proverbs PDF, and Swedish affirmations on YouTube.",
 };
 
 const AMAZON_LINK = "https://amzn.eu/d/08coXSxv";
@@ -24,7 +24,7 @@ export default function ResourcesPage() {
 
         <div className="mt-12 space-y-5">
 
-          {/* Book — Amazon */}
+          {/* Book, Amazon */}
           <div className="overflow-hidden rounded-2xl border bg-white" style={{ borderColor: "#C9A04A18" }}>
             <div
               className="relative flex h-48 items-center justify-center overflow-hidden sm:h-56"
@@ -54,7 +54,7 @@ export default function ResourcesPage() {
                 How to Understand a Swede
               </h2>
               <p className="mt-3 text-[15px] leading-relaxed max-w-xl" style={{ color: "#3D2B1460" }}>
-                My book — a guide to the Swedish mindset, the silences, the fika, the
+                My book, a guide to the Swedish mindset, the silences, the fika, the
                 lagom, and everything that makes a Swede a Swede. Written with humour
                 and warmth. Available on Amazon.
               </p>
@@ -72,7 +72,7 @@ export default function ResourcesPage() {
             </div>
           </div>
 
-          {/* 50 Swedish Proverbs — coming soon */}
+          {/* 50 Swedish Proverbs, coming soon */}
           <div className="overflow-hidden rounded-2xl border bg-white" style={{ borderColor: "#C9A04A18" }}>
             <div
               className="relative flex h-48 items-center justify-center overflow-hidden sm:h-56"
@@ -137,7 +137,7 @@ export default function ResourcesPage() {
               </h2>
               <p className="mt-3 text-[15px] leading-relaxed max-w-xl" style={{ color: "#3D2B1460" }}>
                 Positive affirmations in Swedish, recorded by me. Start your morning
-                in the language — it works better than you'd think.
+                in the language, it works better than you'd think.
               </p>
               <div className="mt-7">
                 <Link
