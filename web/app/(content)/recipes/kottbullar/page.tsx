@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Köttbullar — Swedish Meatballs — StudySwedish",
+  title: "Köttbullar, Swedish Meatballs, StudySwedish",
   description:
     "The real homemade Swedish meatballs: tender beef-and-pork balls fried in butter, served with silky brown sauce, creamy mash, and lingonberry. Classic Swedish comfort food.",
 };
@@ -156,8 +156,8 @@ export default function KottbullarPage() {
           </p>
           <ul className="mt-4 space-y-3">
             {TIPS.map((tip, i) => (
-              <li key={i} className="flex gap-3">
-                <span className="mt-1 text-golden">—</span>
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-golden" />
                 <p className="text-sm leading-relaxed text-charcoal/80">{tip}</p>
               </li>
             ))}
