@@ -259,5 +259,6 @@ const RECIPES: Recipe[] = [
       "The crunchy backbone of every Swedish kitchen. Good with cheese, butter, or just itself.",
     category: "Baking",
     minutes: 60,
+    image: "/images/knackebrod.jpg",
   },
 ];
