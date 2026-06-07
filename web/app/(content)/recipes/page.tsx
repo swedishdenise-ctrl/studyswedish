@@ -111,14 +111,9 @@ export default function RecipesPage() {
 
         {/* ── Coming soon ── */}
         <section className="border-t border-black/8 pt-10 pb-4">
-          <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <p className="font-display text-lg font-semibold text-charcoal">
-              More recipes on the way.
-            </p>
-            <p className="text-sm text-charcoal/45">
-              We photograph and test every recipe before it goes up.
-            </p>
-          </div>
+          <p className="font-display text-lg font-semibold text-charcoal">
+            More recipes on the way.
+          </p>
         </section>
 
       </main>
