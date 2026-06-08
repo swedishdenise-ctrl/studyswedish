@@ -159,17 +159,21 @@ export default function CoachingPage() {
                 <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>30 minutes, no commitment</p>
                 <div className="mt-4">
                   <a
-                    href={STRIPE_SINGLE}
+                    href={CALENDLY}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition hover:opacity-90"
                     style={{ background: "#C9A04A", color: "#1A1208" }}
                   >
-                    Book and pay
+                    Pick a time
                   </a>
                 </div>
                 <p className="mt-3 text-xs leading-relaxed" style={{ color: "#3D2B1460" }}>
-                  After payment, pick your time on Calendly and I will confirm within 24 hours.
+                  Choose a slot first, then pay. Or{" "}
+                  <a href={STRIPE_SINGLE} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
+                    pay now
+                  </a>
+                  {" "}and I will confirm your time within 24 hours.
                 </p>
               </div>
               <p className="mt-3 font-display text-5xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€40</p>
@@ -186,11 +190,11 @@ export default function CoachingPage() {
                     className="inline-block rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition hover:opacity-90"
                     style={{ background: "#1A1208", color: "#F5EDE3" }}
                   >
-                    Book and pay
+                    Book the intensive
                   </a>
                 </div>
                 <p className="mt-3 text-xs leading-relaxed" style={{ color: "#3D2B1460" }}>
-                  After payment, I will send you a link to book your first session. We schedule each one as we go, so you are never locked into dates in advance.
+                  Pay to secure your spot. I will send you a Calendly link to book your first session, and we schedule the rest as we go.
                 </p>
               </div>
               <p className="mt-3 font-display text-5xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€140</p>
