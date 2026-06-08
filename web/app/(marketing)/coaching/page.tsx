@@ -184,17 +184,21 @@ export default function CoachingPage() {
                 <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>4 × 30 min, save €20</p>
                 <div className="mt-4">
                   <a
-                    href={STRIPE_PACK}
+                    href={CALENDLY}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition hover:opacity-90"
                     style={{ background: "#1A1208", color: "#F5EDE3" }}
                   >
-                    Book the intensive
+                    Pick a time
                   </a>
                 </div>
                 <p className="mt-3 text-xs leading-relaxed" style={{ color: "#3D2B1460" }}>
-                  Pay to secure your spot. I will send you a Calendly link to book your first session, and we schedule the rest as we go.
+                  Book your first session, then{" "}
+                  <a href={STRIPE_PACK} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
+                    pay here
+                  </a>
+                  . After our first session we will sort the rest together.
                 </p>
               </div>
               <p className="mt-3 font-display text-5xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€140</p>
