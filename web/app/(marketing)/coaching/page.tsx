@@ -153,43 +153,52 @@ export default function CoachingPage() {
             Simple and straightforward.
           </h2>
           <div className="mt-10">
-            <div className="border-t py-8 sm:flex sm:items-center sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A25" }}>
-              <div>
+            <div className="border-t py-8 sm:flex sm:items-start sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A25" }}>
+              <div className="flex-1">
                 <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Single session</p>
                 <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>30 minutes, no commitment</p>
+                <div className="mt-4">
+                  <a
+                    href={STRIPE_SINGLE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition hover:opacity-90"
+                    style={{ background: "#C9A04A", color: "#1A1208" }}
+                  >
+                    Book and pay
+                  </a>
+                </div>
+                <p className="mt-3 text-xs leading-relaxed" style={{ color: "#3D2B1460" }}>
+                  After payment, pick your time on Calendly and I will confirm within 24 hours.
+                </p>
               </div>
               <p className="mt-3 font-display text-5xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€40</p>
             </div>
-            <div className="border-t py-8 sm:flex sm:items-center sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A25" }}>
-              <div>
-                <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>4-session pack</p>
+            <div className="border-t py-8 sm:flex sm:items-start sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A25" }}>
+              <div className="flex-1">
+                <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Swedish Intensive</p>
                 <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>4 × 30 min, save €20</p>
+                <div className="mt-4">
+                  <a
+                    href={STRIPE_PACK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition hover:opacity-90"
+                    style={{ background: "#1A1208", color: "#F5EDE3" }}
+                  >
+                    Book and pay
+                  </a>
+                </div>
+                <p className="mt-3 text-xs leading-relaxed" style={{ color: "#3D2B1460" }}>
+                  After payment, I will send you a link to book your first session. We schedule each one as we go, so you are never locked into dates in advance.
+                </p>
               </div>
               <p className="mt-3 font-display text-5xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€140</p>
             </div>
             <div className="border-t" style={{ borderColor: "#C9A04A25" }} />
           </div>
-          <div className="mt-10">
-            <Link
-              href={CALENDLY}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide transition hover:opacity-90 active:scale-[0.98]"
-              style={{ background: "#C9A04A", color: "#1A1208" }}
-            >
-              Book on Calendly
-            </Link>
-          </div>
-          <p className="mt-5 text-sm" style={{ color: "#3D2B1470" }}>
-            Pick a time, then I'll send you the payment link. Or pay directly:{" "}
-            <a href={STRIPE_SINGLE} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
-              single session
-            </a>
-            {" "}·{" "}
-            <a href={STRIPE_PACK} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
-              4-pack
-            </a>
-            . Questions?{" "}
+          <p className="mt-8 text-sm" style={{ color: "#3D2B1470" }}>
+            Questions?{" "}
             <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
               swedish.denise@gmail.com
             </a>
