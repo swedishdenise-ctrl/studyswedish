@@ -7,8 +7,8 @@ export const metadata = {
 };
 
 const CALENDLY = "https://calendly.com/swedish-denise";
-const STRIPE_SINGLE = "https://buy.stripe.com/28EbJ00x9gYTdCX0kGf3a00";
-const STRIPE_PACK   = "https://buy.stripe.com/8x29AS1Bd0ZV56r4AWf3a01";
+const STRIPE_SINGLE = "https://buy.stripe.com/8x29AS1Bd0ZV56r4AWf3a01";
+const STRIPE_PACK   = "https://buy.stripe.com/28EbJ00x9gYTdCX0kGf3a00";
 
 export default function CoachingPage() {
   return (
