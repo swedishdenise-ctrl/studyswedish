@@ -49,6 +49,15 @@ export default function JordgubbstartaPage() {
 
       <div className="mx-auto max-w-3xl px-6 py-12 space-y-10">
 
+        <div className="rounded-2xl border border-golden/40 bg-golden/10 p-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Swedish ingredient names</p>
+          <div className="mt-4 space-y-2 text-sm" style={{ color: "#3D2B14" }}>
+            <p><span className="font-medium">Sponge base:</span> 4 ägg, 170 g strösocker, 60 g vetemjöl, 80 g rismjöl, 1 tsk bakpulver, 1 tsk vaniljsocker</p>
+            <p><span className="font-medium">Vanilla cream:</span> 3 äggulor, 25 g majsstärkelse, 65 g strösocker, 200 ml mjölk, 50 ml grädde, 1 tsk vaniljpaste, 20 g smör</p>
+            <p><span className="font-medium">Assembly:</span> 1000 g färska jordgubbar, 1,5 msk strösocker, 500 ml vispgrädde, 1 msk florsocker, 1 kvist citronmeliss</p>
+          </div>
+        </div>
+
         <div className="rounded-2xl border border-swedish-blue/20 bg-swedish-blue/5 p-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-swedish-blue/60">Swedish vocabulary</p>
           <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3">

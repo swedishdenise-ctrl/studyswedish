@@ -208,8 +208,8 @@ const RECIPES: Recipe[] = [
   },
   {
     slug: "nutella-ferrero-tarta",
-    title: "Nutella and Ferrero Rocher cake",
-    title_sv: "Nutella & Ferrero Rocher-tårta",
+    title: "Nutella and chocolate cake",
+    title_sv: "Chokladtårta med Nutella",
     blurb:
       "Decadent four-layer chocolate cake with Nutella, dulce de leche, cream cheese frosting, hazelnuts, and Ferrero Rocher on top.",
     category: "Baking",

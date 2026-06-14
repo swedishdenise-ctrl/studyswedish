@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Nutella & Ferrero Rocher-tårta, Nutella Cake, StudySwedish",
+  title: "Nutella and Chocolate Cake, StudySwedish",
   description:
-    "Decadent four-layer chocolate cake with Nutella, dulce de leche, cream cheese frosting, hazelnuts, and topped with Ferrero Rocher. Swedish celebration cake.",
+    "Decadent four-layer chocolate cake with Nutella, dulce de leche, cream cheese frosting, hazelnuts, and topped with Ferrero Rocher.",
 };
 
 export default function NutellaFerroroTartaPage() {
@@ -19,10 +19,10 @@ export default function NutellaFerroroTartaPage() {
               Baking · Special occasion
             </p>
             <h1 className="mt-3 font-display text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
-              Nutella & Ferrero Rocher-tårta
+              Nutella and Chocolate Cake
             </h1>
             <p className="mt-2 font-display text-2xl italic text-swedish-blue/70">
-              Nutella and Ferrero Rocher cake
+              Chokladtårta med Nutella
             </p>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-charcoal/70">
               A decadent four-layer chocolate cake. Rich chocolate sponge layered with Nutella and dulce de leche
@@ -48,6 +48,16 @@ export default function NutellaFerroroTartaPage() {
       </section>
 
       <div className="mx-auto max-w-3xl px-6 py-12 space-y-10">
+
+        <div className="rounded-2xl border border-golden/40 bg-golden/10 p-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Swedish ingredient names</p>
+          <div className="mt-4 space-y-2 text-sm" style={{ color: "#3D2B14" }}>
+            <p><span className="font-medium">Chocolate sponge (x2):</span> 98 g smör, 2 ägg, 65 g vetemjöl, 160 g strösocker, 6 g bakpulver, 20 g kakao, 3 g vaniljsocker, flingsalt, 100 ml hett vatten</p>
+            <p><span className="font-medium">Nutella frosting:</span> 260 g smör, 325 g Philadelphiaost, 200 g Nutella, 130 g dulce de leche, 160 g florsocker, 55 g kakao, 130 ml vispgrädde</p>
+            <p><span className="font-medium">Chocolate truffle:</span> 50 g smör, 25 g strösocker, 40 g mörk choklad, 65 g Nutella</p>
+            <p><span className="font-medium">Assembly:</span> 160 g hackade hasselnötter, 16 Ferrero Rocher</p>
+          </div>
+        </div>
 
         <div className="rounded-2xl border border-swedish-blue/20 bg-swedish-blue/5 p-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-swedish-blue/60">Swedish vocabulary</p>
