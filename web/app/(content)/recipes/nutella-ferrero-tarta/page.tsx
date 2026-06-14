@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Nutella and Chocolate Cake, StudySwedish",
@@ -48,6 +49,16 @@ export default function NutellaFerroroTartaPage() {
       </section>
 
       <div className="mx-auto max-w-3xl px-6 py-12 space-y-10">
+
+        <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
+          <Image
+            src="/images/nutella-ferrero-tarta.jpg"
+            alt="Nutella and Chocolate Cake"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 768px"
+          />
+        </div>
 
         <div className="rounded-2xl border border-golden/40 bg-golden/10 p-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Swedish ingredient names</p>
