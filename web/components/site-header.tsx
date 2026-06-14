@@ -22,6 +22,11 @@ const shopLinks = [
   { href: "https://amzn.eu/d/08coXSxv",  label: "How to Understand a Swede",  desc: "My book on Amazon" },
 ];
 
+const workWithMeLinks = [
+  { href: "/coaching",  label: "Coaching",   desc: "1:1 Swedish sessions" },
+  { href: "/mediakit",  label: "Media kit",  desc: "Press & partnership info" },
+];
+
 const WARM_BG   = "#F5EDE3";
 const WARM_TEXT = "#3D2B14";
 const GOLD      = "#C9A04A";
@@ -108,10 +113,16 @@ export function SiteHeader() {
             </button>
             {openMenu === "sweden" && <DesktopDropdown links={swedenLinks} />}
           </li>
-          <li>
-            <Link href="/coaching" className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition" style={{ color: GOLD }}>
-              Coaching
-            </Link>
+          <li className="relative" onMouseEnter={() => handleEnter("work")} onMouseLeave={handleLeave}>
+            <button
+              type="button"
+              className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition"
+              style={{ color: GOLD }}
+              onClick={() => toggle("work")}
+            >
+              Work with me <Chevron floating={floating} open={openMenu === "work"} />
+            </button>
+            {openMenu === "work" && <DesktopDropdown links={workWithMeLinks} />}
           </li>
           <li>
             <Link href="/about" className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition hover:bg-black/5" style={deskBtnStyle}>
@@ -220,9 +231,27 @@ export function SiteHeader() {
                   </li>
 
                   <li>
-                    <Link href="/coaching" className="block px-6 py-4 text-base font-semibold hover:bg-black/5" style={{ color: GOLD }}>
-                      Coaching
-                    </Link>
+                    <details>
+                      <summary
+                        className="flex cursor-pointer list-none items-center justify-between px-6 py-4 text-base font-semibold hover:bg-black/5 active:bg-black/10"
+                        style={{ color: GOLD }}
+                      >
+                        Work with me
+                        <svg className="h-4 w-4 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </summary>
+                      <ul className="pb-2" style={{ background: "rgba(201,160,74,0.05)" }}>
+                        {workWithMeLinks.map((link) => (
+                          <li key={link.href}>
+                            <Link href={link.href} className="flex flex-col px-8 py-3 hover:bg-black/5">
+                              <span className="text-sm font-medium" style={{ color: WARM_TEXT }}>{link.label}</span>
+                              <span className="text-xs opacity-50" style={{ color: WARM_TEXT }}>{link.desc}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
                   </li>
                   <li>
                     <Link href="/about" className="block px-6 py-4 text-base font-medium hover:bg-black/5" style={{ color: WARM_TEXT }}>
