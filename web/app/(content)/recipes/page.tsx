@@ -197,63 +197,23 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
 
 const RECIPES: Recipe[] = [
   {
-    slug: "kottbullar",
-    title: "Meatballs with mashed potato & lingonberry",
-    title_sv: "Köttbullar",
+    slug: "jordgubbstarta",
+    title: "Strawberry cake with rice flour",
+    title_sv: "Jordgubbstårta med rismjöl",
     blurb:
-      "Pan-fried from scratch in butter, finished in a silky brown sauce. Served with mashed potato and lingonberry, Sweden's most beloved dinner.",
-    category: "Dinner",
-    minutes: 45,
-    image: "/images/kottbullar.jpg",
-  },
-  {
-    slug: "kanelbullar",
-    title: "Cinnamon buns",
-    title_sv: "Kanelbullar",
-    blurb:
-      "The classic Swedish bake. Soft dough, cardamom, cinnamon, and pearl sugar on top.",
-    category: "Baking",
-    minutes: 90,
-    image: "/images/kanelbullar.jpg",
-  },
-  {
-    slug: "semla",
-    title: "Cardamom buns with cream",
-    title_sv: "Semla",
-    blurb:
-      "Eaten on Fat Tuesday, but honestly good all winter. Almond paste, whipped cream, powdered sugar.",
+      "Light sponge, silky vanilla cream, and fresh strawberries. Rice flour 1:1 for potato starch makes this the perfect summer cake.",
     category: "Baking",
     minutes: 120,
-    image: "/images/semla.jpg",
+    image: "/images/jordgubbstarta.jpg",
   },
   {
-    slug: "raggmunk",
-    title: "Potato pancakes with bacon",
-    title_sv: "Raggmunk",
+    slug: "nutella-ferrero-tarta",
+    title: "Nutella and Ferrero Rocher cake",
+    title_sv: "Nutella & Ferrero Rocher-tårta",
     blurb:
-      "Crispy, simple, and the kind of Thursday lunch your Swedish grandmother would approve of.",
-    category: "Lunch",
-    minutes: 30,
-    image: "/images/raggmunk.jpg",
-  },
-  {
-    slug: "janssons-frestelse",
-    title: "Jansson's temptation",
-    title_sv: "Janssons frestelse",
-    blurb:
-      "Creamy potato and anchovy gratin. A Christmas classic, but tastes good any dark Tuesday.",
-    category: "Dinner",
-    minutes: 70,
-    image: "/images/janssons-frestelse.jpg",
-  },
-  {
-    slug: "knackebrod",
-    title: "Crispbread",
-    title_sv: "Knäckebröd",
-    blurb:
-      "The crunchy backbone of every Swedish kitchen. Good with cheese, butter, or just itself.",
+      "Decadent four-layer chocolate cake with Nutella, dulce de leche, cream cheese frosting, hazelnuts, and Ferrero Rocher on top.",
     category: "Baking",
-    minutes: 60,
-    image: "/images/knackebrod.jpg",
+    minutes: 180,
+    image: "/images/nutella-ferrero-tarta.jpg",
   },
 ];
