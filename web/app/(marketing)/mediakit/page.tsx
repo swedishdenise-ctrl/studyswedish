@@ -40,7 +40,7 @@ export default function MediaKitPage() {
               <p className="mt-2 text-sm" style={{ color: "#3D2B1470" }}>Monthly Views</p>
             </div>
             <div>
-              <p className="font-display text-4xl font-semibold" style={{ color: "#C9A04A" }}>26.4k</p>
+              <p className="font-display text-4xl font-semibold" style={{ color: "#C9A04A" }}>28.5k</p>
               <p className="mt-2 text-sm" style={{ color: "#3D2B1470" }}>Combined Followers</p>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function MediaKitPage() {
               <div className="mt-4 space-y-3 text-sm" style={{ color: "#3D2B14" }}>
                 <div className="flex justify-between">
                   <span style={{ color: "#9B9690" }}>Followers</span>
-                  <span className="font-semibold">9,500</span>
+                  <span className="font-semibold">11.4k</span>
                 </div>
                 <div className="flex justify-between">
                   <span style={{ color: "#9B9690" }}>Monthly Reach</span>
@@ -80,7 +80,7 @@ export default function MediaKitPage() {
               <div className="mt-4 space-y-3 text-sm" style={{ color: "#3D2B14" }}>
                 <div className="flex justify-between">
                   <span style={{ color: "#9B9690" }}>Followers</span>
-                  <span className="font-semibold">16,900</span>
+                  <span className="font-semibold">17.1k</span>
                 </div>
                 <div className="flex justify-between">
                   <span style={{ color: "#9B9690" }}>Content Type</span>
