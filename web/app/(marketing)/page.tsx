@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const CALENDLY = "https://calendly.com/swedish-denise/free-15-min-swedish-chat";
+
 export const metadata = {
   title: { absolute: "StudySwedish, Learn Swedish online" },
   description:
-    "Swedish words, recipes, culture and a few good proverbs, from someone who is just very Swedish.",
+    "Swedish words, recipes, culture and a few good proverbs, from someone who is just very Swedish. Book a free 15-minute call to get started.",
 };
 
 export default function HomePage() {
@@ -27,25 +29,31 @@ export default function HomePage() {
             </h1>
             <div className="mt-6 h-px w-12 bg-[#C9A04A]/50" />
             <p className="mt-6 max-w-sm text-[17px] leading-relaxed text-[#3D2B14]/60">
-              Hej, I'm Denise. I share Swedish words,
-              recipes, culture and the occasional proverb
-              because I love where I'm from and I want
-              you to love it too.
+              Hej, I'm Denise, a native Swede sharing the
+              language the way it's actually spoken, the
+              words, the recipes, the culture, and the
+              occasional proverb, because you can't really
+              learn one without the other. Classes with me
+              are more fika than flashcards, I promise. If
+              you want to actually start speaking it, let's
+              talk.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="#what-i-share"
+                href={CALENDLY}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full px-7 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 style={{ background: "linear-gradient(135deg, #C9A04A, #A8813A)" }}
               >
-                What I share ↓
+                Book your free 15-min call →
               </Link>
               <Link
-                href="/community"
+                href="#what-i-share"
                 className="rounded-full border border-[#3D2B14]/15 px-7 py-3 text-sm font-medium text-[#3D2B14]/70 transition hover:border-[#3D2B14]/30"
               >
-                Say hej
+                What I share ↓
               </Link>
             </div>
           </div>
@@ -80,6 +88,65 @@ export default function HomePage() {
           className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-30"
           style={{ background: "radial-gradient(circle, #C9A04A40 0%, transparent 70%)" }}
         />
+      </section>
+
+      {/* Free 15-min call */}
+      <section id="book-a-call" className="px-6 py-20" style={{ background: "#FAF5EE" }}>
+        <div className="mx-auto max-w-2xl">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
+            Free, 15 minutes
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-semibold leading-tight sm:text-4xl" style={{ color: "#1A1208" }}>
+            Let's talk for 15 minutes.
+          </h2>
+          <p className="mt-5 text-[17px] leading-relaxed max-w-xl" style={{ color: "#3D2B14BB" }}>
+            A quick call so I can hear about your goals and where you're starting from,
+            then we get you started learning Swedish with me.
+          </p>
+
+          <div className="mt-10">
+            {[
+              {
+                title: "Your goals",
+                body: "Why you want to learn Swedish, and what you want to be able to do with it.",
+              },
+              {
+                title: "Your level",
+                body: "Complete beginner or already know some Swedish, either is fine.",
+              },
+              {
+                title: "Getting started",
+                body: "We figure out the right way for you to start learning with me.",
+              },
+            ].map((item, i) => (
+              <div key={item.title} className="border-t py-8 flex gap-7" style={{ borderColor: "#C9A04A20" }}>
+                <span
+                  className="font-display text-5xl font-semibold leading-none shrink-0 select-none"
+                  style={{ color: "#C9A04A18", marginTop: "2px", minWidth: "3rem" }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>{item.title}</p>
+                  <p className="mt-2 text-[16px] leading-relaxed" style={{ color: "#3D2B14BB" }}>{item.body}</p>
+                </div>
+              </div>
+            ))}
+            <div className="border-t" style={{ borderColor: "#C9A04A20" }} />
+          </div>
+
+          <div className="mt-10">
+            <Link
+              href={CALENDLY}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide transition hover:opacity-90 active:scale-[0.98]"
+              style={{ background: "#C9A04A", color: "#1A1208" }}
+            >
+              Book your free call →
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* What I share, editorial list */}
