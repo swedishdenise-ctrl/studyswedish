@@ -7,8 +7,6 @@ export const metadata = {
 };
 
 const CALENDLY = "https://calendly.com/swedish-denise";
-const STRIPE_SINGLE = "https://buy.stripe.com/8x29AS1Bd0ZV56r4AWf3a01";
-const STRIPE_PACK   = "https://buy.stripe.com/28EbJ00x9gYTdCX0kGf3a00";
 
 export default function CoachingPage() {
   return (
@@ -143,65 +141,49 @@ export default function CoachingPage() {
         </div>
       </section>
 
-      {/* Pricing, warm background */}
+      {/* Sessions, warm background */}
       <section className="px-6 py-20" style={{ background: "#F0E8D8" }}>
         <div className="mx-auto max-w-2xl">
           <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
-            Pricing
+            Sessions
           </p>
           <h2 className="mt-4 font-display text-3xl font-semibold" style={{ color: "#1A1208" }}>
             Simple and straightforward.
           </h2>
+          <p className="mt-5 text-[16px] leading-relaxed max-w-lg" style={{ color: "#3D2B14BB" }}>
+            Pick whichever fits how you like to learn. We will talk about cost once
+            I know what you need, it depends on the person.
+          </p>
           <div className="mt-10">
-            <div className="border-t py-8 sm:flex sm:items-start sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A25" }}>
-              <div className="flex-1">
-                <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Single session</p>
-                <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>30 minutes, no commitment</p>
-                <div className="mt-4">
-                  <a
-                    href={CALENDLY}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition hover:opacity-90"
-                    style={{ background: "#C9A04A", color: "#1A1208" }}
-                  >
-                    Pick a time
-                  </a>
-                </div>
-                <p className="mt-3 text-xs leading-relaxed" style={{ color: "#3D2B1460" }}>
-                  Choose a slot first, then pay. Or{" "}
-                  <a href={STRIPE_SINGLE} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
-                    pay now
-                  </a>
-                  {" "}and I will confirm your time within 24 hours.
-                </p>
+            <div className="border-t py-8" style={{ borderColor: "#C9A04A25" }}>
+              <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Single session</p>
+              <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>30 minutes, no commitment</p>
+              <div className="mt-4">
+                <a
+                  href={CALENDLY}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition hover:opacity-90"
+                  style={{ background: "#C9A04A", color: "#1A1208" }}
+                >
+                  Pick a time
+                </a>
               </div>
-              <p className="mt-3 font-display text-5xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€40</p>
             </div>
-            <div className="border-t py-8 sm:flex sm:items-start sm:justify-between sm:gap-8" style={{ borderColor: "#C9A04A25" }}>
-              <div className="flex-1">
-                <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Swedish Intensive</p>
-                <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>4 × 30 min, save €20</p>
-                <div className="mt-4">
-                  <a
-                    href={CALENDLY}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition hover:opacity-90"
-                    style={{ background: "#1A1208", color: "#F5EDE3" }}
-                  >
-                    Pick a time
-                  </a>
-                </div>
-                <p className="mt-3 text-xs leading-relaxed" style={{ color: "#3D2B1460" }}>
-                  Book your first session, then{" "}
-                  <a href={STRIPE_PACK} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70" style={{ color: "#C9A04A" }}>
-                    pay here
-                  </a>
-                  . After our first session we will sort the rest together.
-                </p>
+            <div className="border-t py-8" style={{ borderColor: "#C9A04A25" }}>
+              <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Swedish Intensive</p>
+              <p className="mt-1 text-sm" style={{ color: "#3D2B1470" }}>4 × 30 min sessions</p>
+              <div className="mt-4">
+                <a
+                  href={CALENDLY}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition hover:opacity-90"
+                  style={{ background: "#1A1208", color: "#F5EDE3" }}
+                >
+                  Pick a time
+                </a>
               </div>
-              <p className="mt-3 font-display text-5xl font-semibold sm:mt-0 sm:shrink-0" style={{ color: "#1A1208" }}>€140</p>
             </div>
             <div className="border-t" style={{ borderColor: "#C9A04A25" }} />
           </div>
