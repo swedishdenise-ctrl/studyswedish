@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const metadata = {
   title: "Media Kit, Swedish with Denise",
   description:
@@ -119,43 +117,6 @@ export default function MediaKitPage() {
                 <div className="shrink-0 text-right">
                   <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>{reel.views}</p>
                   <p className="text-xs" style={{ color: "#9B9690" }}>views</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Collaborations */}
-      <section className="px-6 pb-20">
-        <div className="mx-auto max-w-2xl">
-          <div className="h-px mb-16" style={{ background: "#C9A04A20" }} />
-          <h2 className="font-display text-3xl font-semibold mb-8" style={{ color: "#1A1208" }}>Work With Me</h2>
-
-          <h3 className="font-display text-xl font-semibold mb-4" style={{ color: "#1A1208" }}>Previous Brand Partners</h3>
-          <div className="flex flex-wrap gap-3 mb-12">
-            {["Rusta", "Face Stockholm", "Fytoo Glasses", "Dossier Perfumes", "AnytoSpeech", "Maria Åkerberg"].map((brand) => (
-              <div key={brand} className="px-4 py-2 border rounded-sm text-sm" style={{ borderColor: "#C9A04A", color: "#5A4E40" }}>
-                {brand}
-              </div>
-            ))}
-          </div>
-
-          <h3 className="font-display text-xl font-semibold mb-4" style={{ color: "#1A1208" }}>What I Offer</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-            {[
-              { title: "Sponsored Reels & TikToks", desc: "Native-style video content woven naturally into my storytelling — never stiff or scripted" },
-              { title: "Instagram Stories", desc: "Product features, link stickers, and day-in-the-life integrations that drive real clicks" },
-              { title: "Product Reviews & Unboxings", desc: "Honest, engaging reviews that feel personal and build genuine trust with my audience" },
-              { title: "Long-term Partnerships", desc: "Ongoing brand ambassador relationships for consistent audience exposure and maximum impact" },
-            ].map((offer) => (
-              <div key={offer.title} className="rounded-lg p-4" style={{ background: "#F0EBE3" }}>
-                <div className="flex gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5" style={{ background: "#C9A04A" }} />
-                  <div>
-                    <p className="font-semibold text-sm" style={{ color: "#1A1208" }}>{offer.title}</p>
-                    <p className="mt-1 text-xs leading-relaxed" style={{ color: "#9B9690" }}>{offer.desc}</p>
-                  </div>
                 </div>
               </div>
             ))}
