@@ -18,6 +18,7 @@ const swedenLinks = [
 ];
 
 const shopLinks = [
+  { href: "/magnets",                     label: "Fridge Magnets",             desc: "4 designs, limited first batch" },
   { href: "/shop",                        label: "All downloads",              desc: "Free PDF, affirmations & more" },
   { href: "https://amzn.eu/d/08coXSxv",  label: "How to Understand a Swede",  desc: "My book on Amazon" },
 ];

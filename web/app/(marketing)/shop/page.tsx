@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Resources, StudySwedish",
   description:
-    "Things made by Denise, a book about Swedish culture on Amazon, a free proverbs PDF, and Swedish affirmations on YouTube.",
+    "Things made by Denise, a book about Swedish culture on Amazon, a free proverbs PDF, Swedish affirmations on YouTube, and fridge magnets.",
 };
 
 const AMAZON_LINK = "https://amzn.eu/d/08coXSxv";
@@ -22,6 +22,32 @@ export default function ResourcesPage() {
           <p className="mt-4 text-[16px] leading-relaxed max-w-lg" style={{ color: "#3D2B1470" }}>
             My book on Amazon, a free proverbs PDF, and Swedish affirmations on YouTube.
           </p>
+        </div>
+      </section>
+
+      {/* Fridge magnets */}
+      <section className="px-6 pb-16">
+        <div className="mx-auto max-w-2xl">
+          <div className="h-px mb-14" style={{ background: "#C9A04A20" }} />
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#C9A04A" }}>
+            New
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-semibold" style={{ color: "#1A1208" }}>
+            Swedish Words Fridge Magnets
+          </h2>
+          <p className="mt-5 text-[16px] leading-relaxed max-w-xl" style={{ color: "#3D2B14" }}>
+            4 acrylic magnets, 4 real Swedish phrases, each with its own collector card.
+            Limited first batch — only 25 sets.
+          </p>
+          <div className="mt-8">
+            <Link
+              href="/magnets"
+              className="inline-block rounded-full px-7 py-3 text-sm font-semibold transition hover:opacity-90"
+              style={{ background: "#C9A04A", color: "#1A1208" }}
+            >
+              See the collection →
+            </Link>
+          </div>
         </div>
       </section>
 
