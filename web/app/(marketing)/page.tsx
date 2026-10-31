@@ -5,7 +5,7 @@ import { StoreSection, Eyebrow } from "@/components/store/section";
 export const metadata = {
   title: "Swedish Words Fridge Magnets — StudySwedish",
   description:
-    "4 acrylic fridge magnets with real Swedish words and phrases — Jag älskar Sverige, Lagom är bäst, Fikadags!, and Dra åt skogen! Each comes with a collector card. Limited first batch of 25 sets.",
+    "4 acrylic fridge magnets with real Swedish words and phrases — Jag älskar Sverige, Lagom är bäst, Fikadags!, and Dra åt skogen! Each comes with a collector card.",
 };
 
 const PAYMENT_LINK = "https://buy.stripe.com/aFaeVc93F8sn56rebwf3a08";
@@ -52,7 +52,7 @@ const FAQ = [
   },
   {
     q: "Can I buy just one design?",
-    a: "Not for this first batch — they're sold as the full set of 4 only. There are only 25 sets total, so once they're gone, they're gone until (if) I order more.",
+    a: "Not for now — they're sold as the full set of 4 only.",
   },
   {
     q: "What if mine arrives damaged?",
@@ -66,7 +66,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="px-6 pt-40 pb-28 sm:pt-48">
         <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Limited first batch — only 25 sets</Eyebrow>
+          <Eyebrow>StudySwedish</Eyebrow>
           <h1 className="mt-6 font-display text-5xl font-normal leading-[1.1] tracking-tight text-ink sm:text-6xl">
             Swedish Words
             <br />

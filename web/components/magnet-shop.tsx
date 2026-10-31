@@ -17,7 +17,7 @@ export function MagnetShop() {
         <StoreButtonNative href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
           Buy the set — {PRICE_DISPLAY}
         </StoreButtonNative>
-        <span className="text-[13px] text-ink/35">Only 25 sets — shipping included</span>
+        <span className="text-[13px] text-ink/35">Shipping included, worldwide</span>
       </div>
     </div>
   );
