@@ -5,7 +5,7 @@ import { StoreSection, Eyebrow } from "@/components/store/section";
 export const metadata = {
   title: "Swedish Words Fridge Magnets — StudySwedish",
   description:
-    "4 acrylic fridge magnets with real Swedish words and phrases — Jag älskar Sverige, Lagom är bäst, Fikadags!, and Dra åt skogen! Each comes with a collector card.",
+    "4 acrylic fridge magnets with real Swedish words and phrases — Jag älskar Sverige, Lagom är bäst, Fikadags!, and Dra åt skogen!",
 };
 
 const PAYMENT_LINK = "https://buy.stripe.com/aFaeVc93F8sn56rebwf3a08";
@@ -40,7 +40,7 @@ const DESIGNS = [
 const FAQ = [
   {
     q: "What's actually in the box?",
-    a: "4 acrylic fridge magnets (6cm, 3mm acrylic + 1mm magnet backing), each with its own 7.5cm collector card — the pronunciation, what it really means, and a QR code to follow along on Instagram. Each one is sealed in its own bag.",
+    a: "4 acrylic fridge magnets (6cm, 3mm acrylic + 1mm magnet backing), each sealed in its own bag, plus one card with a QR code to follow along on Instagram.",
   },
   {
     q: "How much is shipping?",
@@ -119,9 +119,8 @@ export default function HomePage() {
         <p className="mt-6 text-[17px] leading-loose text-ink/70">
           I wanted something you could actually hold — not just another post you scroll
           past. These aren&apos;t tourist-shop clichés; they&apos;re words and phrases I actually
-          use, the ones that make Swedish feel real instead of textbook. Every magnet
-          comes with a little card so you (or whoever&apos;s asking about the weird one on
-          your fridge) can learn what it really means.
+          use, the ones that make Swedish feel real instead of textbook. Whoever asks about
+          the weird one on your fridge, you&apos;ll actually know what to tell them.
         </p>
       </StoreSection>
 
