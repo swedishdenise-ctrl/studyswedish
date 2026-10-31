@@ -63,57 +63,50 @@ const FAQ = [
 export default function HomePage() {
   return (
     <div className="bg-paper">
-      {/* Hero — product + price + buy, visible immediately */}
-      <section className="px-6 pt-32 pb-20 sm:pt-40">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2 sm:gap-16">
-          <div>
-            <Eyebrow>Limited first batch — only 25 sets</Eyebrow>
-            <h1 className="mt-5 font-display text-5xl font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
-              Swedish Words
-              <br />
-              Fridge Magnets
-            </h1>
-            <p className="mt-5 max-w-md text-[17px] leading-relaxed text-ink/60">
-              Four real Swedish words and phrases, four acrylic magnets, four little lessons
-              for your fridge.
-            </p>
-            <div className="mt-8 flex items-center gap-4">
-              <StoreButtonNative href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
-                Buy the set — €29.99
-              </StoreButtonNative>
-            </div>
-            <p className="mt-3 text-sm text-ink/40">Shipping included, worldwide.</p>
+      {/* Hero */}
+      <section className="px-6 pt-40 pb-28 sm:pt-48">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Limited first batch — only 25 sets</Eyebrow>
+          <h1 className="mt-6 font-display text-5xl font-normal leading-[1.1] tracking-tight text-ink sm:text-6xl">
+            Swedish Words
+            <br />
+            Fridge Magnets
+          </h1>
+          <p className="mx-auto mt-6 max-w-sm text-[16px] leading-relaxed text-ink/50">
+            Four real Swedish words and phrases, four acrylic magnets, four little lessons
+            for your fridge.
+          </p>
+          <div className="mt-10 flex flex-col items-center gap-3">
+            <StoreButtonNative href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
+              Buy the set — €29.99
+            </StoreButtonNative>
+            <p className="text-[13px] text-ink/35">Shipping included, worldwide</p>
           </div>
+        </div>
 
-          <div className="grid grid-cols-2 gap-3 rounded-2xl border-2 border-ink bg-mist p-3 shadow-[8px_8px_0_0_var(--color-brand)]">
-            {DESIGNS.map((design) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={design.src}
-                src={design.src}
-                alt={design.alt}
-                className="aspect-square rounded-xl bg-white"
-              />
-            ))}
-          </div>
+        <div className="mx-auto mt-20 grid max-w-3xl grid-cols-2 gap-px bg-ink/10 sm:grid-cols-4">
+          {DESIGNS.map((design) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img key={design.src} src={design.src} alt={design.alt} className="aspect-square bg-white" />
+          ))}
         </div>
       </section>
 
       {/* The collection */}
-      <StoreSection width="max-w-3xl" className="bg-mist" divider={false}>
+      <StoreSection width="max-w-2xl" className="bg-mist">
         <Eyebrow>The collection</Eyebrow>
-        <h2 className="mt-5 font-display text-3xl font-bold tracking-tight text-ink">All 4 designs</h2>
+        <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink">All four designs</h2>
 
-        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="mt-12 flex flex-col divide-y divide-ink/10">
           {DESIGNS.map((design) => (
-            <div key={design.src} className="flex gap-4 rounded-xl border border-ink/10 bg-white p-4">
-              <div className="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-mist">
+            <div key={design.src} className="flex items-center gap-6 py-6">
+              <div className="h-20 w-20 shrink-0 overflow-hidden bg-white">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={design.src} alt={design.alt} className="h-full w-full" />
               </div>
               <div>
-                <h3 className="font-display text-lg font-bold text-ink">{design.name}</h3>
-                <p className="mt-1 text-[14px] leading-relaxed text-ink/55">{design.meaning}</p>
+                <h3 className="font-display text-lg font-normal text-ink">{design.name}</h3>
+                <p className="mt-1 text-[14px] leading-relaxed text-ink/50">{design.meaning}</p>
               </div>
             </div>
           ))}
@@ -121,9 +114,9 @@ export default function HomePage() {
       </StoreSection>
 
       {/* Why I made these */}
-      <StoreSection width="max-w-2xl">
+      <StoreSection width="max-w-xl">
         <Eyebrow>Why I made these</Eyebrow>
-        <p className="mt-5 text-[16px] leading-relaxed max-w-xl text-ink/80">
+        <p className="mt-6 text-[17px] leading-loose text-ink/70">
           I wanted something you could actually hold — not just another post you scroll
           past. These aren&apos;t tourist-shop clichés; they&apos;re words and phrases I actually
           use, the ones that make Swedish feel real instead of textbook. Every magnet
@@ -133,23 +126,23 @@ export default function HomePage() {
       </StoreSection>
 
       {/* Buy, in full */}
-      <StoreSection width="max-w-3xl" className="scroll-mt-20 bg-ink" divider={false}>
+      <StoreSection width="max-w-xl" className="scroll-mt-20 bg-mist">
         <div id="buy" />
-        <Eyebrow invert>Get the set</Eyebrow>
-        <h2 className="mt-5 font-display text-3xl font-bold tracking-tight text-white">All 4, while they last</h2>
+        <Eyebrow>Get the set</Eyebrow>
+        <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink">All four, while they last</h2>
         <div className="mt-8">
-          <MagnetShop dark />
+          <MagnetShop />
         </div>
       </StoreSection>
 
       {/* FAQ */}
-      <StoreSection width="max-w-2xl" className="pb-28">
+      <StoreSection width="max-w-xl" className="pb-32">
         <Eyebrow>Questions</Eyebrow>
-        <div className="mt-8 flex flex-col gap-8">
+        <div className="mt-10 flex flex-col divide-y divide-ink/10">
           {FAQ.map((item) => (
-            <div key={item.q}>
-              <h3 className="font-display text-lg font-bold text-ink">{item.q}</h3>
-              <p className="mt-2 text-[15px] leading-relaxed max-w-xl text-ink/65">{item.a}</p>
+            <div key={item.q} className="py-6">
+              <h3 className="font-display text-base font-normal text-ink">{item.q}</h3>
+              <p className="mt-2 text-[14px] leading-relaxed text-ink/50">{item.a}</p>
             </div>
           ))}
         </div>

@@ -43,18 +43,18 @@ const socials = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-ink">
-      <div className="mx-auto max-w-5xl px-6 py-12">
+    <footer className="border-t border-ink/10 bg-paper">
+      <div className="mx-auto max-w-5xl px-6 py-14">
 
         {/* Top row: brand + socials */}
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="font-display text-lg font-bold text-white">Denise</p>
-            <p className="mt-0.5 text-sm text-white/50">Just very Swedish.</p>
+            <p className="font-display text-base font-normal tracking-[0.06em] text-ink">DENISE</p>
+            <p className="mt-0.5 text-sm text-ink/40">Just very Swedish.</p>
           </div>
 
           {/* Social icons */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             {socials.map((s) => (
               <Link
                 key={s.label}
@@ -62,7 +62,7 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="text-white/40 transition-all hover:text-brand"
+                className="text-ink/30 transition-all hover:text-ink"
               >
                 {s.icon}
               </Link>
@@ -71,14 +71,14 @@ export function SiteFooter() {
         </div>
 
         {/* Divider */}
-        <div className="my-8 h-px bg-white/10" />
+        <div className="my-10 h-px bg-ink/10" />
 
         {/* Bottom row: links + copyright */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <Link href="/privacy" className="text-sm text-white/40 transition-colors hover:text-brand">
+          <Link href="/privacy" className="text-[13px] text-ink/40 transition-colors hover:text-ink">
             Privacy
           </Link>
-          <p className="text-xs text-white/30">
+          <p className="text-[13px] text-ink/30">
             &copy; {new Date().getFullYear()} StudySwedish
           </p>
         </div>

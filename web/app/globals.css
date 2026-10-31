@@ -15,26 +15,26 @@
   --color-warm-gray: #8B6A3E;
   --color-slate: #5A3E20;
 
-  /* Storefront palette v3 — bold black/white with a confident gold accent
-     (flag-yellow derived) instead of a generic SaaS blue */
+  /* Storefront palette v4 — quiet luxury: near-monochrome, one muted
+     accent used sparingly, no bright color, no shadows */
   --color-paper: #FFFFFF;
-  --color-mist: #F4F3EF;
-  --color-ink: #0A0A0A;
-  --color-brand: #D4A72C;
-  --color-brand-dark: #A8841F;
-  --color-gold: #D4A72C;
+  --color-mist: #F7F6F4;
+  --color-ink: #111111;
+  --color-brand: #8A7A5C;
+  --color-brand-dark: #6E6049;
+  --color-gold: #8A7A5C;
   --color-flag-blue: #006AA7;
   --color-flag-yellow: #FECC02;
   --color-soft-blue: #CFE9FA;
 
-  --font-display: var(--font-display-sans), "Space Grotesk", system-ui, sans-serif;
+  --font-display: var(--font-display-sans), "Jost", system-ui, sans-serif;
   --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 :root {
   --background: #FFFFFF;
-  --foreground: #0A0A0A;
+  --foreground: #111111;
 }
 
 body {

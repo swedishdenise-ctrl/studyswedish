@@ -12,9 +12,9 @@ export function StoreSection({
   divider?: boolean;
 }) {
   return (
-    <section className={`px-6 py-16 ${className}`}>
+    <section className={`px-6 py-24 ${className}`}>
       <div className={`mx-auto ${width}`}>
-        {divider && <div className="h-px mb-14 bg-ink/8" />}
+        {divider && <div className="h-px mb-16 bg-ink/10" />}
         {children}
       </div>
     </section>
@@ -23,12 +23,7 @@ export function StoreSection({
 
 export function Eyebrow({ children, invert = false }: { children: ReactNode; invert?: boolean }) {
   return (
-    <p
-      className={`flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.18em] ${
-        invert ? "text-white/70" : "text-ink/50"
-      }`}
-    >
-      <span className="h-1.5 w-1.5 rounded-full bg-brand" />
+    <p className={`text-[12px] font-medium uppercase tracking-[0.22em] ${invert ? "text-white/50" : "text-ink/45"}`}>
       {children}
     </p>
   );

@@ -1,9 +1,10 @@
 ﻿import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Jost, Inter } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const jost = Jost({
   variable: "--font-display-sans",
+  weight: ["300", "400", "500"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
+      className={`${jost.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         {children}
