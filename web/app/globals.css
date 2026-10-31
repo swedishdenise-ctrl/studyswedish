@@ -1,19 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #1A1208;
+  --color-navy: #17213A;
   --color-navy-light: #2C1A08;
   --color-navy-deep: #100904;
   --color-swedish-blue: #C9A04A;
   --color-swedish-blue-dark: #A8813A;
   --color-golden: #C9A04A;
   --color-golden-dark: #A8813A;
-  --color-cream: #FAF5EE;
+  --color-cream: #FFF8EC;
   --color-charcoal: #1A1208;
   --color-forest: #2D6A4F;
   --color-coral: #C0714A;
   --color-warm-gray: #8B6A3E;
   --color-slate: #5A3E20;
+
+  /* Storefront palette — matches the physical magnet/card product exactly */
+  --color-gold: #B8903F;
+  --color-flag-blue: #006AA7;
+  --color-flag-yellow: #FECC02;
+  --color-soft-blue: #CFE9FA;
 
   --font-display: var(--font-display-serif), "Playfair Display", Georgia, serif;
   --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
@@ -21,8 +27,8 @@
 }
 
 :root {
-  --background: #FAF5EE;
-  --foreground: #1A1208;
+  --background: #FFF8EC;
+  --foreground: #17213A;
 }
 
 body {

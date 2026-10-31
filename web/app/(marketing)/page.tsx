@@ -1,252 +1,159 @@
-import Link from "next/link";
-import Image from "next/image";
-
-const CALENDLY = "https://calendly.com/swedish-denise/free-15-min-swedish-chat";
+import { MagnetShop } from "@/components/magnet-shop";
+import { StoreButtonNative } from "@/components/store/button";
+import { StoreSection, Eyebrow } from "@/components/store/section";
 
 export const metadata = {
-  title: { absolute: "StudySwedish, Learn Swedish online" },
+  title: "Swedish Words Fridge Magnets — StudySwedish",
   description:
-    "Swedish words, recipes, culture and a few good proverbs, from someone who is just very Swedish. Book a free 15-minute call to get started.",
+    "4 acrylic fridge magnets with real Swedish words and phrases — Jag älskar Sverige, Lagom är bäst, Fikadags!, and Dra åt skogen! Each comes with a collector card. Limited first batch of 25 sets.",
 };
+
+const PAYMENT_LINK = "https://buy.stripe.com/aFaeVc93F8sn56rebwf3a08";
+
+const DESIGNS = [
+  {
+    src: "/magnets/sverige.png",
+    alt: "Jag älskar Sverige magnet",
+    name: "Jag älskar Sverige",
+    meaning: "“I love Sweden.” The heart stands in for älskar (loves).",
+  },
+  {
+    src: "/magnets/lagom.png",
+    alt: "Lagom är bäst magnet",
+    name: "Lagom är bäst",
+    meaning: "Swedish for “just the right amount” — not too much, not too little.",
+  },
+  {
+    src: "/magnets/fikadags.png",
+    alt: "Fikadags! magnet",
+    name: "Fikadags!",
+    meaning: "Swedish for “time for fika!” — the sacred coffee break.",
+  },
+  {
+    src: "/magnets/dra-at-skogen.png",
+    alt: "Dra åt skogen! magnet",
+    name: "Dra åt skogen!",
+    meaning: "Literally “go to the forest” — a polite(ish) way to say get lost.",
+  },
+];
+
+const FAQ = [
+  {
+    q: "What's actually in the box?",
+    a: "4 acrylic fridge magnets (6cm, 3mm acrylic + 1mm magnet backing), each with its own 7.5cm collector card — the pronunciation, what it really means, and a QR code to follow along on Instagram. Each one is sealed in its own bag.",
+  },
+  {
+    q: "How much is shipping?",
+    a: "Shipping is already included in the €29.99 price, worldwide — no surprise fees at checkout.",
+  },
+  {
+    q: "How long does delivery take?",
+    a: "I ship from Spain via Correos. EU orders typically arrive faster than international ones — I'll have tracking info for every order.",
+  },
+  {
+    q: "Can I buy just one design?",
+    a: "Not for this first batch — they're sold as the full set of 4 only. There are only 25 sets total, so once they're gone, they're gone until (if) I order more.",
+  },
+  {
+    q: "What if mine arrives damaged?",
+    a: "Message me on Instagram (@swedish_with_denise) with a photo and I'll sort it out — a replacement or refund, no hassle.",
+  },
+];
 
 export default function HomePage() {
   return (
-    <>
-      {/* Hero */}
-      <section
-        className="relative min-h-svh overflow-hidden px-6 pt-24 sm:pt-0"
-        style={{ background: "linear-gradient(135deg, #F0E6D3 0%, #EDE0CC 60%, #E8D8C0 100%)" }}
-      >
-        <div className="mx-auto flex min-h-svh max-w-5xl flex-col justify-center sm:flex-row sm:items-center sm:gap-12 lg:gap-20">
-
-          {/* Left, text */}
-          <div className="relative z-10 flex-1 py-16 sm:py-0">
-            <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#8B6A3E]/60">
-              StudySwedish.com
+    <div className="bg-cream">
+      {/* Hero — product + price + buy, visible immediately */}
+      <section className="px-6 pt-32 pb-16 sm:pt-40">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2 sm:gap-16">
+          <div>
+            <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-gold">
+              Limited first batch — only 25 sets
             </p>
-            <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] text-[#1A1208] sm:text-6xl lg:text-7xl">
-              Just very<br />Swedish.
+            <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-navy sm:text-5xl">
+              Swedish Words Fridge Magnets
             </h1>
-            <div className="mt-6 h-px w-12 bg-[#C9A04A]/50" />
-            <p className="mt-6 max-w-sm text-[17px] leading-relaxed text-[#3D2B14]/60">
-              Hej, I'm Denise, a native Swede sharing the
-              language the way it's actually spoken, the
-              words, the recipes, the culture, and the
-              occasional proverb, because you can't really
-              learn one without the other. Classes with me
-              are more fika than flashcards, I promise. If
-              you want to actually start speaking it, let's
-              talk.
+            <p className="mt-4 max-w-md text-[17px] leading-relaxed text-navy/70">
+              Four real Swedish words and phrases, four acrylic magnets, four little lessons
+              for your fridge.
             </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href={CALENDLY}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full px-7 py-3 text-sm font-semibold text-white transition hover:opacity-90"
-                style={{ background: "linear-gradient(135deg, #C9A04A, #A8813A)" }}
-              >
-                Book your free 15-min call →
-              </Link>
-              <Link
-                href="#what-i-share"
-                className="rounded-full border border-[#3D2B14]/15 px-7 py-3 text-sm font-medium text-[#3D2B14]/70 transition hover:border-[#3D2B14]/30"
-              >
-                What I share ↓
-              </Link>
+            <div className="mt-8 flex items-center gap-4">
+              <StoreButtonNative href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
+                Buy the set — €29.99
+              </StoreButtonNative>
             </div>
+            <p className="mt-3 text-sm text-navy/50">Shipping included, worldwide.</p>
           </div>
 
-          {/* Right, Denise's photo */}
-          <div className="relative mx-auto w-72 shrink-0 sm:mx-0 sm:w-80 lg:w-96">
-            <div
-              className="absolute -bottom-3 -right-3 h-full w-full rounded-3xl"
-              style={{ background: "linear-gradient(135deg, #C9A04A30, #C9A04A10)" }}
-            />
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-[#3D2B14]/15">
-              <Image
-                src="/images/denise.jpg"
-                alt="Denise, StudySwedish"
-                width={800}
-                height={1000}
-                className="block w-full object-cover"
-                priority
-                quality={90}
+          <div className="grid grid-cols-2 gap-3 overflow-hidden rounded-3xl bg-white p-3 shadow-sm">
+            {DESIGNS.map((design) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={design.src}
+                src={design.src}
+                alt={design.alt}
+                className="aspect-square rounded-2xl"
               />
-              <div
-                className="pointer-events-none absolute bottom-0 inset-x-0 h-24"
-                style={{ background: "linear-gradient(to top, #E8D8C080, transparent)" }}
-              />
-            </div>
+            ))}
           </div>
-
         </div>
-
-        {/* Decorative soft circle */}
-        <div
-          className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-30"
-          style={{ background: "radial-gradient(circle, #C9A04A40 0%, transparent 70%)" }}
-        />
       </section>
 
-      {/* Free 15-min call */}
-      <section id="book-a-call" className="px-6 py-20" style={{ background: "#FAF5EE" }}>
-        <div className="mx-auto max-w-2xl">
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
-            Free, 15 minutes
-          </p>
-          <h2 className="mt-4 font-display text-3xl font-semibold leading-tight sm:text-4xl" style={{ color: "#1A1208" }}>
-            Let's talk for 15 minutes.
-          </h2>
-          <p className="mt-5 text-[17px] leading-relaxed max-w-xl" style={{ color: "#3D2B14BB" }}>
-            A quick call so I can hear about your goals and where you're starting from,
-            then we get you started learning Swedish with me.
-          </p>
+      {/* The collection */}
+      <StoreSection width="max-w-3xl">
+        <Eyebrow>The collection</Eyebrow>
+        <h2 className="mt-4 font-display text-3xl font-semibold text-navy">All 4 designs</h2>
 
-          <div className="mt-10">
-            {[
-              {
-                title: "Your goals",
-                body: "Why you want to learn Swedish, and what you want to be able to do with it.",
-              },
-              {
-                title: "Your level",
-                body: "Complete beginner or already know some Swedish, either is fine.",
-              },
-              {
-                title: "Getting started",
-                body: "We figure out the right way for you to start learning with me.",
-              },
-            ].map((item, i) => (
-              <div key={item.title} className="border-t py-8 flex gap-7" style={{ borderColor: "#C9A04A20" }}>
-                <span
-                  className="font-display text-5xl font-semibold leading-none shrink-0 select-none"
-                  style={{ color: "#C9A04A18", marginTop: "2px", minWidth: "3rem" }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <p className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>{item.title}</p>
-                  <p className="mt-2 text-[16px] leading-relaxed" style={{ color: "#3D2B14BB" }}>{item.body}</p>
-                </div>
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          {DESIGNS.map((design) => (
+            <div key={design.src} className="flex gap-4">
+              <div className="h-28 w-28 shrink-0 overflow-hidden rounded-2xl border border-navy/10 bg-white">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={design.src} alt={design.alt} className="h-full w-full" />
               </div>
-            ))}
-            <div className="border-t" style={{ borderColor: "#C9A04A20" }} />
-          </div>
-
-          <div className="mt-10">
-            <Link
-              href={CALENDLY}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide transition hover:opacity-90 active:scale-[0.98]"
-              style={{ background: "#C9A04A", color: "#1A1208" }}
-            >
-              Book your free call →
-            </Link>
-          </div>
+              <div>
+                <h3 className="font-display text-xl font-semibold text-navy">{design.name}</h3>
+                <p className="mt-1 text-[15px] leading-relaxed text-navy/60">{design.meaning}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </StoreSection>
 
-      {/* What I share, editorial list */}
-      <section id="what-i-share" className="px-6 py-20" style={{ background: "#F0E8D8" }}>
-        <div className="mx-auto max-w-2xl">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E50" }}>
-            All free, always
-          </p>
-          <h2 className="mt-3 font-display text-2xl font-semibold" style={{ color: "#1A1208" }}>
-            Here's what I share.
-          </h2>
+      {/* Why I made these */}
+      <StoreSection width="max-w-2xl">
+        <Eyebrow>Why I made these</Eyebrow>
+        <p className="mt-5 text-[16px] leading-relaxed max-w-xl text-navy">
+          I wanted something you could actually hold — not just another post you scroll
+          past. These aren&apos;t tourist-shop clichés; they&apos;re words and phrases I actually
+          use, the ones that make Swedish feel real instead of textbook. Every magnet
+          comes with a little card so you (or whoever&apos;s asking about the weird one on
+          your fridge) can learn what it really means.
+        </p>
+      </StoreSection>
 
-          <div className="mt-10">
-
-            {/* Conversagas, featured */}
-            <Link
-              href="/conversagas"
-              className="group block border-t py-8 transition"
-              style={{ borderColor: "#C9A04A25" }}
-            >
-              <p className="text-[10px] font-bold uppercase tracking-[0.3em]" style={{ color: "#C9A04A" }}>
-                My language app
-              </p>
-              <h3 className="mt-2 font-display text-2xl font-semibold transition group-hover:opacity-70" style={{ color: "#1A1208" }}>
-                Conversagas
-              </h3>
-              <p className="mt-2 text-[16px] leading-relaxed max-w-lg" style={{ color: "#3D2B1470" }}>
-                Real lessons, daily stories, and performance tracking. The Swedish app I built because nothing else was good enough.
-              </p>
-              <span className="mt-3 inline-block text-sm font-medium" style={{ color: "#C9A04A" }}>
-                Start free →
-              </span>
-            </Link>
-
-            {[
-              {
-                href: "https://amzn.eu/d/08coXSxv",
-                label: "How to Understand a Swede",
-                desc: "My book on Amazon. The Swedish mindset, the humour, the silence, the fika.",
-                external: true,
-              },
-              {
-                href: "/shop",
-                label: "50 Swedish Proverbs",
-                desc: "A free PDF. Fifty beautiful ordspråk with translations and the stories behind them.",
-                external: false,
-              },
-              {
-                href: "/grammar",
-                label: "Swedish language",
-                desc: "Grammar, vocabulary, verbs and phrases. The way I'd explain it to a friend. No paywall.",
-                external: false,
-              },
-              {
-                href: "/recipes",
-                label: "Swedish recipes",
-                desc: "From köttbullar to cinnamon buns, the real thing.",
-                external: false,
-              },
-              {
-                href: "/blog",
-                label: "About Sweden",
-                desc: "Culture, curiosities, the weird customs and the beautiful ones.",
-                external: false,
-              },
-              {
-                href: "/community",
-                label: "Community",
-                desc: "Ask questions, say hej, share what you find. No account needed to read.",
-                external: false,
-              },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noopener noreferrer" : undefined}
-                className="group flex items-start justify-between gap-6 border-t py-6 transition"
-                style={{ borderColor: "#C9A04A18" }}
-              >
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-display text-xl font-semibold transition group-hover:opacity-70" style={{ color: "#1A1208" }}>
-                    {item.label}
-                  </h3>
-                  <p className="mt-1 text-sm leading-relaxed" style={{ color: "#3D2B1460" }}>
-                    {item.desc}
-                  </p>
-                </div>
-                <span
-                  className="shrink-0 mt-1 text-lg leading-none opacity-25 transition group-hover:opacity-60"
-                  style={{ color: "#1A1208" }}
-                >
-                  →
-                </span>
-              </Link>
-            ))}
-            <div className="border-t" style={{ borderColor: "#C9A04A18" }} />
-          </div>
+      {/* Buy, in full */}
+      <StoreSection width="max-w-3xl" className="scroll-mt-20" >
+        <div id="buy" />
+        <Eyebrow>Get the set</Eyebrow>
+        <h2 className="mt-4 font-display text-3xl font-semibold text-navy">All 4, while they last</h2>
+        <div className="mt-8">
+          <MagnetShop />
         </div>
-      </section>
-    </>
+      </StoreSection>
+
+      {/* FAQ */}
+      <StoreSection width="max-w-2xl" className="pb-28">
+        <Eyebrow>Questions</Eyebrow>
+        <div className="mt-8 flex flex-col gap-8">
+          {FAQ.map((item) => (
+            <div key={item.q}>
+              <h3 className="font-display text-lg font-semibold text-navy">{item.q}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed max-w-xl text-navy/80">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </StoreSection>
+    </div>
   );
 }

@@ -5,41 +5,40 @@
 
 export default function PrivacyPage() {
   return (
-    <div style={{ background: "#FAF5EE" }}>
+    <div className="bg-cream">
       <section className="px-6 pt-36 pb-24 sm:pt-44">
         <div className="mx-auto max-w-2xl">
 
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em]" style={{ color: "#8B6A3E60" }}>
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-navy/40">
             Legal
           </p>
-          <h1 className="mt-4 font-display text-4xl font-semibold" style={{ color: "#1A1208" }}>
+          <h1 className="mt-4 font-display text-4xl font-semibold text-navy">
             Privacy Policy
           </h1>
-          <p className="mt-3 text-sm" style={{ color: "#8B6A3E80" }}>
+          <p className="mt-3 text-sm text-navy/50">
             Last updated: June 2026
           </p>
 
-          <div className="mt-12 space-y-10 text-[16px] leading-relaxed" style={{ color: "#3D2B14" }}>
+          <div className="mt-12 space-y-10 text-[16px] leading-relaxed text-navy/80">
 
             <div>
-              <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Who we are</h2>
+              <h2 className="font-display text-xl font-semibold text-navy">Who we are</h2>
               <p className="mt-3">
-                This is StudySwedish.com, run by Denise. The site covers Swedish language, culture, recipes,
-                and resources, including the Conversagas language app and downloadable products. If you have
-                any questions about this policy, email{" "}
-                <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
+                This is StudySwedish.com, run by Denise. The site sells the Swedish Words fridge
+                magnets and related products. If you have any questions about this policy, email{" "}
+                <a href="mailto:swedish.denise@gmail.com" className="text-gold underline underline-offset-2">
                   swedish.denise@gmail.com
                 </a>.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>What data we collect</h2>
+              <h2 className="font-display text-xl font-semibold text-navy">What data we collect</h2>
               <p className="mt-3">We only collect what we need:</p>
-              <ul className="mt-3 space-y-2 pl-5 list-disc" style={{ color: "#3D2B1490" }}>
-                <li><strong style={{ color: "#1A1208" }}>Email address</strong>, if you create an account or sign up for updates.</li>
-                <li><strong style={{ color: "#1A1208" }}>Usage data</strong>, pages visited, time spent, general interaction data. This is anonymous and used only to improve the site.</li>
-                <li><strong style={{ color: "#1A1208" }}>Technical data</strong>, browser type, device, approximate location (country level). Collected automatically by our hosting provider.</li>
+              <ul className="mt-3 space-y-2 pl-5 list-disc text-navy/70">
+                <li><strong className="text-navy">Order details</strong>, your name, shipping address, and email, collected by Stripe at checkout to fulfill your order.</li>
+                <li><strong className="text-navy">Usage data</strong>, pages visited, time spent, general interaction data. This is anonymous and used only to improve the site.</li>
+                <li><strong className="text-navy">Technical data</strong>, browser type, device, approximate location (country level). Collected automatically by our hosting provider.</li>
               </ul>
               <p className="mt-3">
                 We do not sell your data. We do not share it with third parties for marketing purposes.
@@ -47,28 +46,28 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>How we use your data</h2>
-              <ul className="mt-3 space-y-2 pl-5 list-disc" style={{ color: "#3D2B1490" }}>
-                <li>To provide the services you signed up for</li>
-                <li>To send updates you asked for (you can unsubscribe any time)</li>
+              <h2 className="font-display text-xl font-semibold text-navy">How we use your data</h2>
+              <ul className="mt-3 space-y-2 pl-5 list-disc text-navy/70">
+                <li>To process and ship your order</li>
+                <li>To contact you about your order if needed</li>
                 <li>To understand how the site is used so we can improve it</li>
               </ul>
             </div>
 
             <div>
-              <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Cookies</h2>
+              <h2 className="font-display text-xl font-semibold text-navy">Cookies</h2>
               <p className="mt-3">
-                We use essential cookies to keep the site working, for example, to keep you logged in.
-                We do not use advertising or tracking cookies.
+                We use only essential cookies to keep the site working. We do not use
+                advertising or tracking cookies.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Third-party services</h2>
+              <h2 className="font-display text-xl font-semibold text-navy">Third-party services</h2>
               <p className="mt-3">We use a small number of trusted services to run the site:</p>
-              <ul className="mt-3 space-y-2 pl-5 list-disc" style={{ color: "#3D2B1490" }}>
-                <li><strong style={{ color: "#1A1208" }}>Supabase</strong>, database and authentication. Your account data is stored securely here.</li>
-                <li><strong style={{ color: "#1A1208" }}>Vercel</strong>, website hosting. Processes technical data as part of serving the site.</li>
+              <ul className="mt-3 space-y-2 pl-5 list-disc text-navy/70">
+                <li><strong className="text-navy">Stripe</strong>, payment processing. Handles your card details and shipping address — we never see or store your card information.</li>
+                <li><strong className="text-navy">Vercel</strong>, website hosting. Processes technical data as part of serving the site.</li>
               </ul>
               <p className="mt-3">
                 Each of these services has their own privacy policy and handles data in accordance with GDPR.
@@ -76,40 +75,41 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Your rights (GDPR)</h2>
+              <h2 className="font-display text-xl font-semibold text-navy">Your rights (GDPR)</h2>
               <p className="mt-3">
-                If you're in the EU or UK, you have the right to access, correct, or delete your personal data
-                at any time. You can also object to how we use it or ask us to restrict processing.
+                If you&apos;re in the EU or UK, you have the right to access, correct, or delete your
+                personal data at any time. You can also object to how we use it or ask us to
+                restrict processing.
               </p>
               <p className="mt-3">
                 To exercise any of these rights, just email{" "}
-                <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
+                <a href="mailto:swedish.denise@gmail.com" className="text-gold underline underline-offset-2">
                   swedish.denise@gmail.com
                 </a>{" "}
-                and we'll sort it out promptly.
+                and we&apos;ll sort it out promptly.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Data retention</h2>
+              <h2 className="font-display text-xl font-semibold text-navy">Data retention</h2>
               <p className="mt-3">
-                We keep your data for as long as your account is active. If you delete your account,
-                your personal data is removed within 30 days.
+                We keep order data for as long as needed for accounting and legal purposes,
+                then it&apos;s removed.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-xl font-semibold" style={{ color: "#1A1208" }}>Changes to this policy</h2>
+              <h2 className="font-display text-xl font-semibold text-navy">Changes to this policy</h2>
               <p className="mt-3">
-                If we make significant changes, we'll update the date at the top of this page.
-                We won't make your data less private without letting you know.
+                If we make significant changes, we&apos;ll update the date at the top of this page.
+                We won&apos;t make your data less private without letting you know.
               </p>
             </div>
 
-            <div className="border-t pt-10" style={{ borderColor: "#C9A04A15" }}>
-              <p style={{ color: "#8B6A3E80" }}>
+            <div className="border-t border-navy/10 pt-10">
+              <p className="text-navy/50">
                 Questions? Email{" "}
-                <a href="mailto:swedish.denise@gmail.com" className="underline underline-offset-2" style={{ color: "#C9A04A" }}>
+                <a href="mailto:swedish.denise@gmail.com" className="text-gold underline underline-offset-2">
                   swedish.denise@gmail.com
                 </a>
               </p>

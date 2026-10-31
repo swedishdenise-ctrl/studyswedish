@@ -41,29 +41,16 @@ const socials = [
   },
 ];
 
-const footerLinks = [
-  { href: "/about",        label: "About" },
-  { href: "/conversagas",  label: "Conversagas" },
-  { href: "/shop",         label: "Downloads" },
-  { href: "/community",    label: "Community" },
-  { href: "/daily-word",   label: "Daily word" },
-  { href: "/privacy",      label: "Privacy" },
-];
-
 export function SiteFooter() {
   return (
-    <footer style={{ background: "#1A1208" }}>
+    <footer className="bg-navy">
       <div className="mx-auto max-w-5xl px-6 py-12">
 
         {/* Top row: brand + socials */}
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="font-display text-lg font-semibold" style={{ color: "#F5EDE3" }}>
-              Denise
-            </p>
-            <p className="mt-0.5 text-sm" style={{ color: "#F5EDE380" }}>
-              Just very Swedish.
-            </p>
+            <p className="font-display text-lg font-semibold text-cream">Denise</p>
+            <p className="mt-0.5 text-sm text-cream/60">Just very Swedish.</p>
           </div>
 
           {/* Social icons */}
@@ -75,8 +62,7 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="opacity-30 transition-all hover:opacity-100 hover:text-[#C9A04A]"
-                style={{ color: "#F5EDE3" }}
+                className="text-cream/40 transition-all hover:text-gold"
               >
                 {s.icon}
               </Link>
@@ -85,24 +71,14 @@ export function SiteFooter() {
         </div>
 
         {/* Divider */}
-        <div className="my-8 h-px" style={{ background: "#F5EDE310" }} />
+        <div className="my-8 h-px bg-cream/10" />
 
         {/* Bottom row: links + copyright */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <ul className="flex flex-wrap gap-5">
-            {footerLinks.map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  className="text-sm transition-colors hover:text-[#C9A04A]"
-                  style={{ color: "#F5EDE345" }}
-                >
-                  {l.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <p className="text-xs" style={{ color: "#F5EDE330" }}>
+          <Link href="/privacy" className="text-sm text-cream/40 transition-colors hover:text-gold">
+            Privacy
+          </Link>
+          <p className="text-xs text-cream/30">
             &copy; {new Date().getFullYear()} StudySwedish
           </p>
         </div>
