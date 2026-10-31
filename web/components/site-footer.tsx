@@ -49,7 +49,7 @@ export function SiteFooter() {
         {/* Top row: brand + socials */}
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-lg font-extrabold text-white">Denise</p>
+            <p className="font-display text-lg font-bold text-white">Denise</p>
             <p className="mt-0.5 text-sm text-white/50">Just very Swedish.</p>
           </div>
 

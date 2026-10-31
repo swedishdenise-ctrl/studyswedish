@@ -21,9 +21,14 @@ export function StoreSection({
   );
 }
 
-export function Eyebrow({ children }: { children: ReactNode }) {
+export function Eyebrow({ children, invert = false }: { children: ReactNode; invert?: boolean }) {
   return (
-    <p className="inline-flex items-center gap-1.5 rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
+    <p
+      className={`flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.18em] ${
+        invert ? "text-white/70" : "text-ink/50"
+      }`}
+    >
+      <span className="h-1.5 w-1.5 rounded-full bg-brand" />
       {children}
     </p>
   );

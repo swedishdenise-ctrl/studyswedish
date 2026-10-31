@@ -64,15 +64,11 @@ export default function HomePage() {
   return (
     <div className="bg-paper">
       {/* Hero — product + price + buy, visible immediately */}
-      <section className="relative overflow-hidden px-6 pt-32 pb-20 sm:pt-40">
-        <div
-          className="pointer-events-none absolute -top-32 right-0 h-[32rem] w-[32rem] rounded-full opacity-[0.07] blur-3xl"
-          style={{ background: "radial-gradient(circle, var(--color-brand), transparent 70%)" }}
-        />
-        <div className="relative mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2 sm:gap-16">
+      <section className="px-6 pt-32 pb-20 sm:pt-40">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2 sm:gap-16">
           <div>
             <Eyebrow>Limited first batch — only 25 sets</Eyebrow>
-            <h1 className="mt-5 text-5xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+            <h1 className="mt-5 font-display text-5xl font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
               Swedish Words
               <br />
               Fridge Magnets
@@ -89,14 +85,14 @@ export default function HomePage() {
             <p className="mt-3 text-sm text-ink/40">Shipping included, worldwide.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 rounded-3xl border border-ink/8 bg-mist p-3 shadow-xl shadow-ink/5">
+          <div className="grid grid-cols-2 gap-3 rounded-2xl border-2 border-ink bg-mist p-3 shadow-[8px_8px_0_0_var(--color-brand)]">
             {DESIGNS.map((design) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 key={design.src}
                 src={design.src}
                 alt={design.alt}
-                className="aspect-square rounded-2xl bg-white shadow-sm"
+                className="aspect-square rounded-xl bg-white"
               />
             ))}
           </div>
@@ -106,17 +102,17 @@ export default function HomePage() {
       {/* The collection */}
       <StoreSection width="max-w-3xl" className="bg-mist" divider={false}>
         <Eyebrow>The collection</Eyebrow>
-        <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-ink">All 4 designs</h2>
+        <h2 className="mt-5 font-display text-3xl font-bold tracking-tight text-ink">All 4 designs</h2>
 
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
           {DESIGNS.map((design) => (
-            <div key={design.src} className="flex gap-4 rounded-2xl border border-ink/8 bg-white p-4 shadow-sm">
-              <div className="h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-mist">
+            <div key={design.src} className="flex gap-4 rounded-xl border border-ink/10 bg-white p-4">
+              <div className="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-mist">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={design.src} alt={design.alt} className="h-full w-full" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-ink">{design.name}</h3>
+                <h3 className="font-display text-lg font-bold text-ink">{design.name}</h3>
                 <p className="mt-1 text-[14px] leading-relaxed text-ink/55">{design.meaning}</p>
               </div>
             </div>
@@ -139,10 +135,8 @@ export default function HomePage() {
       {/* Buy, in full */}
       <StoreSection width="max-w-3xl" className="scroll-mt-20 bg-ink" divider={false}>
         <div id="buy" />
-        <p className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-white">
-          Get the set
-        </p>
-        <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-white">All 4, while they last</h2>
+        <Eyebrow invert>Get the set</Eyebrow>
+        <h2 className="mt-5 font-display text-3xl font-bold tracking-tight text-white">All 4, while they last</h2>
         <div className="mt-8">
           <MagnetShop dark />
         </div>
@@ -154,7 +148,7 @@ export default function HomePage() {
         <div className="mt-8 flex flex-col gap-8">
           {FAQ.map((item) => (
             <div key={item.q}>
-              <h3 className="text-lg font-bold text-ink">{item.q}</h3>
+              <h3 className="font-display text-lg font-bold text-ink">{item.q}</h3>
               <p className="mt-2 text-[15px] leading-relaxed max-w-xl text-ink/65">{item.a}</p>
             </div>
           ))}

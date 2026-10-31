@@ -12,7 +12,7 @@ export default function PrivacyPage() {
           <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-ink/40">
             Legal
           </p>
-          <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-ink">
+          <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-ink">
             Privacy Policy
           </h1>
           <p className="mt-3 text-sm text-ink/50">
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
           <div className="mt-12 space-y-10 text-[16px] leading-relaxed text-ink/80">
 
             <div>
-              <h2 className="text-xl font-bold text-ink">Who we are</h2>
+              <h2 className="font-display text-xl font-bold text-ink">Who we are</h2>
               <p className="mt-3">
                 This is StudySwedish.com, run by Denise. The site sells the Swedish Words fridge
                 magnets and related products. If you have any questions about this policy, email{" "}
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-ink">What data we collect</h2>
+              <h2 className="font-display text-xl font-bold text-ink">What data we collect</h2>
               <p className="mt-3">We only collect what we need:</p>
               <ul className="mt-3 space-y-2 pl-5 list-disc text-ink/70">
                 <li><strong className="text-ink">Order details</strong>, your name, shipping address, and email, collected by Stripe at checkout to fulfill your order.</li>
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-ink">How we use your data</h2>
+              <h2 className="font-display text-xl font-bold text-ink">How we use your data</h2>
               <ul className="mt-3 space-y-2 pl-5 list-disc text-ink/70">
                 <li>To process and ship your order</li>
                 <li>To contact you about your order if needed</li>
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-ink">Cookies</h2>
+              <h2 className="font-display text-xl font-bold text-ink">Cookies</h2>
               <p className="mt-3">
                 We use only essential cookies to keep the site working. We do not use
                 advertising or tracking cookies.
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-ink">Third-party services</h2>
+              <h2 className="font-display text-xl font-bold text-ink">Third-party services</h2>
               <p className="mt-3">We use a small number of trusted services to run the site:</p>
               <ul className="mt-3 space-y-2 pl-5 list-disc text-ink/70">
                 <li><strong className="text-ink">Stripe</strong>, payment processing. Handles your card details and shipping address — we never see or store your card information.</li>
@@ -75,7 +75,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-ink">Your rights (GDPR)</h2>
+              <h2 className="font-display text-xl font-bold text-ink">Your rights (GDPR)</h2>
               <p className="mt-3">
                 If you&apos;re in the EU or UK, you have the right to access, correct, or delete your
                 personal data at any time. You can also object to how we use it or ask us to
@@ -91,7 +91,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-ink">Data retention</h2>
+              <h2 className="font-display text-xl font-bold text-ink">Data retention</h2>
               <p className="mt-3">
                 We keep order data for as long as needed for accounting and legal purposes,
                 then it&apos;s removed.
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-ink">Changes to this policy</h2>
+              <h2 className="font-display text-xl font-bold text-ink">Changes to this policy</h2>
               <p className="mt-3">
                 If we make significant changes, we&apos;ll update the date at the top of this page.
                 We won&apos;t make your data less private without letting you know.
