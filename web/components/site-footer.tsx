@@ -43,14 +43,14 @@ const socials = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-navy">
+    <footer className="bg-ink">
       <div className="mx-auto max-w-5xl px-6 py-12">
 
         {/* Top row: brand + socials */}
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="font-display text-lg font-semibold text-cream">Denise</p>
-            <p className="mt-0.5 text-sm text-cream/60">Just very Swedish.</p>
+            <p className="text-lg font-extrabold text-white">Denise</p>
+            <p className="mt-0.5 text-sm text-white/50">Just very Swedish.</p>
           </div>
 
           {/* Social icons */}
@@ -62,7 +62,7 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="text-cream/40 transition-all hover:text-gold"
+                className="text-white/40 transition-all hover:text-brand"
               >
                 {s.icon}
               </Link>
@@ -71,14 +71,14 @@ export function SiteFooter() {
         </div>
 
         {/* Divider */}
-        <div className="my-8 h-px bg-cream/10" />
+        <div className="my-8 h-px bg-white/10" />
 
         {/* Bottom row: links + copyright */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <Link href="/privacy" className="text-sm text-cream/40 transition-colors hover:text-gold">
+          <Link href="/privacy" className="text-sm text-white/40 transition-colors hover:text-brand">
             Privacy
           </Link>
-          <p className="text-xs text-cream/30">
+          <p className="text-xs text-white/30">
             &copy; {new Date().getFullYear()} StudySwedish
           </p>
         </div>

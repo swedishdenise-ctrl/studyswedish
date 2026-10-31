@@ -14,7 +14,7 @@ export function StoreSection({
   return (
     <section className={`px-6 py-16 ${className}`}>
       <div className={`mx-auto ${width}`}>
-        {divider && <div className="h-px mb-14 bg-navy/10" />}
+        {divider && <div className="h-px mb-14 bg-ink/8" />}
         {children}
       </div>
     </section>
@@ -22,5 +22,9 @@ export function StoreSection({
 }
 
 export function Eyebrow({ children }: { children: ReactNode }) {
-  return <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-gold">{children}</p>;
+  return (
+    <p className="inline-flex items-center gap-1.5 rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
+      {children}
+    </p>
+  );
 }

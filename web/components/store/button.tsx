@@ -4,11 +4,11 @@ import type { ComponentProps } from "react";
 type Variant = "primary" | "secondary";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
-  primary: "bg-navy text-cream hover:bg-navy/90",
-  secondary: "border border-navy/20 text-navy hover:border-navy/40 bg-transparent",
+  primary: "bg-brand text-white shadow-lg shadow-brand/25 hover:bg-brand-dark",
+  secondary: "border-2 border-ink/15 text-ink hover:border-ink/30 bg-transparent",
 };
 
-const BASE = "inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold transition";
+const BASE = "inline-flex items-center justify-center rounded-full px-8 py-3.5 text-[15px] font-bold transition";
 
 export function StoreButton({
   variant = "primary",

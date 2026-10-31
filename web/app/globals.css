@@ -15,7 +15,12 @@
   --color-warm-gray: #8B6A3E;
   --color-slate: #5A3E20;
 
-  /* Storefront palette — matches the physical magnet/card product exactly */
+  /* Storefront palette v2 — crisp, modern, high-contrast */
+  --color-paper: #FFFFFF;
+  --color-mist: #F5F7FA;
+  --color-ink: #0B1220;
+  --color-brand: #0062A3;
+  --color-brand-dark: #004A7C;
   --color-gold: #B8903F;
   --color-flag-blue: #006AA7;
   --color-flag-yellow: #FECC02;
@@ -27,8 +32,8 @@
 }
 
 :root {
-  --background: #FFF8EC;
-  --foreground: #17213A;
+  --background: #FFFFFF;
+  --foreground: #0B1220;
 }
 
 body {

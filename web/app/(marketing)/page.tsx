@@ -62,18 +62,22 @@ const FAQ = [
 
 export default function HomePage() {
   return (
-    <div className="bg-cream">
+    <div className="bg-paper">
       {/* Hero — product + price + buy, visible immediately */}
-      <section className="px-6 pt-32 pb-16 sm:pt-40">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2 sm:gap-16">
+      <section className="relative overflow-hidden px-6 pt-32 pb-20 sm:pt-40">
+        <div
+          className="pointer-events-none absolute -top-32 right-0 h-[32rem] w-[32rem] rounded-full opacity-[0.07] blur-3xl"
+          style={{ background: "radial-gradient(circle, var(--color-brand), transparent 70%)" }}
+        />
+        <div className="relative mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2 sm:gap-16">
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-gold">
-              Limited first batch — only 25 sets
-            </p>
-            <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-navy sm:text-5xl">
-              Swedish Words Fridge Magnets
+            <Eyebrow>Limited first batch — only 25 sets</Eyebrow>
+            <h1 className="mt-5 text-5xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+              Swedish Words
+              <br />
+              Fridge Magnets
             </h1>
-            <p className="mt-4 max-w-md text-[17px] leading-relaxed text-navy/70">
+            <p className="mt-5 max-w-md text-[17px] leading-relaxed text-ink/60">
               Four real Swedish words and phrases, four acrylic magnets, four little lessons
               for your fridge.
             </p>
@@ -82,17 +86,17 @@ export default function HomePage() {
                 Buy the set — €29.99
               </StoreButtonNative>
             </div>
-            <p className="mt-3 text-sm text-navy/50">Shipping included, worldwide.</p>
+            <p className="mt-3 text-sm text-ink/40">Shipping included, worldwide.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 overflow-hidden rounded-3xl bg-white p-3 shadow-sm">
+          <div className="grid grid-cols-2 gap-3 rounded-3xl border border-ink/8 bg-mist p-3 shadow-xl shadow-ink/5">
             {DESIGNS.map((design) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 key={design.src}
                 src={design.src}
                 alt={design.alt}
-                className="aspect-square rounded-2xl"
+                className="aspect-square rounded-2xl bg-white shadow-sm"
               />
             ))}
           </div>
@@ -100,20 +104,20 @@ export default function HomePage() {
       </section>
 
       {/* The collection */}
-      <StoreSection width="max-w-3xl">
+      <StoreSection width="max-w-3xl" className="bg-mist" divider={false}>
         <Eyebrow>The collection</Eyebrow>
-        <h2 className="mt-4 font-display text-3xl font-semibold text-navy">All 4 designs</h2>
+        <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-ink">All 4 designs</h2>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
           {DESIGNS.map((design) => (
-            <div key={design.src} className="flex gap-4">
-              <div className="h-28 w-28 shrink-0 overflow-hidden rounded-2xl border border-navy/10 bg-white">
+            <div key={design.src} className="flex gap-4 rounded-2xl border border-ink/8 bg-white p-4 shadow-sm">
+              <div className="h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-mist">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={design.src} alt={design.alt} className="h-full w-full" />
               </div>
               <div>
-                <h3 className="font-display text-xl font-semibold text-navy">{design.name}</h3>
-                <p className="mt-1 text-[15px] leading-relaxed text-navy/60">{design.meaning}</p>
+                <h3 className="text-lg font-bold text-ink">{design.name}</h3>
+                <p className="mt-1 text-[14px] leading-relaxed text-ink/55">{design.meaning}</p>
               </div>
             </div>
           ))}
@@ -123,7 +127,7 @@ export default function HomePage() {
       {/* Why I made these */}
       <StoreSection width="max-w-2xl">
         <Eyebrow>Why I made these</Eyebrow>
-        <p className="mt-5 text-[16px] leading-relaxed max-w-xl text-navy">
+        <p className="mt-5 text-[16px] leading-relaxed max-w-xl text-ink/80">
           I wanted something you could actually hold — not just another post you scroll
           past. These aren&apos;t tourist-shop clichés; they&apos;re words and phrases I actually
           use, the ones that make Swedish feel real instead of textbook. Every magnet
@@ -133,12 +137,14 @@ export default function HomePage() {
       </StoreSection>
 
       {/* Buy, in full */}
-      <StoreSection width="max-w-3xl" className="scroll-mt-20" >
+      <StoreSection width="max-w-3xl" className="scroll-mt-20 bg-ink" divider={false}>
         <div id="buy" />
-        <Eyebrow>Get the set</Eyebrow>
-        <h2 className="mt-4 font-display text-3xl font-semibold text-navy">All 4, while they last</h2>
+        <p className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-white">
+          Get the set
+        </p>
+        <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-white">All 4, while they last</h2>
         <div className="mt-8">
-          <MagnetShop />
+          <MagnetShop dark />
         </div>
       </StoreSection>
 
@@ -148,8 +154,8 @@ export default function HomePage() {
         <div className="mt-8 flex flex-col gap-8">
           {FAQ.map((item) => (
             <div key={item.q}>
-              <h3 className="font-display text-lg font-semibold text-navy">{item.q}</h3>
-              <p className="mt-2 text-[15px] leading-relaxed max-w-xl text-navy/80">{item.a}</p>
+              <h3 className="text-lg font-bold text-ink">{item.q}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed max-w-xl text-ink/65">{item.a}</p>
             </div>
           ))}
         </div>
