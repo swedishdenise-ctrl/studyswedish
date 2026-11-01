@@ -8,9 +8,8 @@ export function MagnetShop() {
     <div>
       <p className="text-[16px] leading-relaxed max-w-xl text-ink/60">
         The full set of 4 — Jag älskar Sverige, Lagom är bäst, Fikadags! and Dra åt skogen!
-        6cm acrylic magnets, each with its own collector card (pronunciation, meaning, and
-        a QR code to follow along). Sold as a set only, while the first batch lasts. Shipping
-        included, worldwide.
+        6cm acrylic magnets, each sealed in its own bag, plus a card with a QR code to
+        follow along. Sold as a set only. Shipping included, worldwide.
       </p>
 
       <div className="mt-8 flex flex-col items-start gap-3">
