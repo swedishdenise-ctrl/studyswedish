@@ -63,28 +63,43 @@ const FAQ = [
 export default function HomePage() {
   return (
     <div className="bg-paper">
-      {/* Hero */}
-      <section className="px-6 pt-40 pb-28 sm:pt-48">
-        <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow>StudySwedish</Eyebrow>
-          <h1 className="mt-6 font-display text-5xl font-normal leading-[1.1] tracking-tight text-ink sm:text-6xl">
+      {/* Hero — full-screen photo with a slow drifting zoom */}
+      <section className="relative -mt-[2.25rem] flex h-[calc(100svh-4rem)] min-h-[560px] items-end overflow-hidden bg-ink lg:items-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/magnet-hero.jpg"
+          alt="Holding up the Lagom är bäst magnet at sunset"
+          className="animate-drift absolute inset-0 h-full w-full object-cover object-[40%_20%] lg:object-[0%_20%]"
+        />
+        {/* Darken behind the text: bottom on phones, right side on big screens */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent lg:hidden" />
+        <div className="absolute inset-0 hidden bg-gradient-to-l from-black/65 via-black/25 to-transparent lg:block" />
+
+        <div className="animate-fade-up relative mx-auto w-full max-w-6xl px-6 pb-14 text-center lg:pb-0">
+          <div className="mx-auto max-w-md lg:mr-0 lg:text-left">
+          <Eyebrow invert>StudySwedish</Eyebrow>
+          <h1 className="mt-5 font-display text-5xl font-normal leading-[1.1] tracking-tight text-white sm:text-6xl">
             Swedish Words
             <br />
             Fridge Magnets
           </h1>
-          <p className="mx-auto mt-6 max-w-sm text-[16px] leading-relaxed text-ink/50">
+          <p className="mx-auto mt-5 max-w-sm text-[16px] leading-relaxed text-white/80 lg:mx-0">
             Four real Swedish words and phrases, four acrylic magnets, four little lessons
             for your fridge.
           </p>
-          <div className="mt-10 flex flex-col items-center gap-3">
-            <StoreButtonNative href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
+          <div className="mt-9 flex flex-col items-center gap-3 lg:items-start">
+            <StoreButtonNative variant="light" href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
               Buy the set — €29.99
             </StoreButtonNative>
-            <p className="text-[13px] text-ink/35">Shipping included, worldwide</p>
+            <p className="text-[13px] text-white/60">Shipping included, worldwide</p>
+          </div>
           </div>
         </div>
+      </section>
 
-        <div className="mx-auto mt-20 grid max-w-3xl grid-cols-2 gap-px bg-ink/10 sm:grid-cols-4">
+      {/* The four designs */}
+      <section className="px-6 py-24">
+        <div className="mx-auto grid max-w-3xl grid-cols-2 gap-px bg-ink/10 sm:grid-cols-4">
           {DESIGNS.map((design) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={design.src} src={design.src} alt={design.alt} className="aspect-square bg-white" />

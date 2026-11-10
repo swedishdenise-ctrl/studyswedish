@@ -1,10 +1,11 @@
 import Link from "next/link";
 import type { ComponentProps } from "react";
 
-type Variant = "primary" | "secondary";
+type Variant = "primary" | "secondary" | "light";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
   primary: "bg-ink text-white hover:bg-ink/85",
+  light: "bg-white text-ink hover:bg-white/85",
   secondary: "border border-ink text-ink hover:bg-ink hover:text-white",
 };
 
