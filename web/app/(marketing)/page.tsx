@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
+import { BuyBar } from "@/components/store/buy-bar";
 import { StoreButtonNative } from "@/components/store/button";
 import { Eyebrow } from "@/components/store/section";
 import { FlipMagnet } from "@/components/store/flip-magnet";
@@ -91,7 +92,23 @@ const DESIGNS = [
   },
 ];
 
-const WORDS = ["Jag älskar Sverige", "Lagom är bäst", "Fikadags!", "Dra åt skogen!"];
+const FLOATERS = [
+  { src: "/magnets/cut/sverige.png", r: "-10deg", delay: "0s", className: "-left-4 top-2 w-24 sm:left-[6%] sm:top-10 sm:w-40" },
+  { src: "/magnets/cut/fikadags.png", r: "8deg", delay: "-1.5s", className: "-right-4 top-4 w-20 sm:right-[7%] sm:top-12 sm:w-36" },
+  { src: "/magnets/cut/lagom.png", r: "6deg", delay: "-3s", className: "-left-3 bottom-2 w-20 sm:bottom-8 sm:left-[14%] sm:w-32" },
+  { src: "/magnets/cut/dra-at-skogen.png", r: "-7deg", delay: "-4.5s", className: "-bottom-2 -right-3 w-20 sm:bottom-10 sm:right-[15%] sm:w-32" },
+];
+
+const BAND = [
+  { text: "Jag älskar Sverige", swedish: true },
+  { text: "Free shipping worldwide", swedish: false },
+  { text: "Lagom är bäst", swedish: true },
+  { text: "The perfect Christmas gift", swedish: false },
+  { text: "Fikadags!", swedish: true },
+  { text: "Tracked delivery", swedish: false },
+  { text: "Dra åt skogen!", swedish: true },
+  { text: "€7.50 per magnet", swedish: false },
+];
 
 const GIFT_FOR = [
   {
@@ -208,23 +225,38 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent lg:hidden" />
         <div className="absolute inset-0 hidden bg-gradient-to-l from-black/65 via-black/25 to-transparent lg:block" />
 
-        <div className="animate-fade-up relative mx-auto w-full max-w-6xl px-6 pb-14 text-center lg:pb-0">
+        <div className="relative mx-auto w-full max-w-6xl px-6 pb-14 text-center lg:pb-0">
           <div className="mx-auto max-w-md lg:mr-0 lg:text-left">
-            <Eyebrow invert>StudySwedish</Eyebrow>
-            <h1 className="mt-5 font-display text-6xl font-normal leading-[1.02] tracking-tight text-white sm:text-7xl">
-              Swedish Words
-              <br />
-              <em>Fridge Magnets</em>
+            <p
+              className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3.5 py-1.5 text-[12px] font-medium tracking-wide text-white backdrop-blur-sm"
+              style={{ animationDelay: "100ms" }}
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-flag-yellow" />
+              The perfect Christmas gift
+            </p>
+            <h1 className="mt-6 font-display text-6xl font-normal leading-[1.02] tracking-tight text-white sm:text-7xl">
+              <span className="animate-fade-up block" style={{ animationDelay: "250ms" }}>
+                Swedish Words
+              </span>
+              <em className="animate-fade-up block" style={{ animationDelay: "420ms" }}>
+                Fridge Magnets
+              </em>
             </h1>
-            <p className="mx-auto mt-5 max-w-sm text-[16px] leading-relaxed text-white/80 lg:mx-0">
+            <p
+              className="animate-fade-up mx-auto mt-5 max-w-sm text-[16px] leading-relaxed text-white/80 lg:mx-0"
+              style={{ animationDelay: "600ms" }}
+            >
               Four real Swedish words and phrases, four acrylic magnets, four little lessons
               for your fridge.
             </p>
-            <div className="mt-9 flex flex-col items-center gap-3 lg:items-start">
-              <StoreButtonNative variant="light" href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
+            <div
+              className="animate-fade-up mt-9 flex flex-col items-center gap-3 lg:items-start"
+              style={{ animationDelay: "780ms" }}
+            >
+              <StoreButtonNative variant="light" shine href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
                 Buy the set — €29.99
               </StoreButtonNative>
-              <p className="text-[13px] text-white/60">Shipping included, worldwide</p>
+              <p className="text-[13px] text-white/60">Free shipping worldwide · Only €7.50 per magnet</p>
             </div>
           </div>
         </div>
@@ -235,9 +267,13 @@ export default function HomePage() {
         <div className="marquee-track">
           {[0, 1].map((copy) => (
             <div key={copy} className="flex shrink-0 items-center">
-              {[...WORDS, ...WORDS].map((w, i) => (
-                <span key={i} className="flex items-center whitespace-nowrap font-display text-[21px] italic">
-                  <span className="px-7">{w}</span>
+              {[...BAND, ...BAND].map((w, i) => (
+                <span key={i} className="flex items-center whitespace-nowrap">
+                  {w.swedish ? (
+                    <span className="px-7 font-display text-[21px] italic">{w.text}</span>
+                  ) : (
+                    <span className="px-7 text-[12px] font-medium uppercase tracking-[0.18em] text-white/70">{w.text}</span>
+                  )}
                   <span className="text-[10px] text-flag-yellow">✦</span>
                 </span>
               ))}
@@ -344,10 +380,13 @@ export default function HomePage() {
             <h2 className="mt-5 font-display text-4xl font-normal leading-[1.08] tracking-tight text-ink sm:text-5xl">
               Swedish Words Magnet Set
             </h2>
-            <div className="mt-5 flex items-baseline gap-3">
+            <div className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1">
               <p className="font-display text-4xl text-ink">€29.99</p>
               <p className="text-[13px] text-ink/50">Shipping included</p>
             </div>
+            <p className="mt-3 inline-block bg-soft-blue/60 px-3 py-1.5 text-[13px] leading-relaxed text-ink/75">
+              That&apos;s just <strong className="font-medium text-ink">€7.50 a magnet</strong>, delivered to your door
+            </p>
 
             <ul className="mt-8 flex flex-col gap-3 border-t border-ink/10 pt-8">
               {SPECS.map((s) => (
@@ -361,6 +400,7 @@ export default function HomePage() {
             </ul>
 
             <StoreButtonNative
+              shine
               href={PAYMENT_LINK}
               target="_blank"
               rel="noopener noreferrer"
@@ -441,14 +481,31 @@ export default function HomePage() {
       </section>
 
       {/* Closing call to action */}
-      <section className="bg-ink px-6 py-24 text-center">
-        <Reveal>
-          <h2 className="font-display text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-5xl">
+      <section className="relative overflow-hidden bg-ink px-6 pb-40 pt-36 text-center sm:py-36">
+        {/* Magnets floating around the edges */}
+        {FLOATERS.map((f) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={f.src}
+            src={f.src}
+            alt=""
+            aria-hidden="true"
+            className={`animate-bob pointer-events-none absolute drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] ${f.className}`}
+            style={{ "--r": f.r, animationDelay: f.delay } as CSSProperties}
+          />
+        ))}
+
+        <Reveal className="relative">
+          <h2 className="font-display text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl">
             Bring a little <em>Sweden</em> home.
           </h2>
-          <p className="mt-4 text-[15px] text-white/60">All four magnets — €29.99, shipping included.</p>
+          <p className="mt-5 text-[15px] text-white/60">
+            All four magnets — €29.99, free shipping worldwide.
+            <br className="sm:hidden" /> Order early for Christmas.
+          </p>
           <StoreButtonNative
             variant="light"
+            shine
             href={PAYMENT_LINK}
             target="_blank"
             rel="noopener noreferrer"
@@ -458,6 +515,8 @@ export default function HomePage() {
           </StoreButtonNative>
         </Reveal>
       </section>
+
+      <BuyBar href={PAYMENT_LINK} />
     </div>
   );
 }

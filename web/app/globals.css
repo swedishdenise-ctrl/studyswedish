@@ -143,6 +143,59 @@ html {
   scroll-behavior: smooth;
 }
 
+/* A soft light sweep across the buy buttons every few seconds */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(17, 17, 17, 0.09) 48%, transparent 66%);
+  transform: translateX(-120%);
+  animation: btn-shine 4.5s ease-in-out 1.5s infinite;
+}
+
+.btn-shine-dark::before {
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.22) 48%, transparent 66%);
+}
+
+@keyframes btn-shine {
+  0% { transform: translateX(-120%); }
+  35%, 100% { transform: translateX(120%); }
+}
+
+/* Gentle bob for floating magnets */
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-14px) rotate(calc(var(--r, 0deg) + 3deg)); }
+}
+
+.animate-bob {
+  animation: bob 6s ease-in-out infinite;
+}
+
+/* Mobile buy bar */
+.buy-bar {
+  transform: translateY(110%);
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.buy-bar.is-visible {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine::before,
+  .animate-bob {
+    animation: none;
+  }
+}
+
 /* Scrolling word band */
 @keyframes marquee {
   from { transform: translateX(0); }

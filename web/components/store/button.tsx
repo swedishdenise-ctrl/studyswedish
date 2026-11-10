@@ -47,12 +47,18 @@ export function StoreButtonNative({
   variant = "primary",
   className = "",
   children,
+  shine = false,
   ...props
-}: ComponentProps<"a"> & { variant?: Variant }) {
+}: ComponentProps<"a"> & { variant?: Variant; shine?: boolean }) {
   return (
-    <a className={`${BASE} ${VARIANT_CLASSES[variant]} ${className}`} {...props}>
-      {children}
-      <Arrow />
+    <a
+      className={`${BASE} ${VARIANT_CLASSES[variant]} ${shine ? `btn-shine ${variant === "primary" ? "btn-shine-dark" : ""}` : ""} ${className}`}
+      {...props}
+    >
+      <span className="relative">{children}</span>
+      <span className="relative">
+        <Arrow />
+      </span>
     </a>
   );
 }
