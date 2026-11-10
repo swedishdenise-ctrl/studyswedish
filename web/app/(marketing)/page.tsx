@@ -12,13 +12,57 @@ const FRIDGE: FridgeMagnet[] = [
   { cutout: "/magnets/cut/dra-at-skogen.png", name: "Dra åt skogen!", short: "Go to the forest! (= get lost)", mobile: [52, 58, -4], desktop: [72, 45, -5] },
 ];
 
+const DESCRIPTION =
+  "4 acrylic fridge magnets with real Swedish words and phrases — Jag älskar Sverige, Lagom är bäst, Fikadags! and Dra åt skogen! €29.99, shipping included worldwide.";
+
 export const metadata = {
-  title: "Swedish Words Fridge Magnets — StudySwedish",
-  description:
-    "4 acrylic fridge magnets with real Swedish words and phrases — Jag älskar Sverige, Lagom är bäst, Fikadags!, and Dra åt skogen!",
+  title: { absolute: "Swedish Words Fridge Magnets — StudySwedish" },
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "StudySwedish",
+    title: "Swedish Words Fridge Magnets",
+    description: DESCRIPTION,
+    images: [{ url: "/og-magnets.jpg", width: 1200, height: 630, alt: "Four Swedish words fridge magnets on a fridge door" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Swedish Words Fridge Magnets",
+    description: DESCRIPTION,
+    images: ["/og-magnets.jpg"],
+  },
 };
 
 const PAYMENT_LINK = "https://buy.stripe.com/aFaeVc93F8sn56rebwf3a08";
+
+// Lets Google show the product with its price in search results
+const PRODUCT_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Swedish Words Fridge Magnets — Set of 4",
+  description: DESCRIPTION,
+  image: [
+    "https://studyswedish.com/og-magnets.jpg",
+    "https://studyswedish.com/magnets/sverige.png",
+    "https://studyswedish.com/magnets/lagom.png",
+    "https://studyswedish.com/magnets/fikadags.png",
+    "https://studyswedish.com/magnets/dra-at-skogen.png",
+  ],
+  brand: { "@type": "Brand", name: "StudySwedish" },
+  offers: {
+    "@type": "Offer",
+    url: "https://studyswedish.com/",
+    price: "29.99",
+    priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: { "@type": "MonetaryAmount", value: "0", currency: "EUR" },
+    },
+  },
+};
 
 const DESIGNS = [
   {
@@ -44,6 +88,23 @@ const DESIGNS = [
     alt: "Dra åt skogen! magnet",
     name: "Dra åt skogen!",
     meaning: "Literally “go to the forest” — a polite(ish) way to say get lost.",
+  },
+];
+
+const WORDS = ["Jag älskar Sverige", "Lagom är bäst", "Fikadags!", "Dra åt skogen!"];
+
+const GIFT_FOR = [
+  {
+    title: "The Swede abroad",
+    text: "A little piece of home on the fridge — and the phrases they actually miss saying.",
+  },
+  {
+    title: "The Sweden lover",
+    text: "For the friend who's been to Stockholm twice and still talks about the fika.",
+  },
+  {
+    title: "The language learner",
+    text: "Four real phrases they'll see every single day — learning without even trying.",
   },
 ];
 
@@ -130,6 +191,11 @@ const TRUST = [
 export default function HomePage() {
   return (
     <div className="bg-paper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PRODUCT_JSON_LD) }}
+      />
+
       {/* Hero — full-screen photo with a slow drifting zoom */}
       <section className="relative -mt-[2.25rem] flex h-[calc(100svh-4rem)] min-h-[560px] items-end overflow-hidden bg-ink lg:items-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -163,6 +229,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Scrolling word band */}
+      <div className="overflow-hidden bg-ink py-4 text-white" aria-hidden="true">
+        <div className="marquee-track">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex shrink-0 items-center">
+              {[...WORDS, ...WORDS].map((w, i) => (
+                <span key={i} className="flex items-center whitespace-nowrap font-display text-[17px] tracking-wide">
+                  <span className="px-7">{w}</span>
+                  <span className="text-[10px] text-flag-yellow">✦</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Trust strip */}
       <section className="border-b border-ink/8 px-6 py-10">
@@ -213,11 +295,41 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Gift */}
+      <section className="px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-5xl">
+          <Reveal>
+            <div className="text-center">
+              <Eyebrow>A gift that gets talked about</Eyebrow>
+              <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                The perfect present for…
+              </h2>
+            </div>
+          </Reveal>
+          <div className="mt-14 grid gap-10 sm:grid-cols-3 sm:gap-8">
+            {GIFT_FOR.map((g, i) => (
+              <Reveal key={g.title} delay={i * 120}>
+                <div className="border-t border-ink/15 pt-6 text-center sm:text-left">
+                  <p className="font-display text-[13px] tracking-[0.2em] text-brand">0{i + 1}</p>
+                  <h3 className="mt-3 font-display text-xl font-normal text-ink">{g.title}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-ink/55">{g.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={200}>
+            <p className="mt-14 text-center text-[14px] text-ink/50">
+              Each magnet arrives sealed in its own bag — ready to wrap, or to give just as it is.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Product */}
-      <section id="shop" className="scroll-mt-16 px-6 py-24 sm:py-28">
+      <section id="shop" className="scroll-mt-16 bg-mist px-6 py-24 sm:py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <div className="overflow-hidden bg-mist">
+            <div className="overflow-hidden bg-paper">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/magnet-hero.jpg"
@@ -268,7 +380,7 @@ export default function HomePage() {
       </section>
 
       {/* About */}
-      <section id="about" className="scroll-mt-16 bg-mist px-6 py-24 sm:py-28">
+      <section id="about" className="scroll-mt-16 px-6 py-24 sm:py-28">
         <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-[2fr_3fr] md:gap-16">
           <Reveal>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -302,7 +414,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="scroll-mt-16 px-6 py-24 sm:py-28">
+      <section id="faq" className="scroll-mt-16 bg-mist px-6 py-24 sm:py-28">
         <div className="mx-auto max-w-2xl">
           <Reveal>
             <div className="text-center">

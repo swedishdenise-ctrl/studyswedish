@@ -16,6 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://studyswedish.com"),
   title: {
     default: "StudySwedish, Learn Swedish online",
     template: "%s | StudySwedish",
