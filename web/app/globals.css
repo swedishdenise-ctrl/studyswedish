@@ -143,6 +143,154 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ---------- Fridge scene ---------- */
+.fridge-door {
+  border-radius: 28px;
+  background:
+    radial-gradient(120% 80% at 15% 0%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 55%),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.012) 0 1px, transparent 1px 3px),
+    linear-gradient(100deg, #ECE9E3 0%, #F7F5F1 35%, #F1EEE9 70%, #E4E0D9 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05),
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    inset -14px 0 30px -18px rgba(0, 0, 0, 0.18),
+    0 50px 80px -40px rgba(40, 30, 20, 0.35),
+    0 18px 30px -20px rgba(40, 30, 20, 0.25);
+}
+
+.fridge-handle {
+  position: absolute;
+  left: 3.5%;
+  top: 30%;
+  width: 12px;
+  height: 40%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #B9B4AC, #F4F2EE 45%, #A9A49C);
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.fridge-magnet {
+  position: absolute;
+  left: var(--l);
+  top: var(--t);
+  width: 40%;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 640px) {
+  .fridge-magnet {
+    left: var(--ls);
+    top: var(--ts);
+    width: 23%;
+  }
+  .fridge-magnet .fridge-magnet-body {
+    --r: var(--rs);
+  }
+}
+
+.fridge-magnet-body {
+  position: relative;
+  display: block;
+  transform: translateY(-60px) rotate(calc(var(--r) - 12deg)) scale(1.08);
+  opacity: 0;
+  filter:
+    drop-shadow(0 1px 0 rgba(0, 0, 0, 0.12))
+    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.12))
+    drop-shadow(0 10px 14px rgba(40, 30, 20, 0.16));
+  transition:
+    transform 0.6s cubic-bezier(0.3, 1.5, 0.5, 1),
+    opacity 0.35s ease,
+    filter 0.3s ease;
+  transition-delay: var(--delay), var(--delay), 0s;
+}
+
+.fridge-magnet.is-landed .fridge-magnet-body {
+  transform: rotate(var(--r));
+  opacity: 1;
+}
+
+.fridge-magnet.is-settled .fridge-magnet-body {
+  transition-delay: 0s;
+}
+
+.fridge-magnet.is-landed:hover .fridge-magnet-body,
+.fridge-magnet.is-landed:focus-visible .fridge-magnet-body {
+  transform: translateY(-6px) rotate(calc(var(--r) * 0.4)) scale(1.03);
+  transition-delay: 0s;
+  filter:
+    drop-shadow(0 1px 0 rgba(0, 0, 0, 0.1))
+    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1))
+    drop-shadow(0 22px 22px rgba(40, 30, 20, 0.2));
+}
+
+.fridge-magnet.is-active .fridge-magnet-body {
+  animation: magnet-wiggle 0.6s ease;
+}
+
+@keyframes magnet-wiggle {
+  0%, 100% { transform: rotate(var(--r)); }
+  20% { transform: rotate(calc(var(--r) - 7deg)) scale(1.04); }
+  45% { transform: rotate(calc(var(--r) + 5deg)) scale(1.04); }
+  70% { transform: rotate(calc(var(--r) - 2deg)); }
+}
+
+/* Acrylic shine, clipped to the magnet's own shape */
+.fridge-magnet-gloss {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.12) 30%, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.18) 100%);
+  -webkit-mask: var(--mask) center / 100% 100% no-repeat;
+  mask: var(--mask) center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+
+.fridge-bubble {
+  position: absolute;
+  left: 50%;
+  bottom: 92%;
+  z-index: 10;
+  width: max-content;
+  max-width: 190px;
+  transform: translateX(-50%);
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px 14px;
+  text-align: center;
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.25);
+  animation: bubble-in 0.35s cubic-bezier(0.3, 1.4, 0.5, 1);
+}
+
+.fridge-bubble::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  border: 7px solid transparent;
+  border-top-color: #fff;
+  transform: translateX(-50%);
+}
+
+@keyframes bubble-in {
+  from { opacity: 0; transform: translate(-50%, 8px) scale(0.9); }
+  to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fridge-magnet-body {
+    transition: none;
+    transform: rotate(var(--r));
+    opacity: 1;
+  }
+  .fridge-magnet.is-active .fridge-magnet-body,
+  .fridge-bubble {
+    animation: none;
+  }
+}
+
 /* Flip cards for the magnets */
 .flip-card {
   perspective: 1200px;

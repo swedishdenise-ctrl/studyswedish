@@ -3,6 +3,14 @@ import { StoreButtonNative } from "@/components/store/button";
 import { Eyebrow } from "@/components/store/section";
 import { FlipMagnet } from "@/components/store/flip-magnet";
 import { Reveal } from "@/components/store/reveal";
+import { FridgeScene, type FridgeMagnet } from "@/components/store/fridge-scene";
+
+const FRIDGE: FridgeMagnet[] = [
+  { cutout: "/magnets/cut/sverige.png", name: "Jag älskar Sverige", short: "I love Sweden", mobile: [6, 6, -6], desktop: [9, 9, -6] },
+  { cutout: "/magnets/cut/lagom.png", name: "Lagom är bäst", short: "Just the right amount is best", mobile: [53, 13, 5], desktop: [32, 44, 4] },
+  { cutout: "/magnets/cut/fikadags.png", name: "Fikadags!", short: "Time for fika!", mobile: [9, 52, 4], desktop: [55, 7, 3] },
+  { cutout: "/magnets/cut/dra-at-skogen.png", name: "Dra åt skogen!", short: "Go to the forest! (= get lost)", mobile: [52, 58, -4], desktop: [72, 45, -5] },
+];
 
 export const metadata = {
   title: "Swedish Words Fridge Magnets — StudySwedish",
@@ -187,6 +195,21 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Fridge scene */}
+      <section className="bg-[#E9E4DC] px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-5xl">
+          <Reveal>
+            <div className="mb-14 text-center">
+              <Eyebrow>On your fridge</Eyebrow>
+              <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                A little Swedish, every time you open it
+              </h2>
+            </div>
+          </Reveal>
+          <FridgeScene magnets={FRIDGE} />
         </div>
       </section>
 
