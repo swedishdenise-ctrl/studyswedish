@@ -92,6 +92,22 @@ const DESIGNS = [
   },
 ];
 
+const BOOK_LINK = "https://amzn.eu/d/0bnmJY1g";
+const BOOK_ASIN = "B0GYFHLG3H";
+const BOOK_STORES = [
+  { label: "UK", href: `https://www.amazon.co.uk/dp/${BOOK_ASIN}` },
+  { label: "US", href: `https://www.amazon.com/dp/${BOOK_ASIN}` },
+  { label: "Germany", href: `https://www.amazon.de/dp/${BOOK_ASIN}` },
+  { label: "Sweden", href: `https://www.amazon.se/dp/${BOOK_ASIN}` },
+  { label: "France", href: `https://www.amazon.fr/dp/${BOOK_ASIN}` },
+];
+const BOOK_POINTS = [
+  "Real phrases Swedes actually use",
+  "Pronunciation guide for every phrase",
+  "Example sentences & cultural gems",
+  "120 pages — a perfect gift",
+];
+
 const FLOATERS = [
   { src: "/magnets/cut/sverige.png", r: "-10deg", delay: "0s", className: "-left-4 top-2 w-24 sm:left-[6%] sm:top-10 sm:w-40" },
   { src: "/magnets/cut/fikadags.png", r: "8deg", delay: "-1.5s", className: "-right-4 top-4 w-20 sm:right-[7%] sm:top-12 sm:w-36" },
@@ -211,6 +227,22 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(PRODUCT_JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Book",
+            name: "How to Understand a Swede: Det är lugnt",
+            author: { "@type": "Person", name: "Denise Lundqvist" },
+            image: "https://studyswedish.com/images/book-cover.jpg",
+            numberOfPages: 120,
+            bookFormat: ["https://schema.org/Paperback", "https://schema.org/EBook"],
+            inLanguage: "en",
+            url: `https://www.amazon.es/dp/${BOOK_ASIN}`,
+          }),
+        }}
       />
 
       {/* Hero — full-screen photo with a slow drifting zoom */}
@@ -356,6 +388,12 @@ export default function HomePage() {
           <Reveal delay={200}>
             <p className="mt-14 text-center text-[14px] text-ink/50">
               Each magnet arrives sealed in its own bag — ready to wrap, or to give just as it is.
+              <br />
+              Want to make it extra special?{" "}
+              <a href="#book" className="text-ink underline decoration-ink/30 underline-offset-4 transition hover:decoration-ink">
+                Pair them with my book
+              </a>
+              .
             </p>
           </Reveal>
         </div>
@@ -414,6 +452,81 @@ export default function HomePage() {
                 <path d="M8 11V7a4 4 0 0 1 8 0v4" />
               </svg>
               Secure checkout with Stripe
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* The book */}
+      <section id="book" className="relative scroll-mt-16 overflow-hidden bg-[#1C2550] px-6 py-24 text-white sm:py-32">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-60"
+          style={{ background: "radial-gradient(60% 50% at 25% 40%, rgba(120,140,220,0.25), transparent 70%)" }}
+        />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[5fr_6fr] md:gap-20">
+          <Reveal>
+            <div className="book-stage mx-auto w-[64%] max-w-[340px] md:w-full">
+              <div className="book-3d">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/book-cover.jpg"
+                  alt="How to Understand a Swede: Det är lugnt — book cover"
+                  className="block w-full"
+                />
+                <span className="book-spine" aria-hidden="true" />
+                <span className="book-shine" aria-hidden="true" />
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={150}>
+            <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-[#D4B77A]">Also by me · The book</p>
+            <h2 className="mt-5 font-display text-4xl font-normal leading-[1.05] tracking-tight sm:text-6xl">
+              How to Understand <em>a Swede</em>
+            </h2>
+            <p className="mt-3 font-display text-xl italic text-white/60">— Det är lugnt —</p>
+
+            <p className="mt-8 font-display text-2xl leading-snug text-white sm:text-[28px]">
+              They&apos;re not cold. They&apos;re <em>Swedish.</em>
+            </p>
+            <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-white/70">
+              A warm, funny guide to how Swedes actually speak — not in textbooks, but in real
+              life. Why they say &ldquo;it&apos;s fine&rdquo; to everything, why fika is sacred, what
+              lagom really means, and how to swear with Swedish elegance.
+            </p>
+
+            <ul className="mt-8 grid gap-3 text-[14px] text-white/75 sm:grid-cols-2">
+              {BOOK_POINTS.map((b) => (
+                <li key={b} className="flex gap-3">
+                  <svg className="mt-1 shrink-0 text-[#D4B77A]" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg>
+                  {b}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+              <StoreButtonNative variant="light" shine href={BOOK_LINK} target="_blank" rel="noopener noreferrer">
+                Get it on Amazon
+              </StoreButtonNative>
+              <p className="text-[13px] text-white/55">Paperback &amp; Kindle</p>
+            </div>
+            <p className="mt-6 text-[13px] text-white/45">
+              Other Amazon stores:{" "}
+              {BOOK_STORES.map((s, i) => (
+                <span key={s.label}>
+                  {i > 0 && " · "}
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/70 underline decoration-white/25 underline-offset-4 transition hover:text-white hover:decoration-white"
+                  >
+                    {s.label}
+                  </a>
+                </span>
+              ))}
             </p>
           </Reveal>
         </div>

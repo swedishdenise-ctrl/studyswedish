@@ -5,6 +5,7 @@ const PAYMENT_LINK = "https://buy.stripe.com/aFaeVc93F8sn56rebwf3a08";
 const NAV = [
   { href: "/#collection", label: "The designs" },
   { href: "/#shop", label: "Shop" },
+  { href: "/#book", label: "The book" },
   { href: "/#about", label: "About" },
   { href: "/#faq", label: "FAQ" },
 ];
