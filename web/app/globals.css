@@ -110,6 +110,39 @@ h1, h2, h3, h4 {
   will-change: transform;
 }
 
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* FAQ accordion */
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Flip cards for the magnets */
 .flip-card {
   perspective: 1200px;

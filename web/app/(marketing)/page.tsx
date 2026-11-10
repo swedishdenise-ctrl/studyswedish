@@ -1,7 +1,8 @@
-import { MagnetShop } from "@/components/magnet-shop";
+import type { ReactNode } from "react";
 import { StoreButtonNative } from "@/components/store/button";
-import { StoreSection, Eyebrow } from "@/components/store/section";
+import { Eyebrow } from "@/components/store/section";
 import { FlipMagnet } from "@/components/store/flip-magnet";
+import { Reveal } from "@/components/store/reveal";
 
 export const metadata = {
   title: "Swedish Words Fridge Magnets — StudySwedish",
@@ -38,6 +39,14 @@ const DESIGNS = [
   },
 ];
 
+const SPECS = [
+  "4 designs: Jag älskar Sverige, Lagom är bäst, Fikadags! and Dra åt skogen!",
+  "6 cm acrylic, 3 mm thick, with a 1 mm magnet backing",
+  "Each magnet sealed in its own bag",
+  "A card with a QR code to follow along on Instagram",
+  "Shipping included, worldwide",
+];
+
 const FAQ = [
   {
     q: "What's actually in the box?",
@@ -61,6 +70,55 @@ const FAQ = [
   },
 ];
 
+const Icon = ({ children }: { children: ReactNode }) => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {children}
+  </svg>
+);
+
+const TRUST = [
+  {
+    title: "Free shipping",
+    text: "Included in the price, worldwide",
+    icon: (
+      <Icon>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+      </Icon>
+    ),
+  },
+  {
+    title: "Tracked delivery",
+    text: "Sent from Spain with tracking",
+    icon: (
+      <Icon>
+        <path d="M3 7l9-4 9 4v10l-9 4-9-4z" />
+        <path d="M3 7l9 4 9-4M12 11v10" />
+      </Icon>
+    ),
+  },
+  {
+    title: "Secure checkout",
+    text: "Card payments via Stripe",
+    icon: (
+      <Icon>
+        <rect x="5" y="11" width="14" height="10" rx="1.5" />
+        <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+      </Icon>
+    ),
+  },
+  {
+    title: "Arrived damaged?",
+    text: "Replacement or refund, no hassle",
+    icon: (
+      <Icon>
+        <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z" />
+        <path d="M9 12l2 2 4-4" />
+      </Icon>
+    ),
+  },
+];
+
 export default function HomePage() {
   return (
     <div className="bg-paper">
@@ -78,74 +136,193 @@ export default function HomePage() {
 
         <div className="animate-fade-up relative mx-auto w-full max-w-6xl px-6 pb-14 text-center lg:pb-0">
           <div className="mx-auto max-w-md lg:mr-0 lg:text-left">
-          <Eyebrow invert>StudySwedish</Eyebrow>
-          <h1 className="mt-5 font-display text-5xl font-normal leading-[1.1] tracking-tight text-white sm:text-6xl">
-            Swedish Words
-            <br />
-            Fridge Magnets
-          </h1>
-          <p className="mx-auto mt-5 max-w-sm text-[16px] leading-relaxed text-white/80 lg:mx-0">
-            Four real Swedish words and phrases, four acrylic magnets, four little lessons
-            for your fridge.
-          </p>
-          <div className="mt-9 flex flex-col items-center gap-3 lg:items-start">
-            <StoreButtonNative variant="light" href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
-              Buy the set — €29.99
-            </StoreButtonNative>
-            <p className="text-[13px] text-white/60">Shipping included, worldwide</p>
-          </div>
+            <Eyebrow invert>StudySwedish</Eyebrow>
+            <h1 className="mt-5 font-display text-5xl font-normal leading-[1.1] tracking-tight text-white sm:text-6xl">
+              Swedish Words
+              <br />
+              Fridge Magnets
+            </h1>
+            <p className="mx-auto mt-5 max-w-sm text-[16px] leading-relaxed text-white/80 lg:mx-0">
+              Four real Swedish words and phrases, four acrylic magnets, four little lessons
+              for your fridge.
+            </p>
+            <div className="mt-9 flex flex-col items-center gap-3 lg:items-start">
+              <StoreButtonNative variant="light" href={PAYMENT_LINK} target="_blank" rel="noopener noreferrer">
+                Buy the set — €29.99
+              </StoreButtonNative>
+              <p className="text-[13px] text-white/60">Shipping included, worldwide</p>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Trust strip */}
+      <section className="border-b border-ink/8 px-6 py-10">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-4">
+          {TRUST.map((t) => (
+            <div key={t.title} className="flex flex-col items-center gap-2 text-center sm:flex-row sm:items-start sm:gap-4 sm:text-left">
+              <span className="text-brand">{t.icon}</span>
+              <div>
+                <p className="text-[14px] font-medium text-ink">{t.title}</p>
+                <p className="mt-0.5 text-[13px] leading-snug text-ink/50">{t.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* The collection — tap a magnet to flip it */}
-      <section className="bg-mist px-6 py-24">
-        <div className="mx-auto max-w-4xl text-center">
-          <Eyebrow>The collection</Eyebrow>
-          <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink">All four designs</h2>
-          <p className="mt-3 text-[14px] text-ink/50">Tap a magnet to see what it means</p>
+      <section id="collection" className="scroll-mt-16 bg-mist px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-5xl text-center">
+          <Reveal>
+            <Eyebrow>The collection</Eyebrow>
+            <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">All four designs</h2>
+            <p className="mt-3 text-[14px] text-ink/50">Tap a magnet to see what it means</p>
+          </Reveal>
 
           <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
-            {DESIGNS.map((design) => (
-              <FlipMagnet key={design.src} {...design} />
+            {DESIGNS.map((design, i) => (
+              <Reveal key={design.src} delay={i * 120}>
+                <FlipMagnet {...design} />
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why I made these */}
-      <StoreSection width="max-w-xl">
-        <Eyebrow>Why I made these</Eyebrow>
-        <p className="mt-6 text-[17px] leading-loose text-ink/70">
-          I wanted something you could actually hold — not just another post you scroll
-          past. These aren&apos;t tourist-shop clichés; they&apos;re words and phrases I actually
-          use, the ones that make Swedish feel real instead of textbook. Whoever asks about
-          the weird one on your fridge, you&apos;ll actually know what to tell them.
-        </p>
-      </StoreSection>
+      {/* Product */}
+      <section id="shop" className="scroll-mt-16 px-6 py-24 sm:py-28">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <Reveal>
+            <div className="overflow-hidden bg-mist">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/magnet-hero.jpg"
+                alt="The Lagom är bäst magnet in its packaging"
+                className="aspect-[4/5] w-full object-cover object-[50%_18%] transition duration-700 hover:scale-105"
+              />
+            </div>
+          </Reveal>
 
-      {/* Buy, in full */}
-      <StoreSection width="max-w-xl" className="scroll-mt-20 bg-mist">
-        <div id="buy" />
-        <Eyebrow>Get the set</Eyebrow>
-        <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink">All four, while they last</h2>
-        <div className="mt-8">
-          <MagnetShop />
+          <Reveal delay={150}>
+            <Eyebrow>The set</Eyebrow>
+            <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Swedish Words Magnet Set
+            </h2>
+            <div className="mt-5 flex items-baseline gap-3">
+              <p className="font-display text-3xl text-ink">€29.99</p>
+              <p className="text-[13px] text-ink/50">Shipping included</p>
+            </div>
+
+            <ul className="mt-8 flex flex-col gap-3 border-t border-ink/10 pt-8">
+              {SPECS.map((s) => (
+                <li key={s} className="flex gap-3 text-[15px] leading-relaxed text-ink/70">
+                  <svg className="mt-1.5 shrink-0 text-brand" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg>
+                  {s}
+                </li>
+              ))}
+            </ul>
+
+            <StoreButtonNative
+              href={PAYMENT_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-10 w-full sm:w-auto"
+            >
+              Buy the set — €29.99
+            </StoreButtonNative>
+            <p className="mt-4 flex items-center gap-2 text-[12px] text-ink/45">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="5" y="11" width="14" height="10" rx="1.5" />
+                <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+              </svg>
+              Secure checkout with Stripe
+            </p>
+          </Reveal>
         </div>
-      </StoreSection>
+      </section>
+
+      {/* About */}
+      <section id="about" className="scroll-mt-16 bg-mist px-6 py-24 sm:py-28">
+        <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-[2fr_3fr] md:gap-16">
+          <Reveal>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/denise.jpg"
+              alt="Denise, the Swede behind StudySwedish"
+              className="mx-auto aspect-[4/5] w-full max-w-sm object-cover object-top"
+            />
+          </Reveal>
+          <Reveal delay={150}>
+            <Eyebrow>Why I made these</Eyebrow>
+            <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Hej! I&apos;m Denise.
+            </h2>
+            <p className="mt-6 text-[16px] leading-loose text-ink/70">
+              I wanted something you could actually hold — not just another post you scroll
+              past. These aren&apos;t tourist-shop clichés; they&apos;re words and phrases I actually
+              use, the ones that make Swedish feel real instead of textbook. Whoever asks about
+              the weird one on your fridge, you&apos;ll actually know what to tell them.
+            </p>
+            <a
+              href="https://instagram.com/swedish_with_denise"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-block border-b border-ink/30 pb-0.5 text-[14px] text-ink transition hover:border-ink"
+            >
+              Follow along @swedish_with_denise
+            </a>
+          </Reveal>
+        </div>
+      </section>
 
       {/* FAQ */}
-      <StoreSection width="max-w-xl" className="pb-32">
-        <Eyebrow>Questions</Eyebrow>
-        <div className="mt-10 flex flex-col divide-y divide-ink/10">
-          {FAQ.map((item) => (
-            <div key={item.q} className="py-6">
-              <h3 className="font-display text-base font-normal text-ink">{item.q}</h3>
-              <p className="mt-2 text-[14px] leading-relaxed text-ink/50">{item.a}</p>
+      <section id="faq" className="scroll-mt-16 px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-2xl">
+          <Reveal>
+            <div className="text-center">
+              <Eyebrow>Questions</Eyebrow>
+              <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                Good to know
+              </h2>
             </div>
-          ))}
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="mt-12 border-t border-ink/10">
+              {FAQ.map((item) => (
+                <details key={item.q} className="faq group border-b border-ink/10">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[16px] text-ink">
+                    {item.q}
+                    <span className="faq-icon text-xl font-light leading-none text-ink/40 transition-transform duration-300">+</span>
+                  </summary>
+                  <p className="pb-6 pr-10 text-[15px] leading-relaxed text-ink/55">{item.a}</p>
+                </details>
+              ))}
+            </div>
+          </Reveal>
         </div>
-      </StoreSection>
+      </section>
+
+      {/* Closing call to action */}
+      <section className="bg-ink px-6 py-24 text-center">
+        <Reveal>
+          <h2 className="font-display text-3xl font-normal tracking-tight text-white sm:text-4xl">
+            Bring a little Sweden home.
+          </h2>
+          <p className="mt-4 text-[15px] text-white/60">All four magnets — €29.99, shipping included.</p>
+          <StoreButtonNative
+            variant="light"
+            href={PAYMENT_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-10"
+          >
+            Buy the set
+          </StoreButtonNative>
+        </Reveal>
+      </section>
     </div>
   );
 }
