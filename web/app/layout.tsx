@@ -1,10 +1,11 @@
 ﻿import type { Metadata } from "next";
-import { Jost, Inter } from "next/font/google";
+import { Instrument_Serif, Inter } from "next/font/google";
 import "./globals.css";
 
-const jost = Jost({
+const serif = Instrument_Serif({
   variable: "--font-display-sans",
-  weight: ["300", "400", "500"],
+  weight: "400",
+  style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -31,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jost.variable} ${inter.variable} h-full antialiased`}
+      className={`${serif.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         {children}

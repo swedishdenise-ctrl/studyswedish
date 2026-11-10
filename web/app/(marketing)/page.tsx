@@ -211,10 +211,10 @@ export default function HomePage() {
         <div className="animate-fade-up relative mx-auto w-full max-w-6xl px-6 pb-14 text-center lg:pb-0">
           <div className="mx-auto max-w-md lg:mr-0 lg:text-left">
             <Eyebrow invert>StudySwedish</Eyebrow>
-            <h1 className="mt-5 font-display text-5xl font-normal leading-[1.1] tracking-tight text-white sm:text-6xl">
+            <h1 className="mt-5 font-display text-6xl font-normal leading-[1.02] tracking-tight text-white sm:text-7xl">
               Swedish Words
               <br />
-              Fridge Magnets
+              <em>Fridge Magnets</em>
             </h1>
             <p className="mx-auto mt-5 max-w-sm text-[16px] leading-relaxed text-white/80 lg:mx-0">
               Four real Swedish words and phrases, four acrylic magnets, four little lessons
@@ -236,7 +236,7 @@ export default function HomePage() {
           {[0, 1].map((copy) => (
             <div key={copy} className="flex shrink-0 items-center">
               {[...WORDS, ...WORDS].map((w, i) => (
-                <span key={i} className="flex items-center whitespace-nowrap font-display text-[17px] tracking-wide">
+                <span key={i} className="flex items-center whitespace-nowrap font-display text-[21px] italic">
                   <span className="px-7">{w}</span>
                   <span className="text-[10px] text-flag-yellow">✦</span>
                 </span>
@@ -266,7 +266,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-5xl text-center">
           <Reveal>
             <Eyebrow>The collection</Eyebrow>
-            <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">All four designs</h2>
+            <h2 className="mt-5 font-display text-4xl font-normal leading-[1.08] tracking-tight text-ink sm:text-5xl">All <em>four</em> designs</h2>
             <p className="mt-3 text-[14px] text-ink/50">Tap a magnet to see what it means</p>
           </Reveal>
 
@@ -286,8 +286,8 @@ export default function HomePage() {
           <Reveal>
             <div className="mb-14 text-center">
               <Eyebrow>On your fridge</Eyebrow>
-              <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                A little Swedish, every time you open it
+              <h2 className="mt-5 font-display text-4xl font-normal leading-[1.08] tracking-tight text-ink sm:text-5xl">
+                A little Swedish, every time you <em>open it</em>
               </h2>
             </div>
           </Reveal>
@@ -301,8 +301,8 @@ export default function HomePage() {
           <Reveal>
             <div className="text-center">
               <Eyebrow>A gift that gets talked about</Eyebrow>
-              <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                The perfect present for…
+              <h2 className="mt-5 font-display text-4xl font-normal leading-[1.08] tracking-tight text-ink sm:text-5xl">
+                The perfect present <em>for…</em>
               </h2>
             </div>
           </Reveal>
@@ -310,8 +310,8 @@ export default function HomePage() {
             {GIFT_FOR.map((g, i) => (
               <Reveal key={g.title} delay={i * 120}>
                 <div className="border-t border-ink/15 pt-6 text-center sm:text-left">
-                  <p className="font-display text-[13px] tracking-[0.2em] text-brand">0{i + 1}</p>
-                  <h3 className="mt-3 font-display text-xl font-normal text-ink">{g.title}</h3>
+                  <p className="text-[12px] font-medium tracking-[0.2em] text-brand">0{i + 1}</p>
+                  <h3 className="mt-3 font-display text-2xl font-normal text-ink">{g.title}</h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-ink/55">{g.text}</p>
                 </div>
               </Reveal>
@@ -341,11 +341,11 @@ export default function HomePage() {
 
           <Reveal delay={150}>
             <Eyebrow>The set</Eyebrow>
-            <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+            <h2 className="mt-5 font-display text-4xl font-normal leading-[1.08] tracking-tight text-ink sm:text-5xl">
               Swedish Words Magnet Set
             </h2>
             <div className="mt-5 flex items-baseline gap-3">
-              <p className="font-display text-3xl text-ink">€29.99</p>
+              <p className="font-display text-4xl text-ink">€29.99</p>
               <p className="text-[13px] text-ink/50">Shipping included</p>
             </div>
 
@@ -392,8 +392,8 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={150}>
             <Eyebrow>Why I made these</Eyebrow>
-            <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-              Hej! I&apos;m Denise.
+            <h2 className="mt-5 font-display text-4xl font-normal leading-[1.08] tracking-tight text-ink sm:text-5xl">
+              Hej! I&apos;m <em>Denise</em>.
             </h2>
             <p className="mt-6 text-[16px] leading-loose text-ink/70">
               I wanted something you could actually hold — not just another post you scroll
@@ -419,8 +419,8 @@ export default function HomePage() {
           <Reveal>
             <div className="text-center">
               <Eyebrow>Questions</Eyebrow>
-              <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                Good to know
+              <h2 className="mt-5 font-display text-4xl font-normal leading-[1.08] tracking-tight text-ink sm:text-5xl">
+                Good to <em>know</em>
               </h2>
             </div>
           </Reveal>
@@ -443,8 +443,8 @@ export default function HomePage() {
       {/* Closing call to action */}
       <section className="bg-ink px-6 py-24 text-center">
         <Reveal>
-          <h2 className="font-display text-3xl font-normal tracking-tight text-white sm:text-4xl">
-            Bring a little Sweden home.
+          <h2 className="font-display text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-5xl">
+            Bring a little <em>Sweden</em> home.
           </h2>
           <p className="mt-4 text-[15px] text-white/60">All four magnets — €29.99, shipping included.</p>
           <StoreButtonNative
