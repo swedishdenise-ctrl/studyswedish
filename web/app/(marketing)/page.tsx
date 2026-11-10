@@ -1,6 +1,7 @@
 import { MagnetShop } from "@/components/magnet-shop";
 import { StoreButtonNative } from "@/components/store/button";
 import { StoreSection, Eyebrow } from "@/components/store/section";
+import { FlipMagnet } from "@/components/store/flip-magnet";
 
 export const metadata = {
   title: "Swedish Words Fridge Magnets — StudySwedish",
@@ -97,36 +98,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The four designs */}
-      <section className="px-6 py-24">
-        <div className="mx-auto grid max-w-3xl grid-cols-2 gap-px bg-ink/10 sm:grid-cols-4">
-          {DESIGNS.map((design) => (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img key={design.src} src={design.src} alt={design.alt} className="aspect-square bg-white" />
-          ))}
+      {/* The collection — tap a magnet to flip it */}
+      <section className="bg-mist px-6 py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <Eyebrow>The collection</Eyebrow>
+          <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink">All four designs</h2>
+          <p className="mt-3 text-[14px] text-ink/50">Tap a magnet to see what it means</p>
+
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+            {DESIGNS.map((design) => (
+              <FlipMagnet key={design.src} {...design} />
+            ))}
+          </div>
         </div>
       </section>
-
-      {/* The collection */}
-      <StoreSection width="max-w-2xl" className="bg-mist">
-        <Eyebrow>The collection</Eyebrow>
-        <h2 className="mt-5 font-display text-3xl font-normal tracking-tight text-ink">All four designs</h2>
-
-        <div className="mt-12 flex flex-col divide-y divide-ink/10">
-          {DESIGNS.map((design) => (
-            <div key={design.src} className="flex items-center gap-6 py-6">
-              <div className="h-20 w-20 shrink-0 overflow-hidden bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={design.src} alt={design.alt} className="h-full w-full" />
-              </div>
-              <div>
-                <h3 className="font-display text-lg font-normal text-ink">{design.name}</h3>
-                <p className="mt-1 text-[14px] leading-relaxed text-ink/50">{design.meaning}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </StoreSection>
 
       {/* Why I made these */}
       <StoreSection width="max-w-xl">
